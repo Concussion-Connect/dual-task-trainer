@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
 
+// from Firebase documentation
+// see https://firebase.google.com/docs/android/setup#console
+apply plugin: 'com.google.gms.google-services'
+
+
 android {
     compileSdkVersion 29
     buildToolsVersion '29.0.3'
@@ -34,4 +39,9 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.3'
     implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.6.3'
     implementation 'com.amazonaws:aws-android-sdk-ses:2.6.3'
+
+    // Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+    // When using the BoM, you don't specify versions for other Firebase dependencies
+    implementation 'com.google.firebase:firebase-firestore'
 }

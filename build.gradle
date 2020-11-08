@@ -3,26 +3,24 @@
 buildscript {
     repositories {
         jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         //classpath "com.android.support:appcompat-v7:25.2.1"
+
+        // from Firebase documentation
+        // see https://firebase.google.com/docs/android/setup#console
+        classpath 'com.google.gms:google-services:4.3.4'
     }
 }
 
 allprojects {
     repositories {
         jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+        google()
     }
 }
 

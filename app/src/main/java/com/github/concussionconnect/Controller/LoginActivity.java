@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -26,7 +28,12 @@ import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.Mult
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.AuthenticationHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.ForgotPasswordHandler;
 import com.github.concussionconnect.Model.AWSHelper;
+import com.github.concussionconnect.Model.ConnectToDB;
 import com.github.concussionconnect.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by unkadi on 9/27/17.
@@ -36,6 +43,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private EditText editTextEmail;
     private EditText editTextPassword;
     private Button buttonLogin;
+    private Button buttonLoginBypass;
+    private Button buttonTest;
     private TextView textRegisterHere;
     private TextView textForgotPassword;
     private String email;
@@ -48,9 +57,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        buttonLoginBypass = (Button) findViewById(R.id.buttonLoginBypass);
+        buttonTest = (Button) findViewById(R.id.buttonTest);
         textRegisterHere = (TextView) findViewById(R.id.textRegisterHere);
         textForgotPassword = (TextView) findViewById(R.id.textForgotPassword);
         buttonLogin.setOnClickListener(this);
+        buttonLoginBypass.setOnClickListener(this);
+        buttonTest.setOnClickListener(this);
         textRegisterHere.setOnClickListener(this);
         textForgotPassword.setOnClickListener(this);
         AWSHelper.init(this);
@@ -58,18 +71,26 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v == buttonLogin) {
-            userLogin();
+            userLogin(false);
+        }
+
+        if (v == buttonLoginBypass) {
+            userLogin(true);
+        }
+
+        if (v == buttonTest) {
+            test();
         }
 
         if (v == textRegisterHere) {
             startActivity(new Intent(this, RegisterActivity.class));
         }
+
         if (v == textForgotPassword) {
             //Not working yet
             //forgotPassword();
         }
     }
-
 
     private void forgotPassword() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -144,14 +165,24 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
         user.forgotPassword(handler);
     }
+
     /*
     * Authenticate user's credentials and either display error message that user does not exist
     * or startActivity and allow user to enter app
+    *
+    * The bypass field will bypass the login. This is a TEMPORARY measure while we switch backends.
     */
-    private void userLogin() {
+    private void userLogin(boolean bypass) {
+
+        if (bypass) {
+            Toast.makeText(getApplicationContext(), "You logged in!", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        }
 
         email = editTextEmail.getText().toString().trim().toLowerCase();
         password = editTextPassword.getText().toString().trim();;
+
+
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(this, "Please enter your e-mail", Toast.LENGTH_LONG).show();
             return;
@@ -222,5 +253,29 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         CognitoUser user = AWSHelper.getPool().getUser();
         //Get Session fills user object with all its details
         user.getSessionInBackground(authenticationHandler);
+    }
+
+    /**
+     * This is a temporary function to quickly perform test tasks from the login screen.
+     */
+    private void test() {
+        System.out.println("test running");
+        ConnectToDB.createTrainerSession(
+            "asdf",
+            0,
+            0,
+            new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Log.d(TAG, "Trainer session successfully created.");
+                }
+            },
+            new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.w(TAG, "Error creating trainer session", e);
+                }
+            }
+        );
     }
 }

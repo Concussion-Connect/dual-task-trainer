@@ -1,20 +1,37 @@
 package com.github.concussionconnect.Model;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Map;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by unkadi on 11/28/17.
+ *
+ * 7 November 2020
+ * Some functions in this file use a Firebase instance managed by VIP BTAP (Brain Trauma Assessment Protocol).
+ * This deviates from dual-task-trainer's use of AWS. The end goal is complete migration to Firebase.
  */
 
 public class ConnectToDB {
 
     private static String USER_AGENT = "Mozilla/5.0";
+    private static FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     // HTTP GET request
     public static JSONObject sendGetRequest(String function, Map<String, Object> params) throws Exception {
@@ -31,6 +48,8 @@ public class ConnectToDB {
             }
         }
         url += getArgs;
+
+        System.out.println(url);
 
         try {
             URL obj = new URL(url);
@@ -71,6 +90,7 @@ public class ConnectToDB {
             return new JSONObject();
         }
     }
+
     public static JSONObject sendPostRequest(String function, Map<String, Object> params) throws Exception {
 
         String url = "https://6zcq2enida.execute-api.us-east-1.amazonaws.com/prod/";
@@ -124,5 +144,53 @@ public class ConnectToDB {
             return new JSONObject();
         }
 
+    }
+
+    // Creates a trainer session to indicate an in-progress trial.
+    // To view how to consume the success and failure callbacks, see https://firebase.google.com/docs/firestore/manage-data/add-data#java_12
+    // Note that this success callback returns Void, and not DocumentReference
+    public static void createTrainerSession(
+        String id,
+        int wordList,
+        int currentTrial,
+        OnSuccessListener<Void> successCallback,
+        OnFailureListener failureCallback
+    ) {
+        // Create a new user with a first and last name
+        Map<String, Object> dataToSave = new HashMap<>();
+        dataToSave.put("wordList", wordList);
+        dataToSave.put("currentTrial", currentTrial);
+
+        // Add a new document with a generated ID
+        db.collection("sessions")
+            .document(id)
+            .set(dataToSave)
+            .addOnSuccessListener(successCallback)
+            .addOnFailureListener(failureCallback);
+    }
+
+    public static void updateTrainerSessionTrial(
+        String id,
+        int currentTrial,
+        OnSuccessListener<Void> successCallback,
+        OnFailureListener failureCallback
+    ) {
+        // Set the "isCapital" field of the city 'DC'
+        db.collection("sessions").document(id)
+            .update("currentTrial", currentTrial)
+            .addOnSuccessListener(successCallback)
+            .addOnFailureListener(failureCallback);
+    }
+
+    public static void deleteTrainerSession(
+        String id,
+        OnSuccessListener<Void> successCallback,
+        OnFailureListener failureCallback
+    ) {
+        // Set the "isCapital" field of the city 'DC'
+        db.collection("sessions").document(id)
+            .delete()
+            .addOnSuccessListener(successCallback)
+            .addOnFailureListener(failureCallback);
     }
 }

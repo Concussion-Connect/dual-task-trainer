@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "334885809125",
+    "firebase_url": "https://concussion-connect.firebaseio.com",
+    "project_id": "concussion-connect",
+    "storage_bucket": "concussion-connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334885809125:android:4e3249b17afc526a8f9d0c",
+        "android_client_info": {
+          "package_name": "com.github.concussionconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334885809125-crtd4cp41p6k5ileo3mn8kp1tci6mj5d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXhK7H0Lcar7NSYjFxJcUSJpUUv1KLNNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334885809125-crtd4cp41p6k5ileo3mn8kp1tci6mj5d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
