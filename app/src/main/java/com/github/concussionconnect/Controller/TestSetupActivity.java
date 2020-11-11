@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.util.Random;
 
 import com.github.concussionconnect.R;
 
@@ -40,14 +43,35 @@ public class TestSetupActivity extends Activity implements View.OnClickListener 
         if (v == nextButton) {
             Intent i = new Intent(this, SymptomsActivity.class);
             Bundle bundle = new Bundle();
-            String listAnswer = "memory_word_list_" + (wordListSpinner.getSelectedItemPosition() + 1);
+            int wordListNumber = wordListSpinner.getSelectedItemPosition() + 1;
+            String listAnswer = "memory_word_list_" + wordListNumber;
             int id = getResources().getIdentifier(listAnswer, "array", getPackageName());
             bundle.putInt("listId", id);
             String playerInfo = rosterSpinner.getSelectedItem().toString();
             bundle.putString("playerInfo", playerInfo);
+
+            //put id into database
+            String adminId = createID();
+            bundle.putString("ID", adminId);
+            //Toast.makeText(this, "Your ID is " + adminId + ". Put this code into the VR App", Toast.LENGTH_LONG).show();
+
+            //createTrainerSession(adminId, wordListNumber, 0);
+
             i.putExtras(bundle);
+
+
             startActivity(i);
         }
+    }
+
+    public String createID() {
+        Random rand = new Random();
+        String id = "";
+        for (int i = 0; i < 6; i++) {
+            int rand_int = rand.nextInt(9);
+            id += rand_int;
+        }
+        return id;
     }
 
 

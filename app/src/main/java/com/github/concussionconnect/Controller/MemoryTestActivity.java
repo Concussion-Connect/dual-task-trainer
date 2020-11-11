@@ -26,6 +26,7 @@ public class MemoryTestActivity extends Activity implements View.OnClickListener
     private EditText errorNumText;
     ChecklistAdapter checklistAdapter;
     Bundle bundle;
+    //updateTrainerSessionTrial(2);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

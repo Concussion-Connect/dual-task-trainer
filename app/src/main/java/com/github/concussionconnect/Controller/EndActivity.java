@@ -74,6 +74,8 @@ public class EndActivity extends Activity implements View.OnClickListener {
         map.put("TRIAL3TANDEMLEGERRORS", bundle.getInt("tandemLegErrors"));
         displayResults.append("Long Term Memory Score: " + bundle.getInt("longMemScore") +"\n");
         map.put("TRIAL4MEMORYSCORE", bundle.getInt("longMemScore"));
+        String id = bundle.getString("ID");
+        //deleteTrainerSession(id);
     }
 
     @Override

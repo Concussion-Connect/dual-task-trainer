@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ListView;
+//import java.util.Random;
 
 import com.github.concussionconnect.Model.ChecklistAdapter;
 import com.github.concussionconnect.Model.ChecklistModel;
@@ -42,6 +43,7 @@ public class LongMemoryActivity extends Activity implements View.OnClickListener
         wordList = ChecklistModel.getChecklistArray(selectedWords);
         checklistAdapter = new ChecklistAdapter(wordList, this);
         listView.setAdapter(checklistAdapter);
+        //updateTrainerSessionTrial(4);
     }
     @Override
     public void onClick(View v) {

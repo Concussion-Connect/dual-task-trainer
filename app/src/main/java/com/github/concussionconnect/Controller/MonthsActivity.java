@@ -50,6 +50,7 @@ public class MonthsActivity extends Activity implements View.OnClickListener{
         wordList = ChecklistModel.getChecklistArray(getResources().getStringArray(R.array.months_in_reverse));
         checklistAdapter = new ChecklistAdapter(wordList, this);
         listView.setAdapter(checklistAdapter);
+        //updateTrainerSessionTrial(3);
 
     }
 

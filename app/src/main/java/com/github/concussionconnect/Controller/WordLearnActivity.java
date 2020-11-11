@@ -28,6 +28,7 @@ public class WordLearnActivity extends Activity implements View.OnClickListener 
         plusButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
         bundle = getIntent().getExtras();
+        //updateTrainerSessionTrial(1);
     }
 
     @Override
