@@ -3,12 +3,19 @@ package com.github.concussionconnect.Controller;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import com.github.concussionconnect.Model.ConnectToDB;
+import androidx.annotation.NonNull;
 
 import com.github.concussionconnect.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+import static android.content.ContentValues.TAG;
 
 public class WordLearnActivity extends Activity implements View.OnClickListener {
     private ImageButton minusButton;
@@ -29,6 +36,21 @@ public class WordLearnActivity extends Activity implements View.OnClickListener 
         nextButton.setOnClickListener(this);
         bundle = getIntent().getExtras();
         //updateTrainerSessionTrial(1);
+        String adminId = bundle.getString("ID");
+        ConnectToDB.updateTrainerSessionTrial(adminId, 1,
+                new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "Trainer session trial updated!");
+                    }
+                },
+                new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error updating trainer session trial", e);
+                    }
+                }
+        );
     }
 
     @Override
