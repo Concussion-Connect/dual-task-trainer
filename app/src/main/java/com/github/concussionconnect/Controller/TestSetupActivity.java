@@ -85,7 +85,6 @@ public class TestSetupActivity extends Activity implements View.OnClickListener 
                                         toast.setView(layout);
                                         toast.show();
                                         //end added
-
                                         Log.d(TAG, "Trainer session created!");
                                     }
                                 },
