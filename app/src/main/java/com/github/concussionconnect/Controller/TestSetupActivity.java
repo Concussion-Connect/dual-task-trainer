@@ -4,10 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -65,7 +69,23 @@ public class TestSetupActivity extends Activity implements View.OnClickListener 
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         beginTest(adminId);
-                                        Toast.makeText(getApplicationContext(), "Your ID is " + adminId + ". Put this code into the VR App", Toast.LENGTH_LONG).show();
+                                        //Toast.makeText(getApplicationContext(), "Your ID is " + adminId + ". Put this code into the VR App", Toast.LENGTH_LONG).show();
+
+                                        //added
+                                        LayoutInflater inflater = getLayoutInflater();
+                                        View layout = inflater.inflate(R.layout.custom_toast,
+                                                (ViewGroup) findViewById(R.id.custom_toast_container));
+
+                                        TextView text = (TextView) layout.findViewById(R.id.text);
+                                        text.setText("Your ID is " + adminId + ". Put this code into the VR App");
+
+                                        Toast toast = new Toast(getApplicationContext());
+                                        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                                        toast.setDuration(Toast.LENGTH_LONG);
+                                        toast.setView(layout);
+                                        toast.show();
+                                        //end added
+
                                         Log.d(TAG, "Trainer session created!");
                                     }
                                 },
