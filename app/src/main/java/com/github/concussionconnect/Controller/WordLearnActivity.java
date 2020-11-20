@@ -35,7 +35,6 @@ public class WordLearnActivity extends Activity implements View.OnClickListener 
         plusButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
         bundle = getIntent().getExtras();
-        //updateTrainerSessionTrial(1);
         String adminId = bundle.getString("ID");
         ConnectToDB.updateTrainerSessionTrial(adminId, 1,
                 new OnSuccessListener<Void>() {

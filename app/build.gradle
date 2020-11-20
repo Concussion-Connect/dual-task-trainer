@@ -45,4 +45,6 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:26.0.0')
     // When using the BoM, you don't specify versions for other Firebase dependencies
     implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-auth'
+
 }
