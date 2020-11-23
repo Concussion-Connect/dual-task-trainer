@@ -6,7 +6,9 @@ import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.json.JSONObject;
@@ -17,6 +19,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import static android.content.ContentValues.TAG;
 
@@ -146,8 +154,18 @@ public class ConnectToDB {
 
     }
 
+    public static void getSessionReference(
+        String id,
+        OnSuccessListener<DocumentSnapshot> successCallback,
+        OnFailureListener failureCallback
+    ) {
+        db.collection("sessions").document(id).get()
+            .addOnSuccessListener(successCallback)
+            .addOnFailureListener(failureCallback);
+    }
+
     // Creates a trainer session to indicate an in-progress trial.
-    // To view how to consume the success and failure callbacks, see https://firebase.google.com/docs/firestore/manage-data/add-data#java_12
+    // If this trainer session already exists, it will be overridden -- beware!
     // Note that this success callback returns Void, and not DocumentReference
     public static void createTrainerSession(
         String id,

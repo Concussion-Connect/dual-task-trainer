@@ -3,3 +3,5 @@
 build/
 concussionConnect.iml
 app/app.iml
+# Android Studio
+*.iml

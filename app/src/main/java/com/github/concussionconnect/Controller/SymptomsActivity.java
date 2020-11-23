@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.github.concussionconnect.Model.SymptomAdapter;
 import com.github.concussionconnect.Model.SymptomModel;
+import com.github.concussionconnect.Model.ConnectToDB;
 import com.github.concussionconnect.R;
 
 import java.util.ArrayList;

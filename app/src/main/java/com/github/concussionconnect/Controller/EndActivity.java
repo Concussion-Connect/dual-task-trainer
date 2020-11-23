@@ -9,9 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.github.concussionconnect.Model.ConnectToDB;
 import com.github.concussionconnect.Model.SymptomModel;
 import com.github.concussionconnect.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import org.json.JSONObject;
 
@@ -20,6 +24,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static android.content.ContentValues.TAG;
 
 public class EndActivity extends Activity implements View.OnClickListener {
     private Button cancelButton;
@@ -74,6 +80,23 @@ public class EndActivity extends Activity implements View.OnClickListener {
         map.put("TRIAL3TANDEMLEGERRORS", bundle.getInt("tandemLegErrors"));
         displayResults.append("Long Term Memory Score: " + bundle.getInt("longMemScore") +"\n");
         map.put("TRIAL4MEMORYSCORE", bundle.getInt("longMemScore"));
+        String id = bundle.getString("ID");
+        String adminId = bundle.getString("ID");
+        ConnectToDB.deleteTrainerSession(adminId,
+                new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "Trainer session deleted!");
+                    }
+                },
+                new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error deleting trainer session", e);
+                    }
+                }
+        );
+        //deleteTrainerSession(id);
     }
 
     @Override
