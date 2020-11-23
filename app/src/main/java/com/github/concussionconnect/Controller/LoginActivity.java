@@ -16,22 +16,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoDevice;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUser;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserCodeDeliveryDetails;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserSession;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.AuthenticationContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.AuthenticationDetails;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.ChallengeContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.ForgotPasswordContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.MultiFactorAuthenticationContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.AuthenticationHandler;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.ForgotPasswordHandler;
-import com.github.concussionconnect.Model.AWSHelper;
 import com.github.concussionconnect.Model.ConnectToDB;
 import com.github.concussionconnect.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import static android.content.ContentValues.TAG;
 
@@ -49,10 +42,24 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private TextView textForgotPassword;
     private String email;
     private String password;
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if (currentUser != null) {
+//            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            System.out.println("FIREBASE USER CHECK");
+            System.out.println(currentUser != null ? "Logged in" : "Logged out");
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -66,8 +73,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         buttonTest.setOnClickListener(this);
         textRegisterHere.setOnClickListener(this);
         textForgotPassword.setOnClickListener(this);
-        AWSHelper.init(this);
     }
+
     @Override
     public void onClick(View v) {
         if (v == buttonLogin) {
@@ -87,11 +94,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         }
 
         if (v == textForgotPassword) {
-            //Not working yet
-            //forgotPassword();
+            showMessageDialog("Forgotten password recovery is not supported yet, but you can change your password in the Firebase backend. Ask an adminstrator for access.");
         }
     }
 
+    /**
+     * CURRENTLY UNUSED
+     */
     private void forgotPassword() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Please enter your email");
@@ -120,50 +129,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         builder.show();
     }
 
+    /**
+     * CURRENTLY UNUSED
+     */
     private void sendCode(String emailKey) {
-        CognitoUser user = AWSHelper.getPool().getUser(emailKey);
-        ForgotPasswordHandler handler = new ForgotPasswordHandler() {
-            @Override
-            public void onSuccess() {
-                Toast.makeText(getApplicationContext(), "New Password Created", Toast.LENGTH_SHORT).show();
-                // Forgot password process completed successfully, new password has been successfully set
 
-            }
-
-            @Override
-            public void getResetCode(ForgotPasswordContinuation continuation) {
-                // A code will be sent, use the "continuation" object to continue with the forgot password process
-
-                // This will indicate where the code was sent
-                CognitoUserCodeDeliveryDetails codeSentHere = continuation.getParameters();
-
-                // Code to get the code from the user - user dialogs etc.
-
-                // If the program control has to exit this method, take the "continuation" object.
-                // "continuation" is the only possible way to continue with the process
-
-
-
-                // When the code is available
-
-                // Set the new password
-                continuation.setPassword("NOTWORKING");
-
-                // Set the code to verify
-                continuation.setVerificationCode("12345");
-
-                // Let the forgot password process proceed
-                continuation.continueTask();
-
-            }
-
-            public void onFailure(Exception e) {
-                // Forgot password processing failed, probe the exception for cause
-                Log.wtf("failTag", e.getMessage());
-            }
-        };
-
-        user.forgotPassword(handler);
     }
 
     /*
@@ -182,7 +152,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         email = editTextEmail.getText().toString().trim().toLowerCase();
         password = editTextPassword.getText().toString().trim();;
 
-
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(this, "Please enter your e-mail", Toast.LENGTH_LONG).show();
             return;
@@ -195,67 +164,23 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             Toast.makeText(this, "Password must be 6 characters or more", Toast.LENGTH_LONG).show();
             return;
         }
-        if (email.equals("neethu.bipin@yahoo.com") && password.equals("blacky99")) {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-        }
 
-//        Callback handler for the sign-in process
-        AuthenticationHandler authenticationHandler = new AuthenticationHandler() {
-
-            @Override
-            public void onSuccess(CognitoUserSession cognitoUserSession, CognitoDevice device) {
-                // Sign-in was successful, cognitoUserSession will contain tokens for the user
-                Toast.makeText(getApplicationContext(), "You logged in!", Toast.LENGTH_LONG).show();
-                AWSHelper.setCurrSession(cognitoUserSession);
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            }
-
-            @Override
-            public void getAuthenticationDetails(AuthenticationContinuation authenticationContinuation, String userId) {
-                // The API needs user sign-in credentials to continue
-                AWSHelper.setUsername(email);
-                AuthenticationDetails authenticationDetails = new AuthenticationDetails(email, password, null);
-
-                // Pass the user sign-in credentials to the continuation
-                authenticationContinuation.setAuthenticationDetails(authenticationDetails);
-
-                // Allow the sign-in to continue
-                authenticationContinuation.continueTask();
-            }
-
-            @Override
-            public void getMFACode(MultiFactorAuthenticationContinuation multiFactorAuthenticationContinuation) {
-//                This app will not be using MFA right now...
-//                Multi-factor authentication is required; get the verification code from user
-//                multiFactorAuthenticationContinuation.setMfaCode(mfaVerificationCode);
-//                Allow the sign-in process to continue
-//                multiFactorAuthenticationContinuation.continueTask();
-            }
-
-            @Override
-            public void onFailure(Exception exception) {
-                // Sign-in failed, check exception for the cause
-                if (exception.getMessage().contains("UserNotFoundException")) {
-                    Toast.makeText(getApplicationContext(), "Account was not found", Toast.LENGTH_SHORT).show();
-                } else if (exception.getMessage().contains("NotAuthorizedException")) {
-                    Toast.makeText(getApplicationContext(), "Incorrect Password", Toast.LENGTH_SHORT).show();
-                } else if (exception.getMessage().contains("UserNotConfirmedException")) {
-                    Toast.makeText(getApplicationContext(), "Your account is not yet confirmed", Toast.LENGTH_SHORT).show();
-                } else {
-                    Log.wtf("what", exception.getMessage());
-                }
-
-            }
-            @Override
-            public void authenticationChallenge(ChallengeContinuation challenge) {
-                //Nothing
-            }
-        };
-
-        // Create an empty user instance of this specific pool
-        CognitoUser user = AWSHelper.getPool().getUser();
-        //Get Session fills user object with all its details
-        user.getSessionInBackground(authenticationHandler);
+        auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success
+                            Toast.makeText(getApplicationContext(), "You logged in!", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(LoginActivity.this, "Authentication failed: " + task.getException().getMessage(),
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
     }
 
     /**
@@ -280,5 +205,20 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 }
             }
         );
+    }
+
+    private void showMessageDialog(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setMessage(message);
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
     }
 }

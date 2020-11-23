@@ -151,17 +151,13 @@ public class EndActivity extends Activity implements View.OnClickListener {
     private class DBConnector extends AsyncTask<Void, Void, String> {
         protected String doInBackground(Void... params) {
             try {
-                JSONObject array = ConnectToDB.sendPostRequest("postTestResults", map);
+                ConnectToDB.saveTestResult(map);
                 return "EXECUTED";
 
             } catch (Exception e) {
                 Log.wtf("MyTag", e.getMessage());
                 return "FAILURE";
             }
-        }
-
-        protected void onProgressUpdate(Integer... progress) {
-//            setProgressPercent(progress[0]);
         }
 
         protected void onPostExecute(String result) {

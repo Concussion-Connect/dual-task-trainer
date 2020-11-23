@@ -11,13 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUser;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserAttributes;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserCodeDeliveryDetails;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserPool;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.SignUpHandler;
-import com.github.concussionconnect.Model.AWSHelper;
+import androidx.annotation.NonNull;
+
 import com.github.concussionconnect.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends Activity implements View.OnClickListener {
 
@@ -29,6 +29,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     private Button buttonRegister;
     private String email;
     private String password;
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,6 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         buttonRegister.setOnClickListener(this);
         textLoginHere.setOnClickListener(this);
-        AWSHelper.init(this);
     }
 
     public void userRegister() {
@@ -72,43 +73,27 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
             Toast.makeText(getApplicationContext(), "Password length must be 6 or greater", Toast.LENGTH_LONG).show();
             return;
         }
-        CognitoUserPool userPool = AWSHelper.getPool();
-        CognitoUserAttributes userAttributes = new CognitoUserAttributes();
-        //Player key primary key hashcode, Given Name, Last Name, Birthdate
-        userAttributes.addAttribute("given_name", givenName);
-        userAttributes.addAttribute("family_name", familyName);
-        userAttributes.addAttribute("email", email);
-        SignUpHandler signupCallback = new SignUpHandler() {
-            @Override
-            public void onSuccess(CognitoUser cognitoUser, boolean userConfirmed, CognitoUserCodeDeliveryDetails cognitoUserCodeDeliveryDetails) {
-                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-                AWSHelper.setUser(cognitoUser);
-                if(!userConfirmed) {
 
-                    startActivity(new Intent(getApplicationContext(), AwaitConfirmationActivity.class));
-                }
-                else {
-                    // This means the user has already been confirmed
-                    //This will never happen because the administrator will be confirming users
-                    Toast.makeText(getApplicationContext(), "This user already exists. Please Login", Toast.LENGTH_LONG).show();
-                }
+        // First and last name are currently unused
 
-            }
-
-            @Override
-            public void onFailure(Exception exception) {
-                // Sign-up failed, check exception for the cause
-                Log.wtf("myWTFTag", exception.getMessage());
-                if (exception.getMessage().contains("UsernameExistsException")) {
-                    Toast.makeText(getApplicationContext(), "E-mail already found", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(getApplicationContext(), "Registration Unsuccessful", Toast.LENGTH_LONG).show();
-                }
-            }
-        };
-        userPool.signUpInBackground(email, password, userAttributes, null, signupCallback);
+        auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(getApplicationContext(), AwaitConfirmationActivity.class));
+                        } else {
+                            // Sign-up failed, display exception
+                            String message = task.getException().getMessage();
+                            Log.wtf("sign up failed", message);
+                            Toast.makeText(getApplicationContext(), "An error occurred: " + message, Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
 
     }
+
     @Override
     public void onClick(View v) {
         if (v == buttonRegister) {

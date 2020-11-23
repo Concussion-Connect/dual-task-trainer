@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,31 +24,23 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 
-
-import java.util.ArrayList;
-
 import static android.content.ContentValues.TAG;
 
 public class TestSetupActivity extends Activity implements View.OnClickListener {
-    private Spinner rosterSpinner;
+    private EditText personNameEditText;
     private Spinner wordListSpinner;
     private Button nextButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_setup);
-        rosterSpinner = (Spinner) findViewById(R.id.rosterSpinner);
+        personNameEditText = (EditText) findViewById(R.id.personNameEditText);
         wordListSpinner = (Spinner) findViewById(R.id.wordListSpinner);
         nextButton = (Button) findViewById(R.id.nextButton);
         ArrayAdapter<CharSequence> wordListAdapter = ArrayAdapter.createFromResource(this, R.array.wordBankSelector, android.R.layout.simple_spinner_item);
         wordListAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         wordListSpinner.setAdapter(wordListAdapter);
         nextButton.setOnClickListener(this);
-        Bundle playerListBundle = getIntent().getExtras();
-        ArrayList<String> playerList = playerListBundle.getStringArrayList("roster");
-        ArrayAdapter<String> rosterAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, playerList);
-        rosterSpinner.setAdapter(rosterAdapter);
-
 
     }
     @Override
@@ -85,7 +78,6 @@ public class TestSetupActivity extends Activity implements View.OnClickListener 
                                         toast.setView(layout);
                                         toast.show();
                                         //end added
-
                                         Log.d(TAG, "Trainer session created!");
                                     }
                                 },
@@ -118,7 +110,7 @@ public class TestSetupActivity extends Activity implements View.OnClickListener 
         String listAnswer = "memory_word_list_" + wordListNumber;
         int id = getResources().getIdentifier(listAnswer, "array", getPackageName());
         bundle.putInt("listId", id);
-        String playerInfo = rosterSpinner.getSelectedItem().toString();
+        String playerInfo = personNameEditText.getText().toString().trim();
         bundle.putString("playerInfo", playerInfo);
 
         i.putExtras(bundle);

@@ -74,8 +74,6 @@ public class MonthsActivity extends Activity implements View.OnClickListener{
                     }
                 }
         );
-
-
     }
 
     @Override
