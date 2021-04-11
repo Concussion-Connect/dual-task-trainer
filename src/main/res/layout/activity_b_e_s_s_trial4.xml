@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.concussionconnect.Controller.WordLearnActivity"
+    android:weightSum="1">
+
+
+    <Button
+        android:id="@+id/FinishBESS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="37dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="Finish Assessment" />
+
+    <ImageButton
+        android:id="@+id/plusBESS4"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignTop="@+id/minusBESS4"
+        android:layout_alignEnd="@+id/textView140"
+        android:layout_alignRight="@+id/textView140"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:adjustViewBounds="true"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/plusbutton" />
+
+    <ImageButton
+        android:id="@+id/minusBESS4"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_above="@+id/FinishBESS"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="80dp"
+        android:adjustViewBounds="true"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/minusbutton" />
+
+    <EditText
+        android:id="@+id/errorText4"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/plusBESS4"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:ems="10"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="false"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView139"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Errors"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/textView140"
+        android:layout_alignBottom="@+id/textView140"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp" />
+
+    <TextView
+        android:id="@+id/textView140"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/plusBESS4"
+        android:layout_alignStart="@+id/minusBESS4"
+        android:layout_alignLeft="@+id/minusBESS4"
+        android:layout_marginBottom="22dp"
+        android:text="Tandem Position"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView141"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:text="User stands in tandem position for 20 seconds.\                  Monitor their balance!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textView142"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView140"
+        android:layout_toRightOf="@+id/textView140"
+        android:text="Trial 4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

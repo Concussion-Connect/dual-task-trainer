@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consent Form For Enrolling Adult Participants in a Research Study"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Investigators: Dr.Michelle LaPlaca"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:text="Krishna Patel"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:text="Helena Makendengue"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Protocol and Consent Title: Evaluation of a Balance and Cognitive Dual-Task in College Students; 07/08/19v3"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="100dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Dual Task Assessment Tool used in this research project is for investigational purposes  only and has not been approved for the intended use by the FDA."
+            android:textColor="@android:color/black"
+            android:layout_marginTop="45dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:text="@string/purpose"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="45dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The purpose of this study is to evaluate a new assessment tool for concussion called  Dual-Task which combines balance and cognitive (memory) testing using a virtual reality (VR)  system."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/ExclusionInclusion"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Participants in this study must be within the ages of 18 and 29 years old.  Subjects can be of either sex. The target population is college students. Subjects must be physically  active (at least 30 minutes of exercise, 3 times of week). Subjects cannot have had a concussion or  concussive-like symptoms in the past 6 months. Eligible subjects must be able to stand and walk with  no complaints of dizziness or imbalance. Subjects are excluded if they have a history of any of the  following: seizure disorder, claustrophobia (fear of tight spaces), peripheral neuropathy (weakness,  numbness, and pain from nerve damage), lower extremity orthopedic problems that prevent standing  or walking. Subjects are excluded if they have any drug or alcohol use within the previous 12 hours.  Participants also cannot currently be under the care of a doctor for these or any related conditions that  may cause an issue where individuals have trouble remembering, learning, concentrating, or making  everyday decisions. "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/Procedures"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We expect to enroll 40 college-aged individuals in this study. If you decide to be  in this study, your part will involve one visit. During the visit, which will take approximately 35  minutes, you will complete a brief medical history questionnaire and a pre-simulator sickness  questionnaire (SSQ). This will be followed by a balance test (modified balance error scoring  system, BESS) and a memory test (modified sports concussion assessment tool, SCAT) both  with a VR headset. Then Dual-Task (balance and memory tests together) will be tested  followed by a post-SSQ. After that, you will take a 10-minute break while wearing either  control goggles or concussion (i.e. vision distortion) goggles and playing a cup stacking game.  You will then take another Dual-Task and another post-SSQ. All instructions for the BESS,  SCAT, and Dual-Task will be given in the VR headset. Each VR session (4 in total) will take 2  minutes, for a total of 8 minutes of VR time. Remember, you may stop at any time. "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/risksOrDiscomforts"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The following risks or discomforts may occur as a result of your  participation in this study. Due to the VR environment, testing may cause physical or  emotional discomfort to some participants with claustrophobia. Other potential risks include  fatigue (extreme tiredness), eyestrain, and motion sickness. You can stop testing and remove  the device at any time during the study. During balance testing, there is a risk of fall. We will  follow safety procedures similar to a clinical assessment or physical therapy. If you lose  balance during the assessment, we are guarding you to prevent a fall. If fatigue arises during  the VR sessions, you may take as much rest as requested. "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/benefits"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="There are no direct benefits to you. The target population for eventual use of this test is  young adults (high school and college aged people), both athletes and non-athletes. Your participation  in this study may benefit people in the future."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/compensation"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="40dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You will be compensated $10 for your time and effort. This $10 will be presented in the  form of a Starbucks gift card. Once you are enrolled in the study, you will be compensated."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/storingInfo"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView51"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your participation in this study is gratefully acknowledged. It is  possible that your information/data will be enormously valuable for other research purposes. By  signing below, you consent for your de-identified information/data to be stored by the researchers and  to be shared with other researchers in future studies. If you agree to allow such future sharing and  use, your identity will be completely separated from your information/data, and none of this  information be used for commercial profit. Future researchers will not have a way to identify you. Any  future research must be approved by an ethics committee before being undertaken. "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/photUse"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" There will be no photographs, audio, or video  recording taken of you during any point of the study."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/confidentiality"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The following procedures will be followed to keep your personal information  confidential in this study. Your privacy will be protected to the extent required by law. To protect your  privacy, your records will be kept under a code number rather than by name. Your records will be kept  in locked files. Unless you give specific consent otherwise, only study staff will be allowed to look at  them. If your data is wished to be used for future research, an ethics committee’s approval will be  required before proceeding. Your name and any other fact that might point to you will not appear  when results of this study are presented or published. The Georgia Institute of Technology IRB, the  Office of Human Research Protections, and/or the Food and Drug Administration may look over study  records during required reviews. "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView56"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/costs"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="There are no costs to you, other than your time, for being in this study."
+            android:textColor="@android:color/black"
+            tools:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/questions"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/questionsDescription"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/yourRights"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="● Your participation in this study is voluntary. You do not have to be in this study if you don't  want to be. "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="● You have the right to change your mind and leave the study at any time without giving any  reason and without penalty. "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:id="@+id/textView64"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="● Any new information that may make you change your mind about being in this study will be  given to you."
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView65"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="● You will be given a copy of this consent form to keep. "
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView66"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="● You do not waive any of your legal rights by signing this consent form."
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/backToKeyInfo"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/clickToSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Click to Sign" />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
