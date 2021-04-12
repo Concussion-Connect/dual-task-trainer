@@ -38,6 +38,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private Button buttonLogin;
     private TextView textRegisterHere;
     private TextView textForgotPassword;
+    private Button researchAppButton;
     private String email;
     private String password;
     private FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -62,8 +63,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        researchAppButton = (Button) findViewById(R.id.researchAppButton);
         textRegisterHere = (TextView) findViewById(R.id.textRegisterHere);
         textForgotPassword = (TextView) findViewById(R.id.textForgotPassword);
+        researchAppButton.setOnClickListener(this);
         buttonLogin.setOnClickListener(this);
         textRegisterHere.setOnClickListener(this);
         textForgotPassword.setOnClickListener(this);
@@ -81,6 +84,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
         if (v == textForgotPassword) {
             showMessageDialog("Forgotten password recovery is not supported yet, but you can change your password in the Firebase backend. Ask an adminstrator for access.");
+        }
+
+        if(v == researchAppButton) {
+            //startActivity(new Intent(this, ResearchSymptomsActivity.class));
+            startActivity(new Intent(this, ConsentDescriptionActivity.class));
+            //Toast.makeText(this, "Please enter your e-mail", Toast.LENGTH_LONG).show();
         }
     }
 

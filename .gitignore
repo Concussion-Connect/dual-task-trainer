@@ -4,5 +4,6 @@ build/
 app/app.iml
 concussionConnect.iml
 local.properties
+.DS_Store
 # Android Studio
 *.iml
