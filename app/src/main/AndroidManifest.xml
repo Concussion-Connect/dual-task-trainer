@@ -13,7 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.EndBESSActivity"></activity>
+        <activity android:name=".Controller.EndSCATActivity"></activity>
+        <activity android:name=".Controller.SCATTrial4Activity" />
+        <activity android:name=".Controller.SCATTrial3Activity" />
+        <activity android:name=".Controller.SCATTrial2Activity" />
+        <activity android:name=".Controller.SCATTrial1Activity" />
+        <activity android:name=".Controller.EndBESSActivity" />
         <activity android:name=".Controller.BESSTrial4Activity" />
         <activity android:name=".Controller.BESSTrial3Activity" />
         <activity android:name=".Controller.BESSTrial2Activity" />

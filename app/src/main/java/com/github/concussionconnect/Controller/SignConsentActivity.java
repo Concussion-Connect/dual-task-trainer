@@ -28,7 +28,6 @@ public class SignConsentActivity extends Activity implements View.OnClickListene
         participantName.setOnClickListener(this);
         backToConsentInfo.setOnClickListener(this);
         nextToQuestionnaire.setOnClickListener(this);
-        bundle = new Bundle();
         bundle = getIntent().getExtras();
 
     }
@@ -36,19 +35,23 @@ public class SignConsentActivity extends Activity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if(v == backToConsentInfo) {
+            Intent intent = new Intent(this, ConsentFormActivity.class);
             if(participantName.getText().length() != 0) {
                 String name = participantName.getText().toString();
                 bundle.putString("participantName", name);
             }
-            startActivity(new Intent(this, ConsentFormActivity.class).putExtras(bundle));
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
 
         if(v == nextToQuestionnaire) {
+            Intent intent = new Intent(this, ScreeningQuestionnairePart1.class);
             if(participantName.getText().length() != 0) {
                 String name = participantName.getText().toString();
                 bundle.putString("participantName", name);
             }
-            startActivity(new Intent(this, ScreeningQuestionnairePart1.class));
+            intent.putExtras(bundle);
+            startActivity(intent);
 
         }
     }

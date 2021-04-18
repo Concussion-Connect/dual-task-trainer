@@ -43,7 +43,9 @@ public class OpeningPageForTests extends Activity implements View.OnClickListene
         if(v == BESS) {
             if(!BESS.isChecked()) {
                 BESS.setChecked(true);
-                startActivity(new Intent(this, BESSTrial1Activity.class));
+                Intent intent = new Intent(this, BESSTrial1Activity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             } else {
                 BESS.setChecked(false);
             }
@@ -53,6 +55,9 @@ public class OpeningPageForTests extends Activity implements View.OnClickListene
         if(v == SCAT) {
             if(!SCAT.isChecked()) {
                 SCAT.setChecked(true);
+                Intent intent = new Intent(this, SCATTrial1Activity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         }
 

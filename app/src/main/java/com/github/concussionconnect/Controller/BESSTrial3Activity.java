@@ -22,12 +22,15 @@ public class BESSTrial3Activity extends Activity implements View.OnClickListener
 
         nextButton = (Button) findViewById(R.id.nextFromTrial3BESS);
         nextButton.setOnClickListener(this);
-
+        bundle = getIntent().getExtras();
     }
 
     public void onClick(View v) {
         if(v == nextButton) {
-            startActivity(new Intent(this, BESSTrial4Activity.class));
+            Intent intent = new Intent(this, BESSTrial4Activity.class);
+            bundle.putString("BESSTrial3Errors","Pause 20 seconds");
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     }
 }

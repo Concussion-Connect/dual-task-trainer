@@ -14,6 +14,7 @@ import com.github.concussionconnect.R;
 public class ScreeningQuestionnairePart1 extends Activity implements View.OnClickListener {
     private Button back;
     private Button next;
+    private Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +27,20 @@ public class ScreeningQuestionnairePart1 extends Activity implements View.OnClic
         back.setOnClickListener(this);
         next.setOnClickListener(this);
 
+        bundle = getIntent().getExtras();
     }
 
     public void onClick(View v) {
         if(v == back) {
-            startActivity(new Intent(this, SignConsentActivity.class));
+            Intent intent = new Intent(this, SignConsentActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
 
         if(v == next) {
-            startActivity(new  Intent(this, ScreeningQuestionnairePart2.class));
+            Intent intent = new Intent(this, ScreeningQuestionnairePart2.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     }
 }

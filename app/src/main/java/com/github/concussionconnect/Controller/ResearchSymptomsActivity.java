@@ -21,7 +21,7 @@ public class ResearchSymptomsActivity extends Activity implements View.OnClickLi
     private Button next;
     private ListView viewList;
     SymptomAdapter sympAdapt;
-    Bundle bundle1;
+    Bundle bundle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +32,14 @@ public class ResearchSymptomsActivity extends Activity implements View.OnClickLi
         viewList = (ListView) findViewById(R.id.listView2);
         sympAdapt = new SymptomAdapter(symptomList, this);
         viewList.setAdapter(sympAdapt);
-
+        bundle = getIntent().getExtras();
     }
     @Override
     public void onClick(View v) {
         if(v == next) {
-            startActivity(new Intent(this, OpeningPageForTests.class));
+            Intent intent = new Intent(this, OpeningPageForTests.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     }
 

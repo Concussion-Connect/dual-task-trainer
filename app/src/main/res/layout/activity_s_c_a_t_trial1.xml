@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Controller.BESSTrial3Activity">
+
+
+    <TextView
+        android:id="@+id/textView143"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Trial 1"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView144"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="Select Word List Below:"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="36sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="439dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+
+                <RadioButton
+                    android:id="@+id/SCATwordList1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finger\nPenny\nBlanket\nLemon\nInsect"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold|italic" />
+
+                <RadioButton
+                    android:id="@+id/SCATwordList2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Candle\nPaper\nSugar\nSandwich\nWagon"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold|italic" />
+
+                <RadioButton
+                    android:id="@+id/SCATwordList3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Baby\nMonkey\nPerfume\nSunset\nIron"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold|italic" />
+
+
+                <RadioButton
+                    android:id="@+id/SCATwordList4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Elbow\nApple\nCarpet\nSaddle\nBubble"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold|italic" />
+
+                <RadioButton
+                    android:id="@+id/SCATwordList5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jacket\nArrow\nPepper\nCotton\nMovie"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold|italic"/>
+
+                <RadioButton
+                    android:id="@+id/SCATwordList6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dollar\nHoney\nMirror\nSaddle\nAnchor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold|italic"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView128"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scroll for More!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/nextFromTrial1SCAT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="37dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="Next" />
+
+
+</LinearLayout>

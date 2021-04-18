@@ -17,7 +17,7 @@ public class BESSTrial1Activity extends Activity implements View.OnClickListener
     private ImageButton plusButton;
     private EditText errorNumText;
     private Button nextButton;
-    Bundle bundle;
+    private Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +31,20 @@ public class BESSTrial1Activity extends Activity implements View.OnClickListener
         plusButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
 
+        bundle = getIntent().getExtras();
+
+
+
+
     }
 
     public void onClick(View v) {
         if(v == nextButton) {
             int doubleLegErrors = Integer.valueOf(errorNumText.getText().toString());
-            startActivity(new Intent(this, BESSTrial2Activity.class));
+            Intent intent = new Intent(this, BESSTrial2Activity.class);
+            bundle.putInt("BESSTrial1Errors", doubleLegErrors);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
         if (v == minusButton) {
             int num = Integer.valueOf(errorNumText.getText().toString());

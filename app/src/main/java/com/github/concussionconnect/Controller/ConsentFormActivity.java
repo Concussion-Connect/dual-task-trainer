@@ -14,7 +14,7 @@ public class ConsentFormActivity extends Activity implements View.OnClickListene
 
     private Button backButton;
     private Button signConsent;
-
+    private Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,17 +25,21 @@ public class ConsentFormActivity extends Activity implements View.OnClickListene
         backButton.setOnClickListener(this);
         signConsent = (Button) findViewById(R.id.clickToSign);
         signConsent.setOnClickListener(this);
-
+        bundle = getIntent().getExtras();
     }
 
     @Override
     public void onClick(View v) {
         if(v == backButton) {
-            startActivity(new Intent(this, ConsentDescriptionActivity.class));
+            Intent intent = new Intent(this, ConsentDescriptionActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
 
         if(v == signConsent) {
-            startActivity(new Intent(this, SignConsentActivity.class));
+            Intent intent = new Intent(this, SignConsentActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     }
 }

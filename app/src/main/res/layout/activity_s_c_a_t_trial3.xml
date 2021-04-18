@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textAlignment="center"
+    android:weightSum="1"
+    tools:context="com.github.concussionconnect.Controller.WordLearnActivity">
+
+
+    <TextView
+        android:id="@+id/monthInReverse"
+        android:layout_width="412dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/SCATTrial3"
+        android:layout_marginTop="35dp"
+        android:text="@string/SCATTrial3"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/months"
+        android:layout_width="match_parent"
+        android:layout_height="322dp"
+        android:layout_alignTop="@id/monthInReverse"
+        android:layout_marginTop="70dp"
+        android:text="December\nNovember\nOctober\nSeptember\nAugust\nJuly\nJune\nMay\nApril\nMarch\nFebruary\nJanuary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/nextFromTrial3SCAT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="37dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="Next" />
+
+
+    <TextView
+        android:id="@+id/SCATTrial3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="6dp"
+        android:text="Trial 3"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/SelectSCATText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/months"
+        android:layout_marginTop="355dp"
+        android:text="Select 'Yes' or 'No'"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_alignTop="@id/months"
+        android:layout_marginTop="392dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/YesSCAT3"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Yes"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/NoSCAT3"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="No"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+
+</RelativeLayout>
+

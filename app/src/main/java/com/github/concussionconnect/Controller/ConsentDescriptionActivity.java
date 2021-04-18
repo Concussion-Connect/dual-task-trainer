@@ -13,6 +13,7 @@ import com.github.concussionconnect.R;
 public class ConsentDescriptionActivity extends Activity implements View.OnClickListener {
     private Button consentButton;
     private Button back;
+    private Bundle bundle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,13 +25,17 @@ public class ConsentDescriptionActivity extends Activity implements View.OnClick
         back = (Button) findViewById(R.id.backButton);
         back.setOnClickListener(this);
 
+        bundle = getIntent().getExtras();
+
     }
 
     @Override
     public void onClick(View v) {
-        if(v== consentButton)
-            startActivity(new Intent(this, ConsentFormActivity.class));
-
+        if(v== consentButton) {
+            Intent intent = new Intent(this, ConsentFormActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
         if(v == back) {
             startActivity(new Intent(this, LoginActivity.class));
         }

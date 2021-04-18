@@ -31,11 +31,15 @@ public class ScreeningQuestionnairePart2 extends Activity implements View.OnClic
 
     public void onClick(View v) {
         if(v == back) {
-            startActivity(new Intent(this, ScreeningQuestionnairePart1.class));
+            Intent intent = new Intent(this, ScreeningQuestionnairePart1.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
 
         if(v == Continue) {
-            startActivity(new Intent(this, ScreeningQuestionnairePart3.class));
+            Intent intent = new Intent(this, ScreeningQuestionnairePart3.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     }
 }

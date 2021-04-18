@@ -30,14 +30,17 @@ public class BESSTrial2Activity extends Activity implements View.OnClickListener
         plusButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
 
+        bundle = getIntent().getExtras();
 
     }
 
     public void onClick(View v) {
         if(v == nextButton) {
             int singleLegErrors = Integer.valueOf(errorNumText.getText().toString());
-
-            startActivity(new Intent(this, BESSTrial3Activity.class));
+            Intent intent = new Intent(this, BESSTrial3Activity.class);
+            bundle.putInt("BESSTrial2Errors", singleLegErrors);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
         if (v == minusButton) {
             int num = Integer.valueOf(errorNumText.getText().toString());

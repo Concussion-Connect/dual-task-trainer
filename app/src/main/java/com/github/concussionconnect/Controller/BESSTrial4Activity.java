@@ -31,13 +31,16 @@ public class BESSTrial4Activity extends Activity implements View.OnClickListener
         plusButton.setOnClickListener(this);
         finishButton.setOnClickListener(this);
 
+        bundle = getIntent().getExtras();
     }
 
     public void onClick(View v) {
         if(v == finishButton) {
             int tandemLegErrors = Integer.valueOf(errorNumText.getText().toString());
-
-            //startActivity(new Intent(this, EndBESSActivity.class));
+            Intent intent = new Intent(this, EndBESSActivity.class);
+            bundle.putInt("BESSTrial4Errors", tandemLegErrors);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
         if (v == minusButton) {
             int num = Integer.valueOf(errorNumText.getText().toString());

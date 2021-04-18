@@ -88,7 +88,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
         if(v == researchAppButton) {
             //startActivity(new Intent(this, ResearchSymptomsActivity.class));
-            startActivity(new Intent(this, ConsentDescriptionActivity.class));
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(this, ConsentDescriptionActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
             //Toast.makeText(this, "Please enter your e-mail", Toast.LENGTH_LONG).show();
         }
     }

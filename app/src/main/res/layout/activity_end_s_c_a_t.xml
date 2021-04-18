@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.concussionconnect.Controller.EndActivity">
+
+    <TextView
+        android:id="@+id/SCATThanksforTesting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="Thanks for testing!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/cancelButtonSCAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/SCATThanksforTesting"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/SCATThanksforTesting"
+        android:layout_marginBottom="28dp"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/submitButtonSCAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cancelButtonSCAT"
+        android:layout_alignEnd="@+id/SCATThanksforTesting"
+        android:layout_alignRight="@+id/SCATThanksforTesting"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/SCATResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SCATThanksforTesting"
+        android:layout_marginTop="50dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+</RelativeLayout>

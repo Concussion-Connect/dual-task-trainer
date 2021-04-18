@@ -39,6 +39,7 @@ or condition that may be associated with<u>neurological impairment?</u></string>
     <string name="medical13a">13a. In your  <u> lifetime</u>, how many times have you had a concussion?</string>
     <string name="medical15">15. For each of the following symptoms please rate how you <u>currently feel</u>, regardless of
 whether or not you have ever had a concussion. </string>
+   <string name="SCATTrial3">Indicate whether the subject recited <u>ALL</u> the months of the year backwards correctly</string>
     <string-array name="ratings">
         <item>0 - None</item>
         <item>1 - Slightly Mild</item>
