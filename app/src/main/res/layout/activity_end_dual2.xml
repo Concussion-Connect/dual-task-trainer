@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.github.concussionconnect.Controller.EndSCATActivity">
+    tools:context="com.github.concussionconnect.Controller.EndDual2Activity">
 
     <TextView
-        android:id="@+id/SCATThanksforTesting"
+        android:id="@+id/Dual2ThanksforTesting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
@@ -18,29 +18,29 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/cancelButtonSCAT"
+        android:id="@+id/cancelButtonDual2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/SCATThanksforTesting"
+        android:layout_alignLeft="@+id/Dual2ThanksforTesting"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/SCATThanksforTesting"
+        android:layout_alignStart="@+id/Dual2ThanksforTesting"
         android:layout_marginBottom="28dp"
         android:text="Cancel" />
 
     <Button
-        android:id="@+id/submitButtonSCAT"
+        android:id="@+id/submitButtonDual2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cancelButtonSCAT"
-        android:layout_alignEnd="@+id/SCATThanksforTesting"
-        android:layout_alignRight="@+id/SCATThanksforTesting"
+        android:layout_alignBottom="@+id/cancelButtonDual2"
+        android:layout_alignEnd="@+id/Dual2ThanksforTesting"
+        android:layout_alignRight="@+id/Dual2ThanksforTesting"
         android:text="Submit" />
 
     <TextView
-        android:id="@+id/SCATResults"
+        android:id="@+id/Dual2Results"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/SCATThanksforTesting"
+        android:layout_below="@+id/Dual2ThanksforTesting"
         android:layout_marginTop="50dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 

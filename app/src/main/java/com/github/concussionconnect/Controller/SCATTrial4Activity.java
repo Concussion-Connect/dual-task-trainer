@@ -47,12 +47,12 @@ public class SCATTrial4Activity extends Activity implements View.OnClickListener
         bundle = getIntent().getExtras();
 
         rememberedWords = new ArrayList<>();
-        ArrayList<String> selectedWords = bundle.getStringArrayList("SCATWordList");
-        SCATword1.setText(selectedWords.get(0));
+        //ArrayList<String> selectedWords = bundle.getStringArrayList("SCATWordList");
+       /** SCATword1.setText(selectedWords.get(0));
         SCATword2.setText(selectedWords.get(1));
         SCATword3.setText(selectedWords.get(2));
         SCATword4.setText(selectedWords.get(3));
-        SCATword5.setText(selectedWords.get(4));
+        SCATword5.setText(selectedWords.get(4));*/
 
         SCATword1.setOnClickListener(this);
         SCATword2.setOnClickListener(this);
@@ -165,7 +165,7 @@ public class SCATTrial4Activity extends Activity implements View.OnClickListener
             } else {
                 SCATword5.setChecked(false);
                 if(rememberedWords.contains(word5)) {
-                    rememberedWords.add(word5);
+                    rememberedWords.remove(word5);
                 }
                 if(num > 0) {
                     num--;

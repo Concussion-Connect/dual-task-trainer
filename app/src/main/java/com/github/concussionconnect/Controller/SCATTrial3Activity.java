@@ -45,9 +45,9 @@ public class SCATTrial3Activity extends Activity implements View.OnClickListener
         }
         if(v== next) {
            if(yes.isChecked()) {
-                bundle.putString("monthsInReverse", "Yes");
+                bundle.putString("monthsInReverseSCAT3", "Yes");
             } else {
-                bundle.putString("monthsInReverse", "No");
+                bundle.putString("monthsInReverseSCAT3", "No");
             }
 
             Intent intent = new Intent(this, SCATTrial4Activity.class);

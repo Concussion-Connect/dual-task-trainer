@@ -16,7 +16,8 @@ public class OpeningPageForTests extends Activity implements View.OnClickListene
     private Button backToMain;
     private CheckedTextView BESS;
     private CheckedTextView SCAT;
-    private CheckedTextView Dual;
+    private CheckedTextView Dual1;
+    private CheckedTextView Dual2;
     private Bundle bundle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +26,14 @@ public class OpeningPageForTests extends Activity implements View.OnClickListene
 
         BESS = (CheckedTextView) findViewById(R.id.BESStest);
         SCAT = (CheckedTextView) findViewById(R.id.SCATtest);
-        Dual = (CheckedTextView) findViewById(R.id.Dualtest);
+        Dual1 = (CheckedTextView) findViewById(R.id.Dual1test);
+        Dual2 = (CheckedTextView) findViewById(R.id.Dual2test);
         reset = (Button) findViewById(R.id.reset);
         backToMain = (Button) findViewById(R.id.backToMain);
         BESS.setOnClickListener(this);
         SCAT.setOnClickListener(this);
-        Dual.setOnClickListener(this);
+        Dual1.setOnClickListener(this);
+        Dual2.setOnClickListener(this);
         reset.setOnClickListener(this);
         bundle = getIntent().getExtras();
     }
@@ -58,14 +61,32 @@ public class OpeningPageForTests extends Activity implements View.OnClickListene
                 Intent intent = new Intent(this, SCATTrial1Activity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+            } else {
+                SCAT.setChecked(false);
             }
         }
 
-        if(v == Dual) {
-            if(!Dual.isChecked()) {
-                Dual.setChecked(true);
+        if(v == Dual1) {
+            if(!Dual1.isChecked()) {
+                Dual1.setChecked(true);
+                Intent intent = new Intent(this, DualTrial1Activity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            } else {
+                Dual1.setChecked(false);
             }
         }
+        if(v == Dual2) {
+            if(!Dual2.isChecked()) {
+                Dual2.setChecked(true);
+                Intent intent = new Intent(this, Dual2Trial1Activity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            } else {
+                Dual2.setChecked(false);
+            }
+        }
+
         if(v== reset) {
            if(BESS.isChecked()) {
                BESS.setChecked(false);
@@ -75,9 +96,13 @@ public class OpeningPageForTests extends Activity implements View.OnClickListene
                SCAT.setChecked(false);
            }
 
-           if(Dual.isChecked()) {
-               Dual.setChecked(false);
+           if(Dual1.isChecked()) {
+               Dual1.setChecked(false);
            }
+
+            if(Dual2.isChecked()) {
+                Dual2.setChecked(false);
+            }
         }
     }
 }

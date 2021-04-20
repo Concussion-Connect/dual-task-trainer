@@ -22,51 +22,33 @@ import java.util.List;
 
 public class SCATTrial1Activity extends Activity implements View.OnClickListener {
     private Bundle bundle;
-    private ArrayList<String> chosenWordList;
-    private RadioButton wordChoice1;
-    private RadioButton wordChoice2;
-    private RadioButton wordChoice3;
-    private RadioButton wordChoice4;
-    private RadioButton wordChoice5;
-    private RadioButton wordChoice6;
     private Button next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_c_a_t_trial1);
-        chosenWordList = new ArrayList<>();
-        wordChoice1 = (RadioButton) findViewById(R.id.SCATwordList1);
+       /** wordChoice1 = (RadioButton) findViewById(R.id.SCATwordList1);
         wordChoice2 = (RadioButton) findViewById(R.id.SCATwordList2);
         wordChoice3 = (RadioButton) findViewById(R.id.SCATwordList3);
         wordChoice4 = (RadioButton) findViewById(R.id.SCATwordList4);
         wordChoice5 = (RadioButton) findViewById(R.id.SCATwordList5);
-        wordChoice6 = (RadioButton) findViewById(R.id.SCATwordList6);
+        wordChoice6 = (RadioButton) findViewById(R.id.SCATwordList6);*/
         next = (Button) findViewById(R.id.nextFromTrial1SCAT);
         next.setOnClickListener(this);
-        wordChoice1.setOnClickListener(this);
-        wordChoice2.setOnClickListener(this);
-        wordChoice3.setOnClickListener(this);
-        wordChoice4.setOnClickListener(this);
-        wordChoice5.setOnClickListener(this);
-        wordChoice6.setOnClickListener(this);
+
         bundle = getIntent().getExtras();
 
     }
 
     public void onClick(View v) {
         if(v == next) {
-            if(chosenWordList.isEmpty()) {
-                Toast.makeText(SCATTrial1Activity.this, "Select a Word List",
-                 Toast.LENGTH_LONG).show();
-            }else {
                 Intent intent = new Intent(this, SCATTrial2Activity.class);
-                bundle.putStringArrayList("SCATWordList", chosenWordList);
+                //bundle.putStringArrayList("SCATWordList", chosenWordList);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
-        }
-        if (v == wordChoice1) {
+        /**if (v == wordChoice1) {
             String words1 = wordChoice1.getText().toString();
             words1 = words1.replaceAll("[\\n]", "");
             chosenWordList.clear();
@@ -198,6 +180,6 @@ public class SCATTrial1Activity extends Activity implements View.OnClickListener
                 }
                 chosenWordList.add(tmp);
             }
-        }
+        }*/
     }
 }

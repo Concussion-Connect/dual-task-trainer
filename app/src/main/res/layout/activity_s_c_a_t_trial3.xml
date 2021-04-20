@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:textAlignment="center"
     android:weightSum="1"
-    tools:context="com.github.concussionconnect.Controller.WordLearnActivity">
+    tools:context="com.github.concussionconnect.Controller.SCATTrial3Activity">
 
 
     <TextView

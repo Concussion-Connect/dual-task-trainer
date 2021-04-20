@@ -6,129 +6,121 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CheckedTextView;
 import android.widget.EditText;
-import android.widget.ListView;
 
-import com.github.concussionconnect.Model.ChecklistAdapter;
-import com.github.concussionconnect.Model.ChecklistModel;
 import com.github.concussionconnect.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
-public class SCATTrial2Activity extends Activity implements View.OnClickListener{
+public class Dual2Trial4Activity extends Activity implements View.OnClickListener {
     private Bundle bundle;
-    private CheckedTextView SCATword1;
-    private CheckedTextView SCATword2;
-    private CheckedTextView SCATword3;
-    private CheckedTextView SCATword4;
-    private CheckedTextView SCATword5;
+
+    private CheckedTextView Dualword1;
+    private CheckedTextView Dualword2;
+    private CheckedTextView Dualword3;
+    private CheckedTextView Dualword4;
+    private CheckedTextView Dualword5;
     private EditText numCorrectWords;
     private Button next;
+
     private ArrayList<String> rememberedWords;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_s_c_a_t_trial2);
-        SCATword1 = (CheckedTextView) findViewById(R.id.SCATWord1);
-        SCATword2 = (CheckedTextView) findViewById(R.id.SCATWord2);
-        SCATword3 = (CheckedTextView) findViewById(R.id.SCATWord3);
-        SCATword4 = (CheckedTextView) findViewById(R.id.SCATWord4);
-        SCATword5 = (CheckedTextView) findViewById(R.id.SCATWord5);
-        numCorrectWords = (EditText) findViewById(R.id.errorTextForSCAT2);
-        next = (Button) findViewById(R.id.nextFromTrial2SCAT);
-        SCATword1.setOnClickListener(this);
-        SCATword2.setOnClickListener(this);
-        SCATword3.setOnClickListener(this);
-        SCATword4.setOnClickListener(this);
-        SCATword5.setOnClickListener(this);
-        numCorrectWords.setOnClickListener(this);
+        setContentView(R.layout.activity_dual2_trial4);
+
         bundle = getIntent().getExtras();
+        Dualword1 = (CheckedTextView) findViewById(R.id.Dual2Word11);
+        Dualword2 = (CheckedTextView) findViewById(R.id.Dual2Word12);
+        Dualword3 = (CheckedTextView) findViewById(R.id.Dual2Word13);
+        Dualword4 = (CheckedTextView) findViewById(R.id.Dual2Word14);
+        Dualword5 = (CheckedTextView) findViewById(R.id.Dual2Word15);
+        numCorrectWords = (EditText) findViewById(R.id.errorTextForDual24);
+        next = (Button) findViewById(R.id.nextFromTrial4Dual2);
+        Dualword1.setOnClickListener(this);
+        Dualword2.setOnClickListener(this);
+        Dualword3.setOnClickListener(this);
+        Dualword4.setOnClickListener(this);
+        Dualword5.setOnClickListener(this);
+        numCorrectWords.setOnClickListener(this);
 
         rememberedWords = new ArrayList<>();
-        /**SCATword1.setText(selectedWords.get(0));
-        SCATword2.setText(selectedWords.get(1));
-        SCATword3.setText(selectedWords.get(2));
-        SCATword4.setText(selectedWords.get(3));
-        SCATword5.setText(selectedWords.get(4));*/
 
-        SCATword1.setOnClickListener(this);
-        SCATword2.setOnClickListener(this);
-        SCATword3.setOnClickListener(this);
-        SCATword4.setOnClickListener(this);
-        SCATword5.setOnClickListener(this);
+        Dualword1.setOnClickListener(this);
+        Dualword2.setOnClickListener(this);
+        Dualword3.setOnClickListener(this);
+        Dualword4.setOnClickListener(this);
+        Dualword5.setOnClickListener(this);
         numCorrectWords.setOnClickListener(this);
         next.setOnClickListener(this);
 
 
     }
 
+
     public void onClick(View v) {
         int num =  Integer.valueOf(numCorrectWords.getText().toString());
         if(v== next) {
-            Intent intent = new Intent(this, SCATTrial3Activity.class);
-            bundle.putInt("numCorrectWordsSCAT2", num);
-            bundle.putStringArrayList("SCATTrial2Words", rememberedWords);
+            Intent intent = new Intent(this, EndDual2Activity.class);
+            bundle.putStringArrayList("Dual2Trial4Words", rememberedWords);
+            bundle.putInt("numCorrectWordsDual24", num);
             intent.putExtras(bundle);
             startActivity(intent);
         }
-        if(v==SCATword1) {
-            String word1 = SCATword1.getText().toString();
-            if(!SCATword1.isChecked()) {
+        if(v==Dualword1) {
+            String word1 = Dualword1.getText().toString();
+            if(!Dualword1.isChecked()) {
                 if(!rememberedWords.contains(word1)) {
                     rememberedWords.add(word1);
                 }
-                SCATword1.setChecked(true);
+                Dualword1.setChecked(true);
                 num++;
                 numCorrectWords.setText(String.valueOf(num));
             } else {
-                SCATword1.setChecked(false);
                 if(rememberedWords.contains(word1)) {
                     rememberedWords.remove(word1);
                 }
-                 num = Integer.valueOf(numCorrectWords.getText().toString());
+                Dualword1.setChecked(false);
+                num = Integer.valueOf(numCorrectWords.getText().toString());
                 if(num > 0) {
                     num--;
                 }
                 numCorrectWords.setText(String.valueOf(num));
             }
         }
-        if(v==SCATword2) {
-            String word2 = SCATword2.getText().toString();
-            if(!SCATword2.isChecked()) {
+        if(v==Dualword2) {
+            String word2 = Dualword2.getText().toString();
+            if(!Dualword2.isChecked()) {
+                Dualword2.setChecked(true);
                 if(!rememberedWords.contains(word2)) {
                     rememberedWords.add(word2);
                 }
-                SCATword2.setChecked(true);
                 num++;
                 numCorrectWords.setText(String.valueOf(num));
             } else {
+                Dualword2.setChecked(false);
                 if(rememberedWords.contains(word2)) {
                     rememberedWords.remove(word2);
                 }
-                SCATword2.setChecked(false);
                 if(num > 0) {
                     num--;
                 }
                 numCorrectWords.setText(String.valueOf(num));
             }
         }
-        if(v==SCATword3) {
-            String word3 = SCATword3.getText().toString();
-            if(!SCATword3.isChecked()) {
+        if(v==Dualword3) {
+            String word3 = Dualword3.getText().toString();
+            if(!Dualword3.isChecked()) {
+                Dualword3.setChecked(true);
                 if(!rememberedWords.contains(word3)) {
                     rememberedWords.add(word3);
                 }
-                SCATword3.setChecked(true);
                 num++;
                 numCorrectWords.setText(String.valueOf(num));
             } else {
-                SCATword3.setChecked(false);
+                Dualword3.setChecked(false);
                 if(rememberedWords.contains(word3)) {
                     rememberedWords.remove(word3);
                 }
@@ -138,17 +130,17 @@ public class SCATTrial2Activity extends Activity implements View.OnClickListener
                 numCorrectWords.setText(String.valueOf(num));
             }
         }
-        if(v==SCATword4) {
-            String word4 = SCATword4.getText().toString();
-            if(!SCATword4.isChecked()) {
+        if(v==Dualword4) {
+            String word4 = Dualword4.getText().toString();
+            if(!Dualword4.isChecked()) {
+                Dualword4.setChecked(true);
                 if(!rememberedWords.contains(word4)) {
                     rememberedWords.add(word4);
                 }
-                SCATword4.setChecked(true);
                 num++;
                 numCorrectWords.setText(String.valueOf(num));
             } else {
-                SCATword4.setChecked(false);
+                Dualword4.setChecked(false);
                 if(rememberedWords.contains(word4)) {
                     rememberedWords.remove(word4);
                 }
@@ -158,19 +150,19 @@ public class SCATTrial2Activity extends Activity implements View.OnClickListener
                 numCorrectWords.setText(String.valueOf(num));
             }
         }
-        if(v==SCATword5) {
-            String word5 = SCATword5.getText().toString();
-            if(!SCATword5.isChecked()) {
+        if(v==Dualword5) {
+            String word5 = Dualword5.getText().toString();
+            if(!Dualword5.isChecked()) {
+                Dualword5.setChecked(true);
                 if(!rememberedWords.contains(word5)) {
                     rememberedWords.add(word5);
                 }
-                SCATword5.setChecked(true);
                 num++;
                 numCorrectWords.setText(String.valueOf(num));
             } else {
-                SCATword5.setChecked(false);
+                Dualword5.setChecked(false);
                 if(rememberedWords.contains(word5)) {
-                    rememberedWords.add(word5);
+                    rememberedWords.remove(word5);
                 }
                 if(num > 0) {
                     num--;
@@ -179,6 +171,4 @@ public class SCATTrial2Activity extends Activity implements View.OnClickListener
             }
         }
     }
-
-
 }

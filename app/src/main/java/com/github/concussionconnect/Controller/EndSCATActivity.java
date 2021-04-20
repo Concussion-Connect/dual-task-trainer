@@ -37,7 +37,12 @@ public class EndSCATActivity extends Activity implements View.OnClickListener{
         ArrayList<String> recallWordsTrial4 = new ArrayList<String>();
         recallWordsTrial4 = bundle.getStringArrayList("SCATTrial4Words");
         recallWordsTrial2 = bundle.getStringArrayList("SCATTrial2Words");
-        selectedWords = bundle.getStringArrayList("SCATWordList");
+        //selectedWords = bundle.getStringArrayList("SCATWordList");
+        selectedWords.add("Finger");
+        selectedWords.add("Penny");
+        selectedWords.add("Blanket");
+        selectedWords.add("Lemon");
+        selectedWords.add("Insect");
         SCATResults.append("SCAT Selected Words: \n");
         for(String word: selectedWords) {
             SCATResults.append(" "+word + "\n");
@@ -47,7 +52,7 @@ public class EndSCATActivity extends Activity implements View.OnClickListener{
             SCATResults.append(" "+word + "\n");
         }
         SCATResults.append("\nSCAT Trial 2 (Number of Recalled Words): " + bundle.getInt("numCorrectWordsSCAT2")+ "\n");
-        SCATResults.append("\nCould the patient name the months in reverse order? (SCAT Trial 3): " + bundle.getString("monthsInReverse") +"\n");
+        SCATResults.append("\nCould the patient name the months in reverse order? (SCAT Trial 3): " + bundle.getString("monthsInReverseSCAT3") +"\n");
         SCATResults.append("\nSCAT Trial 4 (Recalled Words): \n");
 
         for(String word: recallWordsTrial4) {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.github.concussionconnect.Controller.WordLearnActivity"
+    tools:context="com.github.concussionconnect.Controller.SCATTrial4Activity"
     android:weightSum="1">
 
 
@@ -31,7 +31,7 @@
         android:layout_marginBottom="-115dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
-        android:text="CheckedTextView"
+        android:text="Finger"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -47,7 +47,7 @@
         android:layout_marginBottom="-147dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
-        android:text="CheckedTextView"
+        android:text="Penny"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -63,7 +63,7 @@
         android:layout_marginBottom="-209dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
-        android:text="CheckedTextView"
+        android:text="Blanket"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -79,7 +79,7 @@
         android:layout_marginBottom="-255dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
-        android:text="CheckedTextView"
+        android:text="Lemon"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -95,7 +95,7 @@
         android:layout_marginBottom="-298dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
-        android:text="CheckedTextView"
+        android:text="Insect"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -105,13 +105,13 @@
         android:id="@+id/nextFromTrial4SCAT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="37dp"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:text="Next"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="37dp" />
+        android:text="Finish Assessment" />
 
 
     <EditText
@@ -135,24 +135,22 @@
 
     <TextView
         android:id="@+id/SCATMem4"
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
         android:layout_alignTop="@+id/SCATWord15"
-        android:layout_marginLeft="110dp"
         android:layout_marginTop="133dp"
         android:layout_marginBottom="22dp"
-        android:text="Words Memorized"
+        android:text="# of Words Memorized"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="24sp" />
 
     <TextView
         android:id="@+id/SCATTrial4"
-        android:layout_width="match_parent"
+        android:layout_width="412dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="-307dp"
-        android:layout_marginLeft="-307dp"
+        android:layout_marginStart="-411dp"
         android:layout_marginTop="7dp"
         android:layout_toEndOf="@+id/SCATMem4"
         android:layout_toRightOf="@+id/SCATMem4"

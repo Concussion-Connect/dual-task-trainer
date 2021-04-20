@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textAlignment="center"
+    android:weightSum="1"
+    tools:context="com.github.concussionconnect.Controller.Dual2Trial3Activity">
+
+
+    <TextView
+        android:id="@+id/monthsInReverseDual23"
+        android:layout_width="412dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/Dual2Trial3"
+        android:layout_marginTop="35dp"
+        android:text="@string/SCATTrial3"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/monthsDual2"
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:layout_alignTop="@id/monthsInReverseDual23"
+        android:layout_marginTop="70dp"
+        android:text="December\nNovember\nOctober\nSeptember\nAugust\nJuly\nJune\nMay\nApril\nMarch\nFebruary\nJanuary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/nextFromTrial3Dual2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="37dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="Next" />
+
+
+    <TextView
+        android:id="@+id/Dual2Trial3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="6dp"
+        android:text="Trial 3"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/SelectDual2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/monthsDual2"
+        android:layout_marginTop="277dp"
+        android:text="Select 'Yes' or 'No'"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/monthsDual2"
+        android:layout_marginTop="303dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/YesDual23"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Yes"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/NoDual23"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="No"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/plusDual23"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="#0000"
+        android:src="@drawable/plusbutton"
+        android:layout_alignTop="@+id/minusDual23"
+        android:layout_alignRight="@+id/tandemLeg2"
+        android:layout_alignEnd="@+id/tandemLeg2"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <ImageButton
+        android:id="@+id/minusDual23"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_above="@+id/nextFromTrial3Dual2"
+        android:layout_alignBottom="@id/SelectDual2Text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="-205dp"
+        android:adjustViewBounds="true"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/minusbutton" />
+
+    <EditText
+        android:id="@+id/errorNumTextDual23"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/plusDual23"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:ems="10"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="false"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/numErrorsDual23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Errors"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/tandemLeg2"
+        android:layout_alignBottom="@+id/tandemLeg2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp" />
+
+    <TextView
+        android:id="@+id/tandemLeg2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Tandem Leg Stance"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_above="@+id/plusDual23"
+        android:layout_alignLeft="@+id/minusDual23"
+        android:layout_alignStart="@+id/minusDual23"
+        android:layout_marginBottom="22dp" />
+
+
+
+</RelativeLayout>
+

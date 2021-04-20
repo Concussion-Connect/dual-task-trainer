@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.concussionconnect.Controller.DualTrial1Activity"
+    android:weightSum="1">
+
+
+    <Button
+        android:id="@+id/nextButtonFromDual1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="Next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="37dp" />
+
+    <ImageButton
+        android:id="@+id/plusDual1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="#0000"
+        android:src="@drawable/plusbutton"
+        android:layout_alignTop="@+id/minusDual1"
+        android:layout_alignRight="@+id/DLS"
+        android:layout_alignEnd="@+id/DLS"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <ImageButton
+        android:id="@+id/minusDual1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="#0000"
+        android:src="@drawable/minusbutton"
+        android:layout_marginBottom="80dp"
+        android:layout_above="@+id/nextButtonFromDual1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/errorNumTextDual1"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/plusDual1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:ems="10"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="false"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/numErrorsDual1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Errors"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/DLS"
+        android:layout_alignBottom="@+id/DLS"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp" />
+
+    <TextView
+        android:id="@+id/DLS"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Double Leg Stance"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_above="@+id/plusDual1"
+        android:layout_alignLeft="@+id/minusDual1"
+        android:layout_alignStart="@+id/minusDual1"
+        android:layout_marginBottom="22dp" />
+
+    <TextView
+        android:id="@+id/Dual1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:text="User is being presented with 5 words.\n Monitor their balance!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/DualTrial1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/DLS"
+        android:layout_toRightOf="@+id/DLS"
+        android:text="Trial 1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
