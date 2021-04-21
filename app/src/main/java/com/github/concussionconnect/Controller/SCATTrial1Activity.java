@@ -1,5 +1,6 @@
 package com.github.concussionconnect.Controller;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -14,11 +15,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.github.concussionconnect.Model.ConnectToDB;
 import com.github.concussionconnect.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class SCATTrial1Activity extends Activity implements View.OnClickListener {
     private Bundle bundle;
@@ -38,6 +44,23 @@ public class SCATTrial1Activity extends Activity implements View.OnClickListener
         next.setOnClickListener(this);
 
         bundle = getIntent().getExtras();
+
+
+        String adminId = bundle.getString("ID");
+        ConnectToDB.updateTrainerSessionTrial(adminId, 1, "scat",
+                new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "Trainer session trial updated!");
+                    }
+                },
+                new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error updating trainer session trial", e);
+                    }
+                }
+        );
 
     }
 

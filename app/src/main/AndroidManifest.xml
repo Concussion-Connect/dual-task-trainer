@@ -36,7 +36,7 @@
         <activity android:name=".Controller.OpeningPageForTests" />
         <activity android:name=".Controller.ScreeningQuestionnairePart3" />
         <activity android:name=".Controller.ScreeningQuestionnairePart2" />
-        <activity android:name=".Controller.ScreeeningQuestionnairePart2" />
+<!--        <activity android:name=".Controller.ScreeeningQuestionnairePart2" />-->
         <activity android:name=".Controller.ScreeningQuestionnairePart1" />
         <activity android:name=".Controller.SignConsentActivity" />
         <activity android:name=".Controller.ConsentFormActivity" />
@@ -53,6 +53,7 @@
         <activity android:name=".Controller.MemoryTestActivity" />
         <activity android:name=".Controller.SymptomsActivity" />
         <activity android:name=".Controller.EndActivity" />
+        <activity android:name=".Controller.EndAllResearchActivity" />
         <activity android:name=".Controller.MainActivity" />
         <activity android:name=".Controller.SettingsActivity" />
         <activity android:name=".Controller.TestSetupActivity" />

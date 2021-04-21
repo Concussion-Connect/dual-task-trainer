@@ -1,10 +1,12 @@
 package com.github.concussionconnect.Controller;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -15,11 +17,16 @@ import android.widget.ListView;
 
 import com.github.concussionconnect.Model.ChecklistAdapter;
 import com.github.concussionconnect.Model.ChecklistModel;
+import com.github.concussionconnect.Model.ConnectToDB;
 import com.github.concussionconnect.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class SCATTrial2Activity extends Activity implements View.OnClickListener{
     private Bundle bundle;
@@ -49,6 +56,21 @@ public class SCATTrial2Activity extends Activity implements View.OnClickListener
         SCATword5.setOnClickListener(this);
         numCorrectWords.setOnClickListener(this);
         bundle = getIntent().getExtras();
+        String adminId = bundle.getString("ID");
+        ConnectToDB.updateTrainerSessionTrial(adminId, 2, "scat",
+                new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "Trainer session trial updated!");
+                    }
+                },
+                new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error updating trainer session trial", e);
+                    }
+                }
+        );
 
         rememberedWords = new ArrayList<>();
         /**SCATword1.setText(selectedWords.get(0));
