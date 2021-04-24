@@ -14,6 +14,7 @@ public class ConsentDescriptionActivity extends Activity implements View.OnClick
     private Button consentButton;
     private Button back;
     private Bundle bundle;
+    private Button skipButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,11 @@ public class ConsentDescriptionActivity extends Activity implements View.OnClick
 
         back = (Button) findViewById(R.id.backButton);
         back.setOnClickListener(this);
+
+        skipButton = (Button) findViewById(R.id.skipButton);
+        skipButton.setOnClickListener(this);
+
+
 
         bundle = getIntent().getExtras();
 
@@ -38,6 +44,14 @@ public class ConsentDescriptionActivity extends Activity implements View.OnClick
         }
         if(v == back) {
             startActivity(new Intent(this, LoginActivity.class));
+        }
+
+        if(v == skipButton) {
+            Intent intent = new Intent(this, ResearchSymptomsActivity.class);
+            bundle.putString("participantName", " test ");
+            intent.putExtras(bundle);
+            startActivity(intent);
+
         }
     }
 }

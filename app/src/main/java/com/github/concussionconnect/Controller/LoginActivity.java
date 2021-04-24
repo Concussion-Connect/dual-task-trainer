@@ -33,7 +33,7 @@ import static android.content.ContentValues.TAG;
  */
 
 public class LoginActivity extends Activity implements View.OnClickListener {
-    private EditText editTextEmail;
+    private EditText editTextEmail; //test@test.com test123
     private EditText editTextPassword;
     private Button buttonLogin;
     private TextView textRegisterHere;

@@ -37,7 +37,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_end);
+        setContentView(R.layout.activity_end_research);
         cancelButton = (Button) findViewById(R.id.cancelButton);
         submitButton = (Button) findViewById(R.id.submitButton);
         displayResults = (TextView) findViewById(R.id.displayResults);
@@ -84,8 +84,8 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         displayResults.append("SCAT Results: " + "\n");
         displayResults.append("SCAT Short Term Memory Score: " + bundle.getInt("numCorrectWordsSCAT2") +"\n");
         map.put("SCAT_SHORT_MEM_SCORE", bundle.getInt("numCorrectWordsSCAT2"));
-        displayResults.append("SCAT Month Memory Score: " + bundle.getInt("monthsInReverseSCAT3") +"\n");
-        map.put("SCAT_MONTHS_MEM_SCORE", bundle.getInt("monthsInReverseSCAT3"));
+        displayResults.append("SCAT Month Memory Score: " + bundle.getString("monthsInReverseSCAT3") +"\n");
+        map.put("SCAT_MONTHS_MEM_SCORE", bundle.getString("monthsInReverseSCAT3"));
         displayResults.append("SCAT Long Term Memory Score: " + bundle.getInt("numCorrectWordsSCAT4") +"\n");
         map.put("SCAT_LONG_MEM_SCORE", bundle.getInt("numCorrectWordsSCAT4"));
 
@@ -97,8 +97,8 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         map.put("DUAL1_TRIAL2MEMORYSCORE", bundle.getInt("numCorrectWordsDual2"));
         displayResults.append("DUAL1 Single Leg Errors: " + bundle.getInt("SingleLegErrorsDualTrial2") +"\n");
         map.put("DUAL1_TRIAL2SINGLELEGERRORS", bundle.getInt("SingleLegErrorsDualTrial2"));
-        displayResults.append("DUAL1 Month Memory Score: " + bundle.getInt("monthsInReverseDual3") +"\n");
-        map.put("DUAL1_TRIAL3MEMORYSCORE", bundle.getInt("monthsInReverseDual3"));
+        displayResults.append("DUAL1 Month Memory Score: " + bundle.getString("monthsInReverseDual3") +"\n");
+        map.put("DUAL1_TRIAL3MEMORYSCORE", bundle.getString("monthsInReverseDual3"));
         displayResults.append("DUAL1 Tandem Leg Errors: " + bundle.getInt("TandemLegErrorsDualTrial3") +"\n");
         map.put("DUAL1_TRIAL3TANDEMLEGERRORS", bundle.getInt("TandemLegErrorsDualTrial3"));
         displayResults.append("DUAL1 Long Term Memory Score: " + bundle.getInt("numCorrectWordsDual4") +"\n");
@@ -112,8 +112,8 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         map.put("DUAL2_TRIAL2MEMORYSCORE", bundle.getInt("numCorrectWordsDual22"));
         displayResults.append("DUAL2 Single Leg Errors: " + bundle.getInt("SingleLegErrorsDual2Trial2") +"\n");
         map.put("DUAL2_TRIAL2SINGLELEGERRORS", bundle.getInt("SingleLegErrorsDual2Trial2"));
-        displayResults.append("DUAL2 Month Memory Score: " + bundle.getInt("monthsInReverseDual23") +"\n");
-        map.put("DUAL2_TRIAL3MEMORYSCORE", bundle.getInt("monthsInReverseDual23"));
+        displayResults.append("DUAL2 Month Memory Score: " + bundle.getString("monthsInReverseDual23") +"\n");
+        map.put("DUAL2_TRIAL3MEMORYSCORE", bundle.getString("monthsInReverseDual23"));
         displayResults.append("DUAL2 Tandem Leg Errors: " + bundle.getInt("TandemLegErrorsDual2Trial3") +"\n");
         map.put("DUAL2_TRIAL3TANDEMLEGERRORS", bundle.getInt("TandemLegErrorsDual2Trial3"));
         displayResults.append("DUAL2 Long Term Memory Score: " + bundle.getInt("numCorrectWordsDual24") +"\n");
@@ -140,7 +140,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v == cancelButton) {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, LoginActivity.class));
         }
         if (v == submitButton) {
             submitButton.setEnabled(false);
@@ -190,6 +190,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         protected String doInBackground(Void... params) {
             try {
                 ConnectToDB.saveTestResult(map);
+
                 return "EXECUTED";
 
             } catch (Exception e) {
@@ -200,7 +201,8 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
 
         protected void onPostExecute(String result) {
             if (result.equals("EXECUTED")) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         }
     }
