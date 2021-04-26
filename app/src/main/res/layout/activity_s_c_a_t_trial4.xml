@@ -27,8 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/SCATTrial4"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="115dp"
-        android:layout_marginBottom="-115dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginBottom="-143dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
         android:text="Finger"
@@ -43,8 +43,8 @@
         android:layout_height="98dp"
         android:layout_alignBottom="@id/SCATWord11"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="161dp"
-        android:layout_marginBottom="-147dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginBottom="-173dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
         android:text="Penny"
@@ -59,8 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/SCATWord12"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="210dp"
-        android:layout_marginBottom="-209dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginBottom="-233dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
         android:text="Blanket"
@@ -75,8 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/SCATWord13"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="256dp"
-        android:layout_marginBottom="-255dp"
+        android:layout_marginTop="277dp"
+        android:layout_marginBottom="-276dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
         android:text="Lemon"
@@ -91,8 +91,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/SCATWord14"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="299dp"
-        android:layout_marginBottom="-298dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginBottom="-322dp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:clickable="true"
         android:text="Insect"
@@ -101,6 +101,7 @@
         android:textSize="20sp"
         android:textStyle="bold|italic" />
 
+
     <Button
         android:id="@+id/nextFromTrial4SCAT"
         android:layout_width="match_parent"
@@ -108,11 +109,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="37dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="604dp"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:text="Finish Assessment" />
-
 
     <EditText
         android:id="@+id/errorTextForSCAT4"

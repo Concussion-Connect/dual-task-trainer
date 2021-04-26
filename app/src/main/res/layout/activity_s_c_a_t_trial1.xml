@@ -19,16 +19,6 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView144"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:text="User is being presented with 5 words.\n User should try to memorize the words."
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="36sp" />
-
     <Button
         android:id="@+id/nextFromTrial1SCAT"
         android:layout_width="match_parent"
@@ -36,11 +26,21 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="37dp"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:text="Next" />
+
+    <TextView
+        android:id="@+id/textView144"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="User is being presented with 5 words.\n User should try to memorize the words."
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="36sp" />
 
 
 </LinearLayout>

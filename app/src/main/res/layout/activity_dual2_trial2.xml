@@ -24,18 +24,19 @@
         android:textStyle="bold" />
 
 
-
     <Button
         android:id="@+id/nextButtonFromDual22"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="612dp"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:text="Next"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="24dp" />
+        android:text="Next" />
 
     <ImageButton
         android:id="@+id/plusDual22"

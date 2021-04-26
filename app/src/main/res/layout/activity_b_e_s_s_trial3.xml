@@ -23,22 +23,23 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/nextFromTrial3BESS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Next" />
+
         <TextView
             android:id="@+id/BESSTrial3Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="30dp"
             android:text="User should pause for 20 seconds"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="36sp" />
 
-        <Button
-            android:id="@+id/nextFromTrial3BESS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
-            android:text="Next" />
     </LinearLayout>
 
 

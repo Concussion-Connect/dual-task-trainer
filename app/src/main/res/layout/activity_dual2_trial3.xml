@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="265dp"
         android:layout_alignTop="@id/monthsInReverseDual23"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="123dp"
         android:text="December\nNovember\nOctober\nSeptember\nAugust\nJuly\nJune\nMay\nApril\nMarch\nFebruary\nJanuary"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/black"
@@ -40,11 +40,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="37dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="584dp"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:text="Next" />
-
 
     <TextView
         android:id="@+id/Dual2Trial3"
@@ -116,7 +117,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="-205dp"
+        android:layout_marginBottom="-177dp"
         android:adjustViewBounds="true"
         android:background="#0000"
         android:scaleType="fitCenter"
