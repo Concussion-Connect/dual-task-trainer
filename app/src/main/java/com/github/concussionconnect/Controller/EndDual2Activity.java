@@ -23,7 +23,6 @@ import static android.content.ContentValues.TAG;
 public class EndDual2Activity extends Activity implements View.OnClickListener{
     private Bundle bundle;
     private TextView DualResults;
-    private Button cancel;
     private Button submit;
 
     @Override
@@ -33,11 +32,9 @@ public class EndDual2Activity extends Activity implements View.OnClickListener{
         bundle = getIntent().getExtras();
 
         DualResults = (TextView) findViewById(R.id.Dual2Results);
-        cancel = (Button) findViewById(R.id.cancelButtonDual2);
         submit = (Button) findViewById(R.id.submitButtonDual2);
         bundle = getIntent().getExtras();
 
-        cancel.setOnClickListener(this);
         submit.setOnClickListener(this);
 
         /**
@@ -114,12 +111,6 @@ public class EndDual2Activity extends Activity implements View.OnClickListener{
     }
 
     public void onClick(View v) {
-        if(v == cancel) {
-            Intent intent = new Intent(this, OpeningPageForTests.class);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }
-
         if(v == submit) {
             Intent intent = new Intent(this, EndAllResearchActivity.class);
             intent.putExtras(bundle);

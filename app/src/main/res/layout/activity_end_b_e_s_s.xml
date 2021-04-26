@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
     tools:context="com.github.concussionconnect.Controller.EndBESSActivity">
 
-    <TextView
-        android:id="@+id/BESSThanksforTesting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:text="Thanks for testing!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/cancelButtonBESS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/BESSThanksforTesting"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/BESSThanksforTesting"
-        android:layout_marginBottom="28dp"
-        android:text="Cancel" />
-
-    <Button
-        android:id="@+id/submitButtonBESS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cancelButtonBESS"
-        android:layout_alignEnd="@+id/BESSThanksforTesting"
-        android:layout_alignRight="@+id/BESSThanksforTesting"
-        android:text="Submit" />
-
-    <TextView
-        android:id="@+id/BESSResults"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/BESSThanksforTesting"
-        android:layout_marginTop="50dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/BESSThanksforTesting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="Thanks for testing!"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/BESSScrollMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scoll if Submit Button is Not Displayed"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#4C4B4B" />
+
+        <TextView
+            android:id="@+id/BESSResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Button
+            android:id="@+id/submitButtonBESS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:text="Submit" />
+    </LinearLayout>
+
+</ScrollView>

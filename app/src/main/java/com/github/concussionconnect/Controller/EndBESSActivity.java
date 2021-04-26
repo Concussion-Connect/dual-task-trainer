@@ -18,8 +18,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 
 import static android.content.ContentValues.TAG;
 
-public class EndBESSActivity extends Activity implements View.OnClickListener{
-    private Button cancel;
+public class EndBESSActivity extends Activity implements View.OnClickListener {
     private Button submit;
     private TextView BESSresults;
     Bundle bundle;
@@ -27,10 +26,8 @@ public class EndBESSActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_b_e_s_s);
-        cancel = (Button) findViewById(R.id.cancelButtonBESS);
         submit = (Button) findViewById(R.id.submitButtonBESS);
         BESSresults = (TextView) findViewById(R.id.BESSResults);
-        cancel.setOnClickListener(this);
         submit.setOnClickListener(this);
         BESSresults.setText("");
         bundle = getIntent().getExtras();
@@ -63,12 +60,6 @@ public class EndBESSActivity extends Activity implements View.OnClickListener{
     }
 
     public void onClick(View v) {
-        if(v == cancel) {
-            Intent intent = new Intent(this, OpeningPageForTests.class);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }
-
         if(v == submit) {
             Intent intent = new Intent(this, OpeningPageForTests.class);
             intent.putExtras(bundle);

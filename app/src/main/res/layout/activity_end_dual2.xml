@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
     tools:context="com.github.concussionconnect.Controller.EndDual2Activity">
 
-    <TextView
-        android:id="@+id/Dual2ThanksforTesting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:text="Thanks for testing!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/cancelButtonDual2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Dual2ThanksforTesting"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/Dual2ThanksforTesting"
-        android:layout_marginBottom="28dp"
-        android:text="Cancel" />
-
-    <Button
-        android:id="@+id/submitButtonDual2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cancelButtonDual2"
-        android:layout_alignEnd="@+id/Dual2ThanksforTesting"
-        android:layout_alignRight="@+id/Dual2ThanksforTesting"
-        android:text="Submit" />
-
-    <TextView
-        android:id="@+id/Dual2Results"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Dual2ThanksforTesting"
-        android:layout_marginTop="50dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/Dual2ThanksforTesting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="Thanks for testing!"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/Dual2ScrollMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scoll if Submit Button is Not Displayed"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#4C4B4B" />
+
+        <TextView
+            android:id="@+id/Dual2Results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Button
+            android:id="@+id/submitButtonDual2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:text="Submit" />
+    </LinearLayout>
+
+</ScrollView>

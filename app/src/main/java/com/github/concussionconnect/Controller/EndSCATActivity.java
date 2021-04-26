@@ -23,7 +23,6 @@ import static android.content.ContentValues.TAG;
 
 public class EndSCATActivity extends Activity implements View.OnClickListener{
     private TextView SCATResults;
-    private Button cancel;
     private Button submit;
     private Bundle bundle;
     @Override
@@ -32,11 +31,9 @@ public class EndSCATActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_end_s_c_a_t);
 
         SCATResults = (TextView) findViewById(R.id.SCATResults);
-        cancel = (Button) findViewById(R.id.cancelButtonSCAT);
         submit = (Button) findViewById(R.id.submitButtonSCAT);
         bundle = getIntent().getExtras();
 
-        cancel.setOnClickListener(this);
         submit.setOnClickListener(this);
 
         ArrayList<String> recallWordsTrial2 = new ArrayList<String>();
@@ -93,12 +90,6 @@ public class EndSCATActivity extends Activity implements View.OnClickListener{
     }
 
     public void onClick(View v) {
-        if(v == cancel) {
-            Intent intent = new Intent(this, OpeningPageForTests.class);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }
-
         if(v == submit) {
             Intent intent = new Intent(this, OpeningPageForTests.class);
             intent.putExtras(bundle);
