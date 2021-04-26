@@ -28,7 +28,7 @@ import java.util.HashMap;
 import static android.content.ContentValues.TAG;
 
 public class EndAllResearchActivity extends Activity implements View.OnClickListener {
-    private Button cancelButton;
+
     private Button submitButton;
     private TextView displayResults;
     private HashMap<String, Object> map;
@@ -38,10 +38,10 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_research);
-        cancelButton = (Button) findViewById(R.id.cancelButton);
+
         submitButton = (Button) findViewById(R.id.submitButton);
         displayResults = (TextView) findViewById(R.id.displayResults);
-        cancelButton.setOnClickListener(this);
+
         submitButton.setOnClickListener(this);
         displayResults.setText("");
         bundle = getIntent().getExtras();
@@ -139,9 +139,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        if (v == cancelButton) {
-            startActivity(new Intent(this, LoginActivity.class));
-        }
+
         if (v == submitButton) {
             submitButton.setEnabled(false);
             if (connector == null) {

@@ -18,22 +18,14 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/cancelButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="28dp"
-        android:text="Cancel" />
-
-    <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cancelButton"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
+        android:layout_alignBottom="@+id/cancelButton"
+        android:layout_marginEnd="-88dp"
+        android:layout_marginRight="-88dp"
         android:text="Submit" />
 
     <TextView
