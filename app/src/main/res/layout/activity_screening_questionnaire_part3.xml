@@ -291,22 +291,6 @@
             android:entries="@array/ratings" />
 
         <TextView
-            android:id="@+id/textView92"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Drowsiness "
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
-
-        <Spinner
-            android:id="@+id/spinner18"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:entries="@array/ratings" />
-
-        <TextView
             android:id="@+id/textView93"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
