@@ -112,15 +112,16 @@
 
     <TextView
         android:id="@+id/textView133"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="-156dp"
+        android:layout_marginLeft="-156dp"
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/textView131"
         android:layout_toRightOf="@+id/textView131"
         android:text="Trial 1"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="24sp"
         android:textStyle="bold" />

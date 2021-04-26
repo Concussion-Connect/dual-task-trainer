@@ -112,12 +112,15 @@
 
     <TextView
         android:id="@+id/textView142"
-        android:layout_width="wrap_content"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="-170dp"
+        android:layout_marginLeft="-170dp"
         android:layout_toEndOf="@+id/textView140"
         android:layout_toRightOf="@+id/textView140"
         android:text="Trial 4"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="24sp"
         android:textStyle="bold" />
