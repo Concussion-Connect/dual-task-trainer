@@ -26,7 +26,7 @@
             android:id="@+id/SCATScrollMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Scoll if Submit Button is Not Displayed"
+            android:text="Scroll if Submit Button is Not Displayed"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="#4C4B4B" />

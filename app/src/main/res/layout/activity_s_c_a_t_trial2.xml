@@ -1,165 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.github.concussionconnect.Controller.SCATTrial2Activity"
-    android:weightSum="1">
-
-
-    <TextView
-        android:id="@+id/textView134"
+    tools:context="com.github.concussionconnect.Controller.SCATTrial2Activity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/SCATTrial2"
-        android:layout_marginTop="40dp"
-        android:text="What words do they remember?"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp" />
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="631dp"
+            android:weightSum="1">
 
 
-    <CheckedTextView
-        android:id="@+id/SCATWord1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/SCATTrial2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="143dp"
-        android:layout_marginBottom="-143dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Finger"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <CheckedTextView
-        android:id="@+id/SCATWord2"
-        android:layout_width="match_parent"
-        android:layout_height="98dp"
-        android:layout_alignBottom="@id/SCATWord1"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="187dp"
-        android:layout_marginBottom="-172dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Penny"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <CheckedTextView
-        android:id="@+id/SCATWord3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/SCATWord2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="235dp"
-        android:layout_marginBottom="-234dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Blanket"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <CheckedTextView
-        android:id="@+id/SCATWord4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/SCATWord3"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="276dp"
-        android:layout_marginBottom="-275dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Lemon"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <CheckedTextView
-        android:id="@+id/SCATWord5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/SCATWord4"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="324dp"
-        android:layout_marginBottom="-322dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Insect"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <Button
-        android:id="@+id/nextFromTrial2SCAT"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="601dp"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:text="Next" />
-
-    <EditText
-        android:id="@+id/errorTextForSCAT2"
-        android:layout_width="55dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/SCATMem2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="181dp"
-        android:layout_marginRight="181dp"
-        android:clickable="false"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="none"
-        android:text="0"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/SCATMem2"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_alignTop="@+id/SCATWord5"
-        android:layout_marginTop="133dp"
-        android:layout_marginBottom="22dp"
-        android:text="# of Words Memorized"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/SCATTrial2"
-        android:layout_width="412dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-411dp"
-        android:layout_marginLeft="-411dp"
-        android:layout_marginTop="7dp"
-        android:layout_toEndOf="@+id/SCATMem2"
-        android:layout_toRightOf="@+id/SCATMem2"
-        android:text="Trial 2"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView134"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/SCATTrial2"
+                android:layout_marginTop="40dp"
+                android:text="What words do they remember?"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
 
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/textView155"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_alignTop="@id/textView134"
+                android:layout_marginTop="39dp"
+                android:text="Scroll If Any Info is Not Visible "
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
+            <CheckedTextView
+                android:id="@+id/SCATWord1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/SCATTrial2"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="143dp"
+                android:layout_marginBottom="-143dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Finger"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <CheckedTextView
+                android:id="@+id/SCATWord2"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:layout_alignBottom="@id/SCATWord1"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="187dp"
+                android:layout_marginBottom="-172dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Penny"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <CheckedTextView
+                android:id="@+id/SCATWord3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/SCATWord2"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="235dp"
+                android:layout_marginBottom="-234dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Blanket"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <CheckedTextView
+                android:id="@+id/SCATWord4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/SCATWord3"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="276dp"
+                android:layout_marginBottom="-275dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Lemon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <CheckedTextView
+                android:id="@+id/SCATWord5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/SCATWord4"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="324dp"
+                android:layout_marginBottom="-322dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Insect"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/nextFromTrial2SCAT"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="-10dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginBottom="13dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Next" />
+
+            <EditText
+                android:id="@+id/errorTextForSCAT2"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/SCATMem2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="181dp"
+                android:layout_marginRight="181dp"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="none"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/SCATMem2"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_alignTop="@+id/SCATWord5"
+                android:layout_marginTop="133dp"
+                android:layout_marginBottom="22dp"
+                android:text="# of Words Memorized"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/SCATTrial2"
+                android:layout_width="412dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-411dp"
+                android:layout_marginLeft="-411dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/SCATMem2"
+                android:layout_toRightOf="@+id/SCATMem2"
+                android:text="Trial 2"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

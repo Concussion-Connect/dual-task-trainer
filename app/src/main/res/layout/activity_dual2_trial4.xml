@@ -1,166 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.github.concussionconnect.Controller.Dual2Trial4Activity"
-    android:weightSum="1">
-
-
-    <TextView
-        android:id="@+id/Dual2Trial4Question"
+    tools:context="com.github.concussionconnect.Controller.Dual2Trial4Activity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/Dual2Trial4"
-        android:layout_marginTop="40dp"
-        android:text="What words do they still remember?"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp" />
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
 
 
-    <CheckedTextView
-        android:id="@+id/Dual2Word11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/Dual2Trial4"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="138dp"
-        android:layout_marginBottom="-138dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Baby"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <CheckedTextView
-        android:id="@+id/Dual2Word12"
-        android:layout_width="match_parent"
-        android:layout_height="98dp"
-        android:layout_alignBottom="@id/Dual2Word11"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="184dp"
-        android:layout_marginBottom="-169dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Monkey"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <CheckedTextView
-        android:id="@+id/Dual2Word13"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/Dual2Word12"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="231dp"
-        android:layout_marginBottom="-230dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Perfume"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <CheckedTextView
-        android:id="@+id/Dual2Word14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/Dual2Word13"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="273dp"
-        android:layout_marginBottom="-272dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Sunset"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <CheckedTextView
-        android:id="@+id/Dual2Word15"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/Dual2Word14"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="316dp"
-        android:layout_marginBottom="-314dp"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:clickable="true"
-        android:text="Iron"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+            <TextView
+                android:id="@+id/Dual2Trial4Question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/Dual2Trial4"
+                android:layout_marginTop="40dp"
+                android:text="What words do they still remember?"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
 
 
-    <Button
-        android:id="@+id/nextFromTrial4Dual2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginBottom="602dp"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:text="Finish Assessment" />
+            <TextView
+                android:id="@+id/textView149"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_alignTop="@id/Dual2Trial4Question"
+                android:layout_marginTop="29dp"
+                android:text="Scroll If Any Info is Not Visible"
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/errorTextForDual24"
-        android:layout_width="55dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/Dual2Mem4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="181dp"
-        android:layout_marginRight="181dp"
-        android:clickable="false"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="none"
-        android:text="0"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+            <CheckedTextView
+                android:id="@+id/Dual2Word11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/Dual2Trial4"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="138dp"
+                android:layout_marginBottom="-138dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Baby"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
 
-    <TextView
-        android:id="@+id/Dual2Mem4"
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:layout_alignTop="@+id/Dual2Word15"
-        android:layout_marginTop="133dp"
-        android:layout_marginBottom="22dp"
-        android:text="# of Words Memorized"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="24sp" />
+            <CheckedTextView
+                android:id="@+id/Dual2Word12"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:layout_alignBottom="@id/Dual2Word11"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="184dp"
+                android:layout_marginBottom="-169dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Monkey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
 
-    <TextView
-        android:id="@+id/Dual2Trial4"
-        android:layout_width="412dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-411dp"
-        android:layout_marginTop="7dp"
-        android:layout_toEndOf="@+id/Dual2Mem4"
-        android:layout_toRightOf="@+id/Dual2Mem4"
-        android:text="Trial 4"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+            <CheckedTextView
+                android:id="@+id/Dual2Word13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/Dual2Word12"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="231dp"
+                android:layout_marginBottom="-230dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Perfume"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <CheckedTextView
+                android:id="@+id/Dual2Word14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/Dual2Word13"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="273dp"
+                android:layout_marginBottom="-272dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Sunset"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <CheckedTextView
+                android:id="@+id/Dual2Word15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/Dual2Word14"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="316dp"
+                android:layout_marginBottom="-314dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Iron"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
 
 
-</RelativeLayout>
+            <Button
+                android:id="@+id/nextFromTrial4Dual2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="195dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Finish Assessment" />
 
+            <EditText
+                android:id="@+id/errorTextForDual24"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/Dual2Mem4"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="181dp"
+                android:layout_marginRight="181dp"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="none"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Dual2Mem4"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_alignTop="@+id/Dual2Word15"
+                android:layout_marginTop="133dp"
+                android:layout_marginBottom="22dp"
+                android:text="# of Words Memorized"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Dual2Trial4"
+                android:layout_width="412dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-411dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/Dual2Mem4"
+                android:layout_toRightOf="@+id/Dual2Mem4"
+                android:text="Trial 4"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
