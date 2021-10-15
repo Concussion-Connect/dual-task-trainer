@@ -19,13 +19,23 @@
         android:textSize="26sp" />
 
     <TextView
-        android:id="@+id/textView129"
+        android:id="@+id/verticalSpace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click A Test"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#2C2B2B" />
+        android:textColor="#2C2B2B"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sessionID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your session ID is ######."
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#2C2B2B"
+        android:textSize="18sp" />
 
     <CheckedTextView
         android:id="@+id/BESStest"

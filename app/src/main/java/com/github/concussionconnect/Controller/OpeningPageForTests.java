@@ -1,7 +1,6 @@
 package com.github.concussionconnect.Controller;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckedTextView;
+import android.widget.TextView;
 
 import com.github.concussionconnect.Model.ConnectToDB;
 import com.github.concussionconnect.R;
@@ -37,12 +37,19 @@ public class OpeningPageForTests extends Activity implements View.OnClickListene
         Dual2 = (CheckedTextView) findViewById(R.id.Dual2test);
         reset = (Button) findViewById(R.id.reset);
         backToMain = (Button) findViewById(R.id.backToMain);
+
+        bundle = getIntent().getExtras();
+
+        TextView session_id_text = (TextView) findViewById(R.id.sessionID);
+        String adminId = bundle.containsKey("ID") ? bundle.getString("ID") : "######";
+        session_id_text.setText("Your ID is " + adminId
+                + ". \nPlease put this code into the VR App.");
         BESS.setOnClickListener(this);
         SCAT.setOnClickListener(this);
         Dual1.setOnClickListener(this);
         Dual2.setOnClickListener(this);
         reset.setOnClickListener(this);
-        bundle = getIntent().getExtras();
+
     }
 
     @Override

@@ -70,17 +70,17 @@ public class ResearchSymptomsActivity extends Activity implements View.OnClickLi
 
                                                 //added
                                                 LayoutInflater inflater = getLayoutInflater();
-                                                View layout = inflater.inflate(R.layout.custom_toast,
-                                                        (ViewGroup) findViewById(R.id.custom_toast_container));
+//                                                View layout = inflater.inflate(R.layout.custom_toast,
+//                                                        (ViewGroup) findViewById(R.id.custom_toast_container));
 
-                                                TextView text = (TextView) layout.findViewById(R.id.text);
-                                                text.setText("Your ID is " + adminId + ". Put this code into the VR App");
-
-                                                Toast toast = new Toast(getApplicationContext());
-                                                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                                                toast.setDuration(Toast.LENGTH_LONG);
-                                                toast.setView(layout);
-                                                toast.show();
+//                                                TextView text = (TextView) layout.findViewById(R.id.text);
+//                                                text.setText("Your ID is " + adminId + ". Put this code into the VR App");
+//
+//                                                Toast toast = new Toast(getApplicationContext());
+//                                                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+//                                                toast.setDuration(Toast.LENGTH_LONG);
+//                                                toast.setView(layout);
+//                                                toast.show();
                                                 //end added
                                                 Log.d(TAG, "Trainer session created!");
                                             }
