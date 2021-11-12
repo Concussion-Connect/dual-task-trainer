@@ -24,6 +24,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.time.LocalDateTime;
 
 import static android.content.ContentValues.TAG;
 
@@ -47,8 +48,12 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         bundle = getIntent().getExtras();
         map = new HashMap<>();
         map.put("PLAYERID", sha1Hash(bundle.getString("participantName")));
+        map.put("TIMEANDDATE", LocalDateTime.now().toString());
+
         displayResults.append("Name: " + bundle.getString("participantName") + "\n");
         displayResults.append("Encryption: " + sha1Hash(bundle.getString("participantName")) + "\n");
+        displayResults.append("\n");
+        displayResults.append("Time and Date: " + map.get("TIMEANDDATE"));
 //        displayResults.append("List ID: " + bundle.getInt("listId") + "\n");
         ArrayList<SymptomModel> symptoms = (ArrayList<SymptomModel>) getIntent().getSerializableExtra("symptoms");
         int numSymptoms = 0;

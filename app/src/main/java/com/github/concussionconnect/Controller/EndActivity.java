@@ -22,6 +22,7 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -47,8 +48,14 @@ public class EndActivity extends Activity implements View.OnClickListener {
         bundle = getIntent().getExtras();
         map = new HashMap<>();
         map.put("PLAYERID", sha1Hash(bundle.getString("playerInfo")));
+        map.put("TIMEANDDATE", LocalDateTime.now().toString());
+
         displayResults.append("Name: " + bundle.getString("playerInfo") + "\n");
         displayResults.append("Encryption: " + sha1Hash(bundle.getString("playerInfo")) + "\n");
+
+        displayResults.append("\n");
+        displayResults.append("Time and Date: " + map.get("TIMEANDDATE"));
+
 //        displayResults.append("List ID: " + bundle.getInt("listId") + "\n");
         ArrayList<SymptomModel> symptoms = (ArrayList<SymptomModel>) getIntent().getSerializableExtra("symptoms");
         int numSymptoms = 0;
