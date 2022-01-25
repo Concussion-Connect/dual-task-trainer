@@ -6,4 +6,4 @@ A simple app for collecting concussion symptoms of subjects and drawing conclusi
 
 ## Spring 2022 Contributors
 1. Faris Durrani (Project Coordinator)
-2. 
+2. [Sadia Akhter](https://github.com/sadiaa1999) 
