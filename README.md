@@ -18,6 +18,7 @@ A simple Android app for collecting concussion symptoms of subjects and drawing 
 2. [Sadia Akhter](https://github.com/sadiaa1999) 
 3. [Kaushika Mohan](https://github.com/kmohan00)
 4. [Amal Chaudry](https://github.com/amalchaudry)
+5. [Marie-Emmanuela Newman](https://github.com/mnewman12)
 
 ## License
 Under no ciscumstances can this app be used without the consent of the client. All rights reserved.
