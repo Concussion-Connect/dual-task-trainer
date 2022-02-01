@@ -62,6 +62,8 @@ public class ConnectToDB {
         String id,
         int wordList,
         int currentTrial,
+        String testType,
+        boolean sessionFinished,
         OnSuccessListener<Void> successCallback,
         OnFailureListener failureCallback
     ) {
@@ -69,6 +71,8 @@ public class ConnectToDB {
         Map<String, Object> dataToSave = new HashMap<>();
         dataToSave.put("wordList", wordList);
         dataToSave.put("currentTrial", currentTrial);
+        dataToSave.put("testType", testType);
+        dataToSave.put("sessionFinished", sessionFinished);
 
         // Add a new document with a generated ID
         db.collection(sessionsDbCollectionName)
@@ -89,6 +93,22 @@ public class ConnectToDB {
             .update("currentTrial", currentTrial)
             .addOnSuccessListener(successCallback)
             .addOnFailureListener(failureCallback);
+    }
+
+    public static void updateTrainerSessionTrial(
+            String id,
+            int currentTrial,
+            String testType,
+            OnSuccessListener<Void> successCallback,
+            OnFailureListener failureCallback
+    ) {
+        // Set the "isCapital" field of the city 'DC'
+        db.collection(sessionsDbCollectionName).document(id)
+                .update(
+                        "currentTrial", currentTrial,
+                        "testType", testType)
+                .addOnSuccessListener(successCallback)
+                .addOnFailureListener(failureCallback);
     }
 
     public static void deleteTrainerSession(

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    tools:context="com.github.concussionconnect.Controller.EndBESSActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/BESSThanksforTesting"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="38dp"
+            android:text="Thanks for testing!"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/BESSScrollMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scroll if Submit Button is Not Displayed"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#4C4B4B" />
+
+        <TextView
+            android:id="@+id/BESSResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Button
+            android:id="@+id/submitButtonBESS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:text="Submit" />
+    </LinearLayout>
+
+</ScrollView>

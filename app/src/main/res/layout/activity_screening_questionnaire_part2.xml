@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/questionnaireDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="Date"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Study Administrator" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject ID" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView72"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/SSQ"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/textView73"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="Purpose:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView78"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The screening questionnaire serves to collect important information on subjects’ medical and injury history. Data from the screening questionnaire will be used to determine eligibility for study enrollment and will also record demographic data for the study. Additionally, the questionnaire will document health factors that may affect study outcomes."
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Instructions:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView80"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Please write clearly and answer the questions the best that you can. If a question does not apply to you, you may skip it. If you do not remember details, just answer as much as you remember. You may ask the study administrator questions at any time."
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/textView81"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="@string/demographic"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView82"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="1. Subject Gender:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/maleCheckBox"
+                    android:layout_width="209dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <CheckBox
+                    android:id="@+id/femaleCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Female" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView83"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="2. Subject Age:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Age in Years/Months"/>
+
+
+        <TextView
+            android:id="@+id/textView84"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="3. Subject Race:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            />
+
+        <CheckBox
+            android:id="@+id/raceCheckBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="American Indian or Alaskan Native" />
+
+        <CheckBox
+            android:id="@+id/raceCheckBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asian" />
+
+        <CheckBox
+            android:id="@+id/raceCheckBox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Black or African American" />
+
+        <CheckBox
+            android:id="@+id/raceCheckBox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox Hawaiian or Other Pacific Islander" />
+
+        <CheckBox
+            android:id="@+id/raceCheckBox5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="White" />
+
+        <TextView
+            android:id="@+id/textView85"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="4. Subject Ethnicity:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/ethnicityCheckBox1"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Hispanic Latino" />
+
+            <CheckBox
+                android:id="@+id/ethnicityCheckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Not Hispanic/Latino" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView86"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="5. Do you speak English fluently:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/englishCheckBox1"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/englishCheckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView87"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="6. What is the highest degree or level of school you have completed? If currently enrolled, highest degree received:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elementary/primary school" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Middle school / Junior high school" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Some high school (no diploma)" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="High school diploma, or equivalent" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Some college credit, no degree" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Trade/technical/vocational training" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Associate degree" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bachelor’s degree" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Master’s degree" />
+
+        <CheckBox
+            android:id="@+id/schoolCheckBox10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Professional/doctorate degree" />
+
+        <TextView
+            android:id="@+id/textView88"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="7. How many times per week do you practice and/or work out?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/timesPerWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Times Per Week"/>
+
+
+        <TextView
+            android:id="@+id/textView89"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="8. What is the average length of a practice or work out session? "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/avglength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Length of Workout/Practice"/>
+
+        <TextView
+            android:id="@+id/textView90"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="@string/medical"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView91"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/medical9"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/concussionCheckBox1"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/concussionCheckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView92"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/medical10"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/alcoholCheckBox1"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/alcoholCheckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView93"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/medical12"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="a. Attention Deficit Disorder (ADD) or Attention Deficit Hyperactivity Disorder (ADHD) "
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/attentionCheckBox1"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/attentionCheckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView95"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="If Yes, which medication(s) are you taking:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/medications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="Medications" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView96"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/medication"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="28dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/medicationCheckBox1"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/medicationCheckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView97"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="b. Epilepsy (seizure disorder)  "
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="28dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/epilepsyCheckBox1"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/epilepsyCheckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView98"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/medical13a"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/timesConcussion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Times of Concussion"/>
+
+        <TextView
+            android:id="@+id/textView99"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="13b.  When was your most recent concussion?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/dateOfConc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="Date of Last Concussion"/>
+
+        <TextView
+            android:id="@+id/textView100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="14. Describe any concussion(s) you have had to the best of your ability:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView101"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Concussion 1:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView102"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Date (M/D/Y) (most recent first)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/dateOfConc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="Date of Concussion 1"/>
+
+        <TextView
+            android:id="@+id/textView103"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Symptom Duration (# days)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/duration1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Symptom Duration of Concussion 1"/>
+
+        <TextView
+            android:id="@+id/textView104"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Injury Mechanism:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+
+        <CheckBox
+            android:id="@+id/injuryBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sports" />
+
+        <CheckBox
+            android:id="@+id/injuryBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motor Vehicle Crash" />
+
+        <CheckBox
+            android:id="@+id/injuryBox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blunt Object" />
+
+        <CheckBox
+            android:id="@+id/injuryBox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+        <TextView
+            android:id="@+id/textView105"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="For Sports-Related Concussion:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView106"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Sport:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sportName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sport Name for Concussion 1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView107"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="How Many Days Until Return to Play?:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+
+        <EditText
+            android:id="@+id/days1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Days Until Return for Concussion 1"/>
+
+
+        <TextView
+            android:id="@+id/textView108"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Comments:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/comment1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comments for Concussion 1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/textView109"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Concussion 2:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView110"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Date (M/D/Y) (most recent first)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/date2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="Date of Concussion 2"/>
+
+        <TextView
+            android:id="@+id/textView111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Symptom Duration (# days)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/duration2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Symptom Duration of Concussion 2"/>
+
+        <TextView
+            android:id="@+id/textView112"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Injury Mechanism:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+
+        <CheckBox
+            android:id="@+id/injuryBox6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sports" />
+
+        <CheckBox
+            android:id="@+id/injuryBox7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motor Vehicle Crash" />
+
+        <CheckBox
+            android:id="@+id/injuryBox8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blunt Object" />
+
+        <CheckBox
+            android:id="@+id/injuryBox9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+        <TextView
+            android:id="@+id/textView113"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="For Sports-Related Concussion:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView114"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Sport:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sportName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sport Name for Concussion 2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView115"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="How Many Days Until Return to Play?:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+
+        <EditText
+            android:id="@+id/days2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Days Until Return for Concussion 2"/>
+
+        <TextView
+            android:id="@+id/textView116"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Comments:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/comment2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comments for Concussion 2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView117"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Concussion 3:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView118"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Date (M/D/Y) (most recent first)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/date3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="Date of Concussion 3"/>
+
+        <TextView
+            android:id="@+id/textView119"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Symptom Duration (# days)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/duration3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Symptom Duration of Concussion 3"/>
+
+        <TextView
+            android:id="@+id/textView120"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Injury Mechanism:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+
+        <CheckBox
+            android:id="@+id/injuryBox10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sports" />
+
+        <CheckBox
+            android:id="@+id/injuryBox11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motor Vehicle Crash" />
+
+        <CheckBox
+            android:id="@+id/injuryBox12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blunt Object" />
+
+        <CheckBox
+            android:id="@+id/injuryBox13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+        <TextView
+            android:id="@+id/textView121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="For Sports-Related Concussion:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView122"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Sport:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sportName3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sport Name for Concussion 3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView123"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="How Many Days Until Return to Play?:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+        <EditText
+            android:id="@+id/days3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Days Until Return for Concussion 3"/>
+
+        <TextView
+            android:id="@+id/textView124"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Comments:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/comment3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comments for Concussion 3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/backFromQuest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/Continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Continue" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

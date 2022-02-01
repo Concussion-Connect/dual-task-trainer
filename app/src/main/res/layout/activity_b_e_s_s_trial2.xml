@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.concussionconnect.Controller.BESSTrial2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="631dp"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/plusBESS2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/textView137"
+                android:layout_alignTop="@+id/minusBESS2"
+                android:layout_alignEnd="@+id/textView136"
+                android:layout_alignRight="@+id/textView136"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:adjustViewBounds="true"
+                android:background="#0000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/plusbutton" />
+
+            <ImageButton
+                android:id="@+id/minusBESS2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/textView137"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="167dp"
+                android:layout_marginBottom="80dp"
+                android:adjustViewBounds="true"
+                android:background="#0000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/minusbutton" />
+
+            <EditText
+                android:id="@+id/errorText2"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/plusBESS2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="61dp"
+                android:layout_marginRight="61dp"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="none"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView135"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView136"
+                android:layout_alignBottom="@+id/textView136"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="43dp"
+                android:layout_marginRight="43dp"
+                android:text="# of Errors"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView136"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/plusBESS2"
+                android:layout_alignStart="@+id/minusBESS2"
+                android:layout_alignLeft="@+id/minusBESS2"
+                android:layout_marginBottom="22dp"
+                android:text="Single Leg Stance"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView137"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:text="User should hold stance for 20 seconds.\                  Monitor their balance!"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textView138"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-164dp"
+                android:layout_marginLeft="-164dp"
+                android:layout_toEndOf="@+id/textView136"
+                android:layout_toRightOf="@+id/textView136"
+                android:text="Trial 2"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/nextFromTrial2BESS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="2dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Next" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignTop="@id/textView138"
+                android:layout_marginTop="37dp"
+                android:text="Scroll If Any Info is Not Visible "
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
