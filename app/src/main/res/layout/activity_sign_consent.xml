@@ -98,8 +98,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Participant Name (Printed)"/>
+            android:hint="Participant Name"
+            android:inputType="textPersonName" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -108,7 +108,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Participant Signature" />
+                android:hint="Participant ID" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
@@ -116,8 +116,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="date"
-            android:hint="Date (Participant)"/>
+            android:hint="Date"
+            android:inputType="date" />
 
 
         <com.google.android.material.textfield.TextInputLayout
