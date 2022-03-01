@@ -106,6 +106,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/consentID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Participant ID" />
@@ -122,13 +123,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Signature of Person Obtaining Consent " />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

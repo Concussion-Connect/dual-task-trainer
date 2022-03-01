@@ -35,6 +35,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
     private HashMap<String, Object> map;
     Bundle bundle;
     DBConnector connector;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,13 +48,12 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         displayResults.setText("");
         bundle = getIntent().getExtras();
         map = new HashMap<>();
-        map.put("PLAYERID", sha1Hash(bundle.getString("participantName")));
-        map.put("TIMEANDDATE", LocalDateTime.now().toString());
+        map.put("PARTICIPANT_NAME", bundle.getString("participantName"));
+        map.put("PARTICIPANT_ID", bundle.getString("consentID"));
+        map.put("TEST_DATETIME", LocalDateTime.now());
 
         displayResults.append("Name: " + bundle.getString("participantName") + "\n");
-        displayResults.append("Encryption: " + sha1Hash(bundle.getString("participantName")) + "\n");
-        displayResults.append("\n");
-        displayResults.append("Time and Date: " + map.get("TIMEANDDATE"));
+        displayResults.append("Test Time and Date: " + map.get("TEST_DATETIME"));
 //        displayResults.append("List ID: " + bundle.getInt("listId") + "\n");
         ArrayList<SymptomModel> symptoms = (ArrayList<SymptomModel>) getIntent().getSerializableExtra("symptoms");
         int numSymptoms = 0;
@@ -62,7 +62,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         String symptomString = "";
         for (SymptomModel x : symptoms) {
             if (x.getValue() > 0) {
-                symptomString = symptomString == "" ? x.getSympName() + ", Severity: " + x.getValue() : symptomString + ", " + x.getSympName() + ", Severity: " + x.getValue();
+                symptomString = symptomString.equals("") ? x.getSympName() + ", Severity: " + x.getValue() : symptomString + ", " + x.getSympName() + ", Severity: " + x.getValue();
                 numSymptoms++;
             }
             severityTotal += x.getValue();
@@ -77,51 +77,51 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
 
         //BESS RESULTS
         displayResults.append("BESS Results: " + "\n");
-        displayResults.append("BESS Double Leg Errors: " + bundle.getInt("BESSTrial1Errors") +"\n");
+        displayResults.append("BESS Double Leg Errors: " + bundle.getInt("BESSTrial1Errors") + "\n");
         map.put("BESS_DOUBLE_LEG_ERRORS", bundle.getInt("BESSTrial1Errors"));
-        displayResults.append("BESS Single Leg Errors: " + bundle.getInt("BESSTrial2Errors") +"\n");
+        displayResults.append("BESS Single Leg Errors: " + bundle.getInt("BESSTrial2Errors") + "\n");
         map.put("BESS_SINGLE_LEG_ERRORS", bundle.getInt("BESSTrial2Errors"));
         displayResults.append("PAUSED 20 SECONDS... " + "\n");
-        displayResults.append("BESS Tandem Leg Errors: " + bundle.getInt("BESSTrial4Errors") +"\n");
+        displayResults.append("BESS Tandem Leg Errors: " + bundle.getInt("BESSTrial4Errors") + "\n");
         map.put("BESS_TANDEM_LEG_ERRORS", bundle.getInt("BESSTrial4Errors"));
 
         //SCAT RESULTS
         displayResults.append("SCAT Results: " + "\n");
-        displayResults.append("SCAT Short Term Memory Score: " + bundle.getInt("numCorrectWordsSCAT2") +"\n");
+        displayResults.append("SCAT Short Term Memory Score: " + bundle.getInt("numCorrectWordsSCAT2") + "\n");
         map.put("SCAT_SHORT_MEM_SCORE", bundle.getInt("numCorrectWordsSCAT2"));
-        displayResults.append("SCAT Month Memory Score: " + bundle.getString("monthsInReverseSCAT3") +"\n");
+        displayResults.append("SCAT Month Memory Score: " + bundle.getString("monthsInReverseSCAT3") + "\n");
         map.put("SCAT_MONTHS_MEM_SCORE", bundle.getString("monthsInReverseSCAT3"));
-        displayResults.append("SCAT Long Term Memory Score: " + bundle.getInt("numCorrectWordsSCAT4") +"\n");
+        displayResults.append("SCAT Long Term Memory Score: " + bundle.getInt("numCorrectWordsSCAT4") + "\n");
         map.put("SCAT_LONG_MEM_SCORE", bundle.getInt("numCorrectWordsSCAT4"));
 
         //DUAL1 RESULTS
         displayResults.append("DUAL 1 Results: " + "\n");
-        displayResults.append("DUAL1 Double Leg Errors: " + bundle.getInt("DoubleLegErrorsDualTrial1") +"\n");
+        displayResults.append("DUAL1 Double Leg Errors: " + bundle.getInt("DoubleLegErrorsDualTrial1") + "\n");
         map.put("DUAL1_TRIAL1DOUBLELEGERRORS", bundle.getInt("DoubleLegErrorsDualTrial1"));
-        displayResults.append("DUAL1 Short Term Memory Score: " + bundle.getInt("numCorrectWordsDual2") +"\n");
+        displayResults.append("DUAL1 Short Term Memory Score: " + bundle.getInt("numCorrectWordsDual2") + "\n");
         map.put("DUAL1_TRIAL2MEMORYSCORE", bundle.getInt("numCorrectWordsDual2"));
-        displayResults.append("DUAL1 Single Leg Errors: " + bundle.getInt("SingleLegErrorsDualTrial2") +"\n");
+        displayResults.append("DUAL1 Single Leg Errors: " + bundle.getInt("SingleLegErrorsDualTrial2") + "\n");
         map.put("DUAL1_TRIAL2SINGLELEGERRORS", bundle.getInt("SingleLegErrorsDualTrial2"));
-        displayResults.append("DUAL1 Month Memory Score: " + bundle.getString("monthsInReverseDual3") +"\n");
+        displayResults.append("DUAL1 Month Memory Score: " + bundle.getString("monthsInReverseDual3") + "\n");
         map.put("DUAL1_TRIAL3MEMORYSCORE", bundle.getString("monthsInReverseDual3"));
-        displayResults.append("DUAL1 Tandem Leg Errors: " + bundle.getInt("TandemLegErrorsDualTrial3") +"\n");
+        displayResults.append("DUAL1 Tandem Leg Errors: " + bundle.getInt("TandemLegErrorsDualTrial3") + "\n");
         map.put("DUAL1_TRIAL3TANDEMLEGERRORS", bundle.getInt("TandemLegErrorsDualTrial3"));
-        displayResults.append("DUAL1 Long Term Memory Score: " + bundle.getInt("numCorrectWordsDual4") +"\n");
+        displayResults.append("DUAL1 Long Term Memory Score: " + bundle.getInt("numCorrectWordsDual4") + "\n");
         map.put("DUAL1_TRIAL4MEMORYSCORE", bundle.getInt("numCorrectWordsDual4"));
 
         //DUAL2 RESULTS
         displayResults.append("DUAL 2 Results: " + "\n");
-        displayResults.append("DUAL2 Double Leg Errors: " + bundle.getInt("DoubleLegErrorsDual2Trial1") +"\n");
+        displayResults.append("DUAL2 Double Leg Errors: " + bundle.getInt("DoubleLegErrorsDual2Trial1") + "\n");
         map.put("DUAL2_TRIAL1DOUBLELEGERRORS", bundle.getInt("DoubleLegErrorsDual2Trial1"));
-        displayResults.append("DUAL2 Short Term Memory Score: " + bundle.getInt("numCorrectWordsDual22") +"\n");
+        displayResults.append("DUAL2 Short Term Memory Score: " + bundle.getInt("numCorrectWordsDual22") + "\n");
         map.put("DUAL2_TRIAL2MEMORYSCORE", bundle.getInt("numCorrectWordsDual22"));
-        displayResults.append("DUAL2 Single Leg Errors: " + bundle.getInt("SingleLegErrorsDual2Trial2") +"\n");
+        displayResults.append("DUAL2 Single Leg Errors: " + bundle.getInt("SingleLegErrorsDual2Trial2") + "\n");
         map.put("DUAL2_TRIAL2SINGLELEGERRORS", bundle.getInt("SingleLegErrorsDual2Trial2"));
-        displayResults.append("DUAL2 Month Memory Score: " + bundle.getString("monthsInReverseDual23") +"\n");
+        displayResults.append("DUAL2 Month Memory Score: " + bundle.getString("monthsInReverseDual23") + "\n");
         map.put("DUAL2_TRIAL3MEMORYSCORE", bundle.getString("monthsInReverseDual23"));
-        displayResults.append("DUAL2 Tandem Leg Errors: " + bundle.getInt("TandemLegErrorsDual2Trial3") +"\n");
+        displayResults.append("DUAL2 Tandem Leg Errors: " + bundle.getInt("TandemLegErrorsDual2Trial3") + "\n");
         map.put("DUAL2_TRIAL3TANDEMLEGERRORS", bundle.getInt("TandemLegErrorsDual2Trial3"));
-        displayResults.append("DUAL2 Long Term Memory Score: " + bundle.getInt("numCorrectWordsDual24") +"\n");
+        displayResults.append("DUAL2 Long Term Memory Score: " + bundle.getInt("numCorrectWordsDual24") + "\n");
         map.put("DUAL2_TRIAL4MEMORYSCORE", bundle.getInt("numCorrectWordsDual24"));
 
         String adminId = bundle.getString("ID");
@@ -153,40 +153,34 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
             }
         }
     }
+
     //The way that players will be hashed. Taking in their name and birthday
-    public String sha1Hash( String toHash )
-    {
+    public String sha1Hash(String toHash) {
         String hash = null;
-        try
-        {
+        try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] bytes = toHash.getBytes("UTF-8");
             digest.update(bytes, 0, bytes.length);
             bytes = digest.digest();
-            hash = bytesToHex( bytes );
-        }
-        catch( NoSuchAlgorithmException e )
-        {
+            hash = bytesToHex(bytes);
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-        }
-        catch( UnsupportedEncodingException e )
-        {
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return hash;
     }
 
     final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
-    public static String bytesToHex( byte[] bytes )
-    {
-        char[] hexChars = new char[ bytes.length * 2 ];
-        for( int j = 0; j < bytes.length; j++ )
-        {
-            int v = bytes[ j ] & 0xFF;
-            hexChars[ j * 2 ] = hexArray[ v >>> 4 ];
-            hexChars[ j * 2 + 1 ] = hexArray[ v & 0x0F ];
+
+    public static String bytesToHex(byte[] bytes) {
+        char[] hexChars = new char[bytes.length * 2];
+        for (int j = 0; j < bytes.length; j++) {
+            int v = bytes[j] & 0xFF;
+            hexChars[j * 2] = hexArray[v >>> 4];
+            hexChars[j * 2 + 1] = hexArray[v & 0x0F];
         }
-        return new String( hexChars );
+        return new String(hexChars);
     }
 
     private class DBConnector extends AsyncTask<Void, Void, String> {
