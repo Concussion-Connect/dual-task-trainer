@@ -18,8 +18,10 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -31,7 +33,6 @@ import static android.content.ContentValues.TAG;
 public class EndAllResearchActivity extends Activity implements View.OnClickListener {
 
     private Button submitButton;
-    private TextView displayResults;
     private HashMap<String, Object> map;
     Bundle bundle;
     DBConnector connector;
@@ -42,7 +43,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         setContentView(R.layout.activity_end_research);
 
         submitButton = (Button) findViewById(R.id.submitButton);
-        displayResults = (TextView) findViewById(R.id.displayResults);
+        TextView displayResults = (TextView) findViewById(R.id.displayResults);
 
         submitButton.setOnClickListener(this);
         displayResults.setText("");
@@ -54,6 +55,9 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
 
         displayResults.append("Name: " + bundle.getString("participantName") + "\n");
         displayResults.append("Test Time and Date: " + map.get("TEST_DATETIME"));
+
+        saveQuestionnaireInfo(bundle, map);
+
 //        displayResults.append("List ID: " + bundle.getInt("listId") + "\n");
         ArrayList<SymptomModel> symptoms = (ArrayList<SymptomModel>) getIntent().getSerializableExtra("symptoms");
         int numSymptoms = 0;
@@ -74,7 +78,43 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         displayResults.append("Symptom severity score: " + severityTotal + " of " + symptoms.size() * 6);
         displayResults.append("\n\n");
 
+        saveTestResults(map, displayResults);
 
+        String adminId = bundle.getString("ID");
+        ConnectToDB.deleteTrainerSession(adminId,
+                new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "Trainer session deleted!");
+                    }
+                },
+                new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error deleting trainer session", e);
+                    }
+                }
+        );
+        //deleteTrainerSession(id);
+    }
+
+    private void saveQuestionnaireInfo(Bundle bundle, HashMap<String, Object> map) {
+        map.put("STUDY_INFO", bundle.getSerializable("studyInfo"));
+        map.put("SUBJECT_CONTACT_INFO", bundle.getSerializable("contactInfo"));
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == submitButton) {
+            submitButton.setEnabled(false);
+            if (connector == null) {
+                connector = new DBConnector();
+                connector.execute(null, null, null);
+            }
+        }
+    }
+
+    private void saveTestResults(HashMap<String, Object> map, TextView displayResults) {
         //BESS RESULTS
         displayResults.append("BESS Results: " + "\n");
         displayResults.append("BESS Double Leg Errors: " + bundle.getInt("BESSTrial1Errors") + "\n");
@@ -123,35 +163,6 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         map.put("DUAL2_TRIAL3TANDEMLEGERRORS", bundle.getInt("TandemLegErrorsDual2Trial3"));
         displayResults.append("DUAL2 Long Term Memory Score: " + bundle.getInt("numCorrectWordsDual24") + "\n");
         map.put("DUAL2_TRIAL4MEMORYSCORE", bundle.getInt("numCorrectWordsDual24"));
-
-        String adminId = bundle.getString("ID");
-        ConnectToDB.deleteTrainerSession(adminId,
-                new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "Trainer session deleted!");
-                    }
-                },
-                new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error deleting trainer session", e);
-                    }
-                }
-        );
-        //deleteTrainerSession(id);
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        if (v == submitButton) {
-            submitButton.setEnabled(false);
-            if (connector == null) {
-                connector = new DBConnector();
-                connector.execute(null, null, null);
-            }
-        }
     }
 
     //The way that players will be hashed. Taking in their name and birthday
@@ -159,13 +170,11 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         String hash = null;
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] bytes = toHash.getBytes("UTF-8");
+            byte[] bytes = toHash.getBytes(StandardCharsets.UTF_8);
             digest.update(bytes, 0, bytes.length);
             bytes = digest.digest();
             hash = bytesToHex(bytes);
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return hash;
@@ -187,9 +196,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         protected String doInBackground(Void... params) {
             try {
                 ConnectToDB.saveTestResult(map);
-
                 return "EXECUTED";
-
             } catch (Exception e) {
                 Log.wtf("MyTag", e.getMessage());
                 return "FAILURE";
@@ -198,7 +205,6 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
 
         protected void onPostExecute(String result) {
             if (result.equals("EXECUTED")) {
-
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         }

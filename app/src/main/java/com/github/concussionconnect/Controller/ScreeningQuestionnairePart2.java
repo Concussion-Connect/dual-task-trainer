@@ -1,7 +1,5 @@
 package com.github.concussionconnect.Controller;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +10,7 @@ import com.github.concussionconnect.R;
 
 public class ScreeningQuestionnairePart2 extends Activity implements View.OnClickListener {
 
-    private Button back;
-    private Button Continue;
+    private Button back, Continue;
     private Bundle bundle;
 
     @Override
@@ -38,6 +35,7 @@ public class ScreeningQuestionnairePart2 extends Activity implements View.OnClic
 
         if(v == Continue) {
             Intent intent = new Intent(this, ScreeningQuestionnairePart3.class);
+
             intent.putExtras(bundle);
             startActivity(intent);
         }

@@ -7,34 +7,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/questionnaireDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            android:hint="Date"/>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Study Administrator" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Subject ID" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/textView72"
@@ -177,7 +149,7 @@
             android:id="@+id/raceCheckBox4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CheckBox Hawaiian or Other Pacific Islander" />
+            android:text="Hawaiian or Other Pacific Islander" />
 
         <CheckBox
             android:id="@+id/raceCheckBox5"

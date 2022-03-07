@@ -56,10 +56,9 @@ public class SignConsentActivity extends Activity implements View.OnClickListene
                 Toast.makeText(context, "Incorrect date format", Toast.LENGTH_SHORT).show();
                 return;
             }
-            bundle.putString("consentID", !participantID.getText().toString().equals("") ? participantID.getText().toString() : "No ID entered");
+            bundle.putString("consentID", participantID.getText().toString());
             bundle.putString("consentDate", consentDate);
-            String inputName = participantName.getText().toString();
-            bundle.putString("participantName", inputName.length() > 1 ? inputName : "No Name entered");
+            bundle.putString("participantName", participantName.getText().toString());
             intent.putExtras(bundle);
             startActivity(intent);
         }
