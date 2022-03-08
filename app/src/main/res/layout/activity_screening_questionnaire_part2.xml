@@ -175,7 +175,7 @@
                 android:id="@+id/ethnicityHispanic"
                 android:layout_width="209dp"
                 android:layout_height="wrap_content"
-                android:text="Hispanic Latino" />
+                android:text="Hispanic/Latino" />
 
             <CheckBox
                 android:id="@+id/ethnicityNonHispanic"

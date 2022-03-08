@@ -10,6 +10,10 @@ import android.widget.EditText;
 
 import com.github.concussionconnect.R;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class ScreeningQuestionnairePart2 extends Activity implements View.OnClickListener {
 
     private Button back, Continue;
@@ -109,7 +113,38 @@ public class ScreeningQuestionnairePart2 extends Activity implements View.OnClic
         comment3 = findViewById(R.id.comment3);
     }
 
-    private void saveInput() {}
+    private void saveInput() {
+        HashMap<String, Object> subjectBiographicalData = new HashMap<>();
+        ArrayList<String> gender = new ArrayList<>();
+        addIfChecked(gender, maleCheckBox, "Male");
+        addIfChecked(gender, femaleCheckBox, "Female");
+        subjectBiographicalData.put("Gender", String.join(", ", gender));
+
+        ArrayList<String> race = new ArrayList<>();
+        addIfChecked(race, raceNative, "American Indian or Alaskan Native");
+        addIfChecked(race, raceAsian, "Asian");
+        addIfChecked(race, raceBlack, "Black or African American");
+        addIfChecked(race, raceHawaiian, "Hawaiian or Other Pacific Islander");
+        addIfChecked(race, raceWhite, "White");
+        subjectBiographicalData.put("Race", String.join(", ", race));
+
+        ArrayList<String> hispanic = new ArrayList<>();
+        addIfChecked(race, ethnicityHispanic, "Hispanic/Latino");
+        addIfChecked(race, ethnicityNonHispanic, "Not Hispanic/Latino");
+        subjectBiographicalData.put("Ethnicity", String.join(", ", hispanic));
+
+        ArrayList<String> english = new ArrayList<>();
+        addIfChecked(race, yesEnglish, "Yes");
+        addIfChecked(race, noEnglish, "No");
+        subjectBiographicalData.put("Can Speak English", String.join(", ", english));
+
+    }
+
+    private void addIfChecked(List<String> list, CheckBox item, String toAdd) {
+        if (item.isChecked()) {
+            list.add(toAdd);
+        }
+    }
 
     public void onClick(View v) {
         if (v == back) {
