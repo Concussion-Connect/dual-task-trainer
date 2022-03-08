@@ -48,7 +48,7 @@ public class ConsentDescriptionActivity extends Activity implements View.OnClick
 
         if(v == skipButton) {
             Intent intent = new Intent(this, ResearchSymptomsActivity.class);
-            bundle.putString("participantName", " test ");
+            bundle.putString("participantName", "No Name entered");
             intent.putExtras(bundle);
             startActivity(intent);
 

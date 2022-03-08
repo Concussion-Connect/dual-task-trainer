@@ -49,6 +49,7 @@ public class OpeningPageForTests extends Activity implements View.OnClickListene
         Dual1.setOnClickListener(this);
         Dual2.setOnClickListener(this);
         reset.setOnClickListener(this);
+        backToMain.setOnClickListener(this);
 
     }
 
