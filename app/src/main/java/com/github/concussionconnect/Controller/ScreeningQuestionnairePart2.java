@@ -116,33 +116,51 @@ public class ScreeningQuestionnairePart2 extends Activity implements View.OnClic
     private void saveInput() {
         HashMap<String, Object> subjectBiographicalData = new HashMap<>();
         ArrayList<String> gender = new ArrayList<>();
-        addIfChecked(gender, maleCheckBox, "Male");
-        addIfChecked(gender, femaleCheckBox, "Female");
+        addIfChecked(gender, maleCheckBox);
+        addIfChecked(gender, femaleCheckBox);
         subjectBiographicalData.put("Gender", String.join(", ", gender));
 
         ArrayList<String> race = new ArrayList<>();
-        addIfChecked(race, raceNative, "American Indian or Alaskan Native");
-        addIfChecked(race, raceAsian, "Asian");
-        addIfChecked(race, raceBlack, "Black or African American");
-        addIfChecked(race, raceHawaiian, "Hawaiian or Other Pacific Islander");
-        addIfChecked(race, raceWhite, "White");
+        addIfChecked(race, raceNative);
+        addIfChecked(race, raceAsian);
+        addIfChecked(race, raceBlack);
+        addIfChecked(race, raceHawaiian);
+        addIfChecked(race, raceWhite);
         subjectBiographicalData.put("Race", String.join(", ", race));
 
         ArrayList<String> hispanic = new ArrayList<>();
-        addIfChecked(race, ethnicityHispanic, "Hispanic/Latino");
-        addIfChecked(race, ethnicityNonHispanic, "Not Hispanic/Latino");
+        addIfChecked(hispanic, ethnicityHispanic);
+        addIfChecked(hispanic, ethnicityNonHispanic);
         subjectBiographicalData.put("Ethnicity", String.join(", ", hispanic));
 
         ArrayList<String> english = new ArrayList<>();
-        addIfChecked(race, yesEnglish, "Yes");
-        addIfChecked(race, noEnglish, "No");
+        addIfChecked(english, yesEnglish);
+        addIfChecked(english, noEnglish);
         subjectBiographicalData.put("Can Speak English", String.join(", ", english));
+
+        ArrayList<String> highestEducation = new ArrayList<>();
+        addIfChecked(highestEducation, schoolElem);
+        addIfChecked(highestEducation, schoolMiddle);
+        addIfChecked(highestEducation, schoolHigh);
+        addIfChecked(highestEducation, schoolDip);
+        addIfChecked(highestEducation, schoolSomeCollege);
+        addIfChecked(highestEducation, schoolTrade);
+        addIfChecked(highestEducation, schoolAssoc);
+        addIfChecked(highestEducation, schoolBach);
+        addIfChecked(highestEducation, schoolMaster);
+        addIfChecked(highestEducation, schoolPhD);
+        subjectBiographicalData.put("What is the highest degree or level of school you have " +
+                "completed? If currently enrolled, highest degree received",
+                String.join(", ", highestEducation));
+
+
+        ArrayList<String> highestEducation = new ArrayList<>();
 
     }
 
-    private void addIfChecked(List<String> list, CheckBox item, String toAdd) {
+    private void addIfChecked(List<String> list, CheckBox item) {
         if (item.isChecked()) {
-            list.add(toAdd);
+            list.add(item.getText().toString());
         }
     }
 
