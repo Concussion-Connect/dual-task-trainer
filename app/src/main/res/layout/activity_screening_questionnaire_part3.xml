@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +16,7 @@
             android:text="@string/medical15"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView75"
@@ -28,7 +29,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/headache"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -44,7 +45,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/pressureInHead"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -60,7 +61,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/neckPain"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -76,7 +77,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner4"
+            android:id="@+id/nausea"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -92,7 +93,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner5"
+            android:id="@+id/dizziness"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -108,7 +109,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner6"
+            android:id="@+id/blurredVision"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -124,7 +125,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner7"
+            android:id="@+id/balanceProblems"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -140,7 +141,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner8"
+            android:id="@+id/lightSensitivity"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -156,7 +157,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner9"
+            android:id="@+id/noise"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -172,7 +173,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner10"
+            android:id="@+id/slowedDown"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -188,7 +189,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner11"
+            android:id="@+id/fog"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -204,7 +205,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner12"
+            android:id="@+id/dontFeelRight"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -220,7 +221,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner13"
+            android:id="@+id/concentrating"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -236,7 +237,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner14"
+            android:id="@+id/remembering"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -252,7 +253,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner15"
+            android:id="@+id/energy"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -268,7 +269,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner16"
+            android:id="@+id/confusion"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -279,13 +280,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Drowsiness "
+            android:text="Drowsiness"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner17"
+            android:id="@+id/drowsiness"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -295,13 +296,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Trouble falling asleep "
+            android:text="Trouble falling asleep"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner19"
+            android:id="@+id/asleep"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -317,7 +318,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner20"
+            android:id="@+id/emotional"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -333,7 +334,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner21"
+            android:id="@+id/irritability"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -349,7 +350,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner22"
+            android:id="@+id/sadness"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -365,7 +366,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner23"
+            android:id="@+id/nervous"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/ratings" />
@@ -378,10 +379,10 @@
             android:text="16. How many hours of sleep did you get last night?"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextNumberSigned"
+            android:id="@+id/hoursSlept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -395,7 +396,7 @@
             android:text="17. When I got up this morning, I felt:"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView74"
@@ -408,10 +409,11 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner24"
+            android:id="@+id/gotUp"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/scale" />
+
         <TextView
             android:id="@+id/textView125"
             android:layout_width="match_parent"
@@ -420,7 +422,7 @@
             android:text="18. Overall, my sleep last night was:"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
 
         <TextView
@@ -434,7 +436,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner25"
+            android:id="@+id/sleepLastNight"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:entries="@array/scale" />
@@ -445,10 +447,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="THANK YOU FOR COMPLETING THE SURVEY!"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@android:color/black"
-            android:textAlignment="center"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"

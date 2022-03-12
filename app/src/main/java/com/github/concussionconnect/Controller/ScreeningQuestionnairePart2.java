@@ -11,8 +11,10 @@ import android.widget.EditText;
 import com.github.concussionconnect.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ScreeningQuestionnairePart2 extends Activity implements View.OnClickListener {
 
@@ -113,55 +115,110 @@ public class ScreeningQuestionnairePart2 extends Activity implements View.OnClic
         comment3 = findViewById(R.id.comment3);
     }
 
-    private void saveInput() {
-        HashMap<String, Object> subjectBiographicalData = new HashMap<>();
-        ArrayList<String> gender = new ArrayList<>();
-        addIfChecked(gender, maleCheckBox);
-        addIfChecked(gender, femaleCheckBox);
-        subjectBiographicalData.put("Gender", String.join(", ", gender));
+    private void saveInputs() {
+        HashMap<String, Object> subjectDemographicInformation = new HashMap<>();
+        bundle.putSerializable("Subject Demographic Information", subjectDemographicInformation);
 
-        ArrayList<String> race = new ArrayList<>();
-        addIfChecked(race, raceNative);
-        addIfChecked(race, raceAsian);
-        addIfChecked(race, raceBlack);
-        addIfChecked(race, raceHawaiian);
-        addIfChecked(race, raceWhite);
-        subjectBiographicalData.put("Race", String.join(", ", race));
+        addAllIfChecked(new ArrayList<>(Arrays.asList(maleCheckBox, femaleCheckBox)),
+                subjectDemographicInformation, "1. Subject Gender");
 
-        ArrayList<String> hispanic = new ArrayList<>();
-        addIfChecked(hispanic, ethnicityHispanic);
-        addIfChecked(hispanic, ethnicityNonHispanic);
-        subjectBiographicalData.put("Ethnicity", String.join(", ", hispanic));
+        subjectDemographicInformation.put("2. Subject Age", age.getText().toString());
 
-        ArrayList<String> english = new ArrayList<>();
-        addIfChecked(english, yesEnglish);
-        addIfChecked(english, noEnglish);
-        subjectBiographicalData.put("Can Speak English", String.join(", ", english));
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                raceNative, raceAsian, raceBlack, raceHawaiian, raceWhite)),
+                subjectDemographicInformation, "3. Subject Race");
 
-        ArrayList<String> highestEducation = new ArrayList<>();
-        addIfChecked(highestEducation, schoolElem);
-        addIfChecked(highestEducation, schoolMiddle);
-        addIfChecked(highestEducation, schoolHigh);
-        addIfChecked(highestEducation, schoolDip);
-        addIfChecked(highestEducation, schoolSomeCollege);
-        addIfChecked(highestEducation, schoolTrade);
-        addIfChecked(highestEducation, schoolAssoc);
-        addIfChecked(highestEducation, schoolBach);
-        addIfChecked(highestEducation, schoolMaster);
-        addIfChecked(highestEducation, schoolPhD);
-        subjectBiographicalData.put("What is the highest degree or level of school you have " +
-                "completed? If currently enrolled, highest degree received",
-                String.join(", ", highestEducation));
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                ethnicityHispanic, ethnicityNonHispanic)),
+                subjectDemographicInformation, "4. Subject Ethnicity");
 
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                yesEnglish, noEnglish)),
+                subjectDemographicInformation, "5. Do you speak English fluently");
 
-        ArrayList<String> highestEducation = new ArrayList<>();
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                schoolElem, schoolMiddle, schoolHigh, schoolDip, schoolSomeCollege, schoolTrade,
+                schoolAssoc, schoolBach, schoolMaster, schoolPhD)),
+                subjectDemographicInformation, "6. What is the highest degree or level of school you have completed? If currently enrolled, highest degree received");
 
+        subjectDemographicInformation.put("7. How many times per week do you practice and/or work out?",
+                timesPerWeek.getText().toString());
+        subjectDemographicInformation.put("8. What is the average length of a practice or work out session?",
+                avgLength.getText().toString());
+
+        HashMap<String, Object> medicalHealthInformation = new HashMap<>();
+        bundle.putSerializable("Subject Medical Health Information", medicalHealthInformation);
+
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                concussionYes, concussionNo)), medicalHealthInformation, "9. Have you been diagnosed with a concussion in the last 6 months?");
+
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                alcoholYes, alcoholNo)),
+                medicalHealthInformation, "10. Have you consumed alcohol or any other potentially mind altering\n" +
+                        "drugs or medications within the past 12 hours?");
+
+        Map<String, Object> currentMedicines = new HashMap<>();
+        medicalHealthInformation.put("Current Medicines", currentMedicines);
+        Map<String, Object> ADHDMedicines = new HashMap<>();
+        currentMedicines.put("a. Attention Deficit Disorder (ADD) or Attention Deficit Hyperactivity Disorder (ADHD)", ADHDMedicines);
+        addAllIfChecked(new ArrayList<>(Arrays.asList(ADHDYes, ADHDNo)), ADHDMedicines, "Taken");
+        ADHDMedicines.put("If Yes, which medication(s) are you taking", ADHDMedications.getText().toString());
+        addAllIfChecked(new ArrayList<>(Arrays.asList(ADHDMedication24Yes, ADHDMedication24No)),
+                ADHDMedicines, "Did you take this medication last 24 hours?");
+
+        Map<String, Object> epilepsyMedicines = new HashMap<>();
+        currentMedicines.put("b. Epilepsy (seizure disorder)", epilepsyMedicines);
+        addAllIfChecked(new ArrayList<>(Arrays.asList(epilepsyYes, epilepsyNo)), epilepsyMedicines, "Taken");
+
+        Map<String, Object> concussions = new HashMap<>();
+        medicalHealthInformation.put("Concussion History", concussions);
+        concussions.put("13a. In your lifetime, how many times have you had a concussion?",
+                timesConcussion.getText().toString());
+        concussions.put("13b.  When was your most recent concussion?",
+                dateOfLastConc.getText().toString());
+
+        Map<String, Object> concussion1 = new HashMap<>();
+        concussions.put("Concussion History Details", concussion1);
+        concussion1.put("Date (M/D/Y)", dateOfConc1.getText().toString());
+        concussion1.put("Symptom Duration (# days)", duration1.getText().toString());
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                injurySports1, injuryVehicle1, injuryBlunt1, injuryOther1
+        )), concussion1, "Injury Mechanism");
+        concussion1.put("Sport (if any)", sportName1);
+        concussion1.put("How Many Days Until Return to Play", days1);
+        concussion1.put("Comments", comment1);
+
+        Map<String, Object> concussion2 = new HashMap<>();
+        concussions.put("Concussion History Details", concussion2);
+        concussion1.put("Date (M/D/Y)", dateOfConc2.getText().toString());
+        concussion1.put("Symptom Duration (# days)", duration2.getText().toString());
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                injurySports2, injuryVehicle2, injuryBlunt2, injuryOther2
+        )), concussion1, "Injury Mechanism");
+        concussion1.put("Sport (if any)", sportName2);
+        concussion1.put("How Many Days Until Return to Play", days2);
+        concussion1.put("Comments", comment2);
+
+        Map<String, Object> concussion3 = new HashMap<>();
+        concussions.put("Concussion History Details", concussion3);
+        concussion1.put("Date (M/D/Y)", dateOfConc3.getText().toString());
+        concussion1.put("Symptom Duration (# days)", duration3.getText().toString());
+        addAllIfChecked(new ArrayList<>(Arrays.asList(
+                injurySports3, injuryVehicle3, injuryBlunt3, injuryOther3
+        )), concussion1, "Injury Mechanism");
+        concussion1.put("Sport (if any)", sportName3);
+        concussion1.put("How Many Days Until Return to Play", days3);
+        concussion1.put("Comments", comment3);
     }
 
-    private void addIfChecked(List<String> list, CheckBox item) {
-        if (item.isChecked()) {
-            list.add(item.getText().toString());
+    private void addAllIfChecked(List<CheckBox> checkBoxes, Map<String, Object> hashMap, String question) {
+        ArrayList<String> checkBoxAnswers = new ArrayList<>(checkBoxes.size());
+        for (CheckBox c : checkBoxes) {
+            if (c.isChecked()) {
+                checkBoxAnswers.add(c.getText().toString());
+            }
         }
+        hashMap.put(question, String.join(", ", checkBoxAnswers));
     }
 
     public void onClick(View v) {
@@ -172,7 +229,7 @@ public class ScreeningQuestionnairePart2 extends Activity implements View.OnClic
         }
 
         if (v == Continue) {
-            saveInput();
+            saveInputs();
             Intent intent = new Intent(this, ScreeningQuestionnairePart3.class);
             intent.putExtras(bundle);
             startActivity(intent);

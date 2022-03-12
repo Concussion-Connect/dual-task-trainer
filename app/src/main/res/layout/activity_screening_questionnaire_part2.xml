@@ -309,7 +309,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="8. What is the average length of a practice or work out session? "
+            android:text="8. What is the average length of a practice or work out session?"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
@@ -408,7 +408,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:text="a. Attention Deficit Disorder (ADD) or Attention Deficit Hyperactivity Disorder (ADHD) "
+            android:text="a. Attention Deficit Disorder (ADD) or Attention Deficit Hyperactivity Disorder (ADHD)"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
@@ -493,7 +493,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:text="b. Epilepsy (seizure disorder)  "
+            android:text="b. Epilepsy (seizure disorder)"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
