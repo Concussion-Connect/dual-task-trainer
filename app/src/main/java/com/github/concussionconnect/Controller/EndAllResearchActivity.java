@@ -50,9 +50,10 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         displayResults.setText("");
         bundle = getIntent().getExtras();
         map = new HashMap<>();
-        map.put("PARTICIPANT_NAME", bundle.getString("participantName"));
-        map.put("PARTICIPANT_ID", bundle.getString("consentID"));
-        map.put("TEST_DATETIME", LocalDateTime.now());
+        map.put("Participant Name", bundle.getString("participantName"));
+        map.put("Participant ID", bundle.getString("consentID"));
+        map.put("Consent Given Date", bundle.getString("consentDate"));
+        map.put("TEST DATETIME", LocalDateTime.now());
 
         map.put("Subject Contact Info", bundle.get("contactInfo"));
         map.put("Subject Demographic Information", bundle.get("Subject Demographic Information"));
