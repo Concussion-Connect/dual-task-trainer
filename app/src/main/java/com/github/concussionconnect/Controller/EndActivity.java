@@ -17,11 +17,6 @@ import com.github.concussionconnect.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-import org.json.JSONObject;
-
-import java.io.UnsupportedEncodingException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -54,6 +49,13 @@ public class EndActivity extends Activity implements View.OnClickListener {
 
         displayResults.append("\n");
         displayResults.append("Time and Date: " + map.get("TEST_DATETIME"));
+
+        map.put("Subject Contact Info", bundle.get("contactInfo"));
+        map.put("Subject Demographic Information", bundle.get("Subject Demographic Information"));
+        map.put("Subject Medical Health Information", bundle.get("Subject Medical Health Information"));
+        map.put("Current Symptoms", bundle.get("Current Symptoms"));
+
+
 
 //        displayResults.append("List ID: " + bundle.getInt("listId") + "\n");
         ArrayList<SymptomModel> symptoms = (ArrayList<SymptomModel>) getIntent().getSerializableExtra("symptoms");
@@ -117,23 +119,6 @@ public class EndActivity extends Activity implements View.OnClickListener {
                 connector.execute(null, null, null);
             }
         }
-    }
-
-    //The way that players will be hashed. Taking in their name and birthday
-    public String sha1Hash(String toHash) {
-        String hash = null;
-        try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] bytes = toHash.getBytes("UTF-8");
-            digest.update(bytes, 0, bytes.length);
-            bytes = digest.digest();
-            hash = bytesToHex(bytes);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return hash;
     }
 
     final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
