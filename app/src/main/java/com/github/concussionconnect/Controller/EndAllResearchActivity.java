@@ -71,6 +71,9 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         int severityTotal = 0;
         displayResults.append("\n");
         String symptomString = "";
+        HashMap<String, Integer> additionalSymptoms = new HashMap<>();
+        map.put("What are the symptoms?", additionalSymptoms);
+
         for (SymptomModel x : symptoms) {
             if (x.getValue() > 0) {
                 symptomString = symptomString.equals("") ? x.getSympName() + ", Severity: " + x.getValue() : symptomString + ", " + x.getSympName() + ", Severity: " + x.getValue();
@@ -78,7 +81,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
             }
             severityTotal += x.getValue();
 
-            map.put(("SYMPTOM" + x.getSympName().toUpperCase()).replace(" ", "").replace("'", ""), x.getValue());
+            additionalSymptoms.put(("SYMPTOM" + x.getSympName().toUpperCase()).replace(" ", "").replace("'", ""), x.getValue());
         }
         displayResults.append(symptomString);
         displayResults.append("\nTotal number of symptoms: " + numSymptoms + " of " + symptoms.size() + "\n");
