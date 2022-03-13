@@ -177,8 +177,11 @@ public class ScreeningQuestionnairePart2 extends Activity implements View.OnClic
         concussions.put("13b.  When was your most recent concussion?",
                 dateOfLastConc.getText().toString());
 
+        Map<String, Object> concussionHistoryDetails = new HashMap<>(3);
+        concussions.put("Concussion History Details", concussionHistoryDetails);
+
         Map<String, Object> concussion1 = new HashMap<>();
-        concussions.put("Concussion History Details", concussion1);
+        concussionHistoryDetails.put("Concussion 1", concussion1);
         concussion1.put("Date (M/D/Y)", dateOfConc1.getText().toString());
         concussion1.put("Symptom Duration (# days)", duration1.getText().toString());
         addAllIfChecked(new ArrayList<>(Arrays.asList(
@@ -189,26 +192,26 @@ public class ScreeningQuestionnairePart2 extends Activity implements View.OnClic
         concussion1.put("Comments", comment1);
 
         Map<String, Object> concussion2 = new HashMap<>();
-        concussions.put("Concussion History Details", concussion2);
-        concussion1.put("Date (M/D/Y)", dateOfConc2.getText().toString());
-        concussion1.put("Symptom Duration (# days)", duration2.getText().toString());
+        concussionHistoryDetails.put("Concussion 2", concussion2);
+        concussion2.put("Date (M/D/Y)", dateOfConc2.getText().toString());
+        concussion2.put("Symptom Duration (# days)", duration2.getText().toString());
         addAllIfChecked(new ArrayList<>(Arrays.asList(
                 injurySports2, injuryVehicle2, injuryBlunt2, injuryOther2
-        )), concussion1, "Injury Mechanism");
-        concussion1.put("Sport (if any)", sportName2);
-        concussion1.put("How Many Days Until Return to Play", days2);
-        concussion1.put("Comments", comment2);
+        )), concussion2, "Injury Mechanism");
+        concussion2.put("Sport (if any)", sportName2);
+        concussion2.put("How Many Days Until Return to Play", days2);
+        concussion2.put("Comments", comment2);
 
         Map<String, Object> concussion3 = new HashMap<>();
-        concussions.put("Concussion History Details", concussion3);
-        concussion1.put("Date (M/D/Y)", dateOfConc3.getText().toString());
-        concussion1.put("Symptom Duration (# days)", duration3.getText().toString());
+        concussionHistoryDetails.put("Concussion 3", concussion3);
+        concussion3.put("Date (M/D/Y)", dateOfConc3.getText().toString());
+        concussion3.put("Symptom Duration (# days)", duration3.getText().toString());
         addAllIfChecked(new ArrayList<>(Arrays.asList(
                 injurySports3, injuryVehicle3, injuryBlunt3, injuryOther3
-        )), concussion1, "Injury Mechanism");
-        concussion1.put("Sport (if any)", sportName3);
-        concussion1.put("How Many Days Until Return to Play", days3);
-        concussion1.put("Comments", comment3);
+        )), concussion3, "Injury Mechanism");
+        concussion3.put("Sport (if any)", sportName3);
+        concussion3.put("How Many Days Until Return to Play", days3);
+        concussion3.put("Comments", comment3);
     }
 
     private void addAllIfChecked(List<CheckBox> checkBoxes, Map<String, Object> hashMap, String question) {

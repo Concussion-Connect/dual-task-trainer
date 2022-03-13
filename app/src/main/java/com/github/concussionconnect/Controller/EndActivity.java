@@ -50,13 +50,6 @@ public class EndActivity extends Activity implements View.OnClickListener {
         displayResults.append("\n");
         displayResults.append("Time and Date: " + map.get("TEST_DATETIME"));
 
-        map.put("Subject Contact Info", bundle.get("contactInfo"));
-        map.put("Subject Demographic Information", bundle.get("Subject Demographic Information"));
-        map.put("Subject Medical Health Information", bundle.get("Subject Medical Health Information"));
-        map.put("Current Symptoms", bundle.get("Current Symptoms"));
-
-
-
 //        displayResults.append("List ID: " + bundle.getInt("listId") + "\n");
         ArrayList<SymptomModel> symptoms = (ArrayList<SymptomModel>) getIntent().getSerializableExtra("symptoms");
         int numSymptoms = 0;

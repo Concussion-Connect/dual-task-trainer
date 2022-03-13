@@ -10,7 +10,11 @@ import android.widget.EditText;
 
 import com.github.concussionconnect.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ScreeningQuestionnairePart1 extends Activity implements View.OnClickListener {
     private Button back, next;
@@ -60,31 +64,40 @@ public class ScreeningQuestionnairePart1 extends Activity implements View.OnClic
         if (v == next) {
             Intent intent = new Intent(this, ScreeningQuestionnairePart2.class);
             HashMap<String, String> studyInfo = new HashMap<>(3);
-            studyInfo.put("studyID", studyID.getText().toString());
-            studyInfo.put("adminID", adminID.getText().toString());
-            studyInfo.put("adminName", adminName.getText().toString());
+            studyInfo.put("Study ID", studyID.getText().toString());
+            studyInfo.put("Administrator ID", adminID.getText().toString());
+            studyInfo.put("Administrator Name", adminName.getText().toString());
             bundle.putSerializable("studyInfo", studyInfo);
 
             HashMap<String, String> contactInfo = new HashMap<>(8);
-            contactInfo.put("schoolName", schoolName.getText().toString());
-            contactInfo.put("yearInSchool", yearInSchool.getText().toString());
-            contactInfo.put("participantOccupation", participantOccupation.getText().toString());
-            contactInfo.put("yearsEmployed", yearsEmployed.getText().toString());
-            contactInfo.put("contactInfoAddress", contactInfoAddress.getText().toString());
-            contactInfo.put("contactInfoPhone", contactInfoPhone.getText().toString());
-            contactInfo.put("contactInfoEmail", contactInfoEmail.getText().toString());
+            contactInfo.put("School Name", schoolName.getText().toString());
+            contactInfo.put("Current Grade/Year In School", yearInSchool.getText().toString());
+            contactInfo.put("Occupation", participantOccupation.getText().toString());
+            contactInfo.put("Years Employed", yearsEmployed.getText().toString());
+            contactInfo.put("Permanent Address", contactInfoAddress.getText().toString());
+            contactInfo.put("Phone", contactInfoPhone.getText().toString());
+            contactInfo.put("Email Address", contactInfoEmail.getText().toString());
 
-            StringBuilder bestWayOfContact = new StringBuilder();
-            for (CheckBox contactWay : new CheckBox[]{call, sms, email}) {
-                if (contactWay.isChecked()) {
-                    bestWayOfContact.append(contactWay.getText().toString()).append(" ");
-                }
-            }
-            contactInfo.put("bestWayOfContact", bestWayOfContact.toString());
+            addAllIfChecked(new ArrayList<>(Arrays.asList(
+                    call, sms, email
+            )), contactInfo, "What is the best way to contact you?");
             bundle.putSerializable("contactInfo", contactInfo);
 
             intent.putExtras(bundle);
             startActivity(intent);
         }
+
+
     }
+
+    private void addAllIfChecked(List<CheckBox> checkBoxes, Map<String, String> hashMap, String question) {
+        ArrayList<String> checkBoxAnswers = new ArrayList<>(checkBoxes.size());
+        for (CheckBox c : checkBoxes) {
+            if (c.isChecked()) {
+                checkBoxAnswers.add(c.getText().toString());
+            }
+        }
+        hashMap.put(question, String.join(", ", checkBoxAnswers));
+    }
+
 }
