@@ -114,6 +114,7 @@
         android:layout_marginEnd="59dp"
         android:background="@drawable/custom_rounded_shape"
         android:fontFamily="@font/nunito"
+        android:inputType="textCapSentences"
         android:text="Login"
         android:textColor="#FFF"
         android:textSize="17dp" />
