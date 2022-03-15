@@ -28,7 +28,7 @@
                 android:background="@drawable/gradient_bg" />
 
             <TextView
-                android:id="@+id/textView146"
+                android:id="@+id/textView147"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/Dual2Trial1"
@@ -83,7 +83,7 @@
                 />
 
             <TextView
-                android:id="@+id/Dual2Trial1"
+                android:id="@+id/Dual2Trial2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -99,17 +99,19 @@
 
             <Button
                 android:id="@+id/nextButtonFromDual22"
-                android:layout_width="match_parent"
+                android:layout_width="342dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="-5dp"
-                android:layout_marginLeft="-5dp"
-                android:layout_marginBottom="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="630dp"
+                android:background="@drawable/custom_rounded_shape"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:text="Next" />
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:text="Next"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
 
             <CheckedTextView
                 android:id="@+id/Dual2Word1"
@@ -188,24 +190,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="153dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="481dp"
                 android:layout_marginBottom="84dp"
                 android:fontFamily="@font/mulish"
                 android:text="Single Leg Stance"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/Dual2NumErrorsText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="164dp"
-                android:layout_marginTop="470dp"
-                android:fontFamily="@font/mulish"
-                android:text="# of Errors"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
@@ -217,7 +205,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="500dp"
+                android:layout_marginTop="531dp"
                 android:background="@drawable/gradient_bg" />
 
             <View
@@ -227,30 +215,30 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="43dp"
-                android:layout_marginTop="508dp"
+                android:layout_marginTop="539dp"
                 android:background="#fff" />
 
             <ImageButton
-                android:id="@+id/minusDual21"
+                android:id="@+id/minusDual22"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="41dp"
-                android:layout_marginTop="508dp"
+                android:layout_marginTop="539dp"
                 android:adjustViewBounds="true"
                 android:background="#0000"
                 android:scaleType="fitCenter"
                 android:src="@drawable/minus_btn" />
 
             <ImageButton
-                android:id="@+id/plusDual21"
+                android:id="@+id/plusDual22"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="313dp"
-                android:layout_marginTop="507dp"
+                android:layout_marginTop="538dp"
                 android:adjustViewBounds="true"
                 android:background="#0000"
                 android:scaleType="fitCenter"
@@ -262,7 +250,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="510dp"
+                android:layout_marginTop="541dp"
                 android:layout_marginEnd="175dp"
                 android:layout_marginBottom="-236dp"
                 android:background="@null"
@@ -275,32 +263,29 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/Dual2NumErrors2"
-                android:layout_width="55dp"
+            <TextView
+                android:id="@+id/Dual2NumErrorsText2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/plusDual22"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginEnd="61dp"
-                android:layout_marginRight="61dp"
-                android:clickable="false"
-                android:ems="10"
-                android:focusable="false"
-                android:inputType="none"
-                android:text="0"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="501dp"
+                android:fontFamily="@font/mulish"
+                android:text="# of Errors"
                 android:textAlignment="center"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp" />
+
 
             <EditText
                 android:id="@+id/Dual2NumCorrectWords2"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/Dual2NumErrors2"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginEnd="61dp"
+                android:layout_marginStart="339dp"
+                android:layout_marginTop="431dp"
                 android:layout_marginBottom="-124dp"
                 android:background="@null"
                 android:clickable="false"
@@ -312,19 +297,20 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/Dual2NumCorrectWordsText2"
-                android:layout_width="160dp"
-                android:layout_height="46dp"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/Dual2NumErrors2"
-                android:layout_marginLeft="245dp"
-                android:layout_marginTop="18dp"
-                android:text="# of Words Memorized"
-                android:textAlignment="center"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="124dp"
+                android:layout_marginTop="440dp"
+                android:fontFamily="@font/mulish"
+                android:text="# of Words Memorized:"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
-
 
             <TextView
                 android:id="@+id/Dual2Trial2Text"
