@@ -30,10 +30,15 @@ public class TestSetupActivity extends Activity implements View.OnClickListener 
     private EditText personNameEditText;
     private Spinner wordListSpinner;
     private Button nextButton;
+    private EditText participantName;
+    private EditText participantId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_setup);
+        participantId = (EditText) findViewById(R.id.participantID);
+        participantName = (EditText) findViewById(R.id.participantName);
         personNameEditText = (EditText) findViewById(R.id.personNameEditText);
         wordListSpinner = (Spinner) findViewById(R.id.wordListSpinner);
         nextButton = (Button) findViewById(R.id.nextButton);
@@ -112,7 +117,10 @@ public class TestSetupActivity extends Activity implements View.OnClickListener 
         bundle.putInt("listId", id);
         String playerInfo = personNameEditText.getText().toString().trim();
         bundle.putString("playerInfo", playerInfo);
-
+        String parName = participantName.getText().toString().trim();
+        bundle.putString("partName", parName);
+        String parID = participantId.getText().toString().trim();
+        bundle.putString("partId", parID);
         i.putExtras(bundle);
         startActivity(i);
     }

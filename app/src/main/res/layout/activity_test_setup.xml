@@ -43,10 +43,12 @@
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/wordListSpinner"
-        android:layout_marginTop="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="291dp"
         android:text="Next" />
 
     <TextView
@@ -76,4 +78,56 @@
         android:layout_above="@+id/wordListSpinner"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/participantID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/partIDQuestion"
+        android:layout_marginTop="-115dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/partNameQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nextButton"
+        android:layout_alignBottom="@id/wordListSpinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="-51dp"
+        android:text="What is the participant's name?"
+        android:textSize="18sp"
+        tools:textAlignment="center"
+        tools:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/partIDQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/participantName"
+        android:layout_marginTop="-110dp"
+        android:layout_marginBottom="136dp"
+        android:text="What is the participant's ID?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        tools:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/participantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/partNameQuestion"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="127dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
 </RelativeLayout>

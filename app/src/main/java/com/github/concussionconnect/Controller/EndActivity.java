@@ -30,7 +30,7 @@ public class EndActivity extends Activity implements View.OnClickListener {
     private HashMap<String, Object> map;
     Bundle bundle;
     DBConnector connector;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +42,11 @@ public class EndActivity extends Activity implements View.OnClickListener {
         submitButton.setOnClickListener(this);
         displayResults.setText("");
         bundle = getIntent().getExtras();
+
         map = new HashMap<>();
         map.put("TEST_DATETIME", LocalDateTime.now());
+        map.put("participantName", bundle.getString("partName"));
+        map.put("participantID", bundle.getString("partId"));
 
         displayResults.append("Name: " + bundle.getString("participantName") + "\n");
 
