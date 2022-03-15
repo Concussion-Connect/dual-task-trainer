@@ -34,12 +34,10 @@ public class EndActivity extends Activity implements View.OnClickListener {
     private TextView displayResults;
     private HashMap<String, Object> map;
     Bundle bundle;
-<<<<<<< Updated upstream
     DBConnector connector;
-=======
-    DBConnector connector; git pull origin Farris
 
->>>>>>> Stashed changes
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,14 +51,11 @@ public class EndActivity extends Activity implements View.OnClickListener {
         bundle = getIntent().getExtras();
 
         map = new HashMap<>();
-<<<<<<< Updated upstream
-        map.put("PLAYERID", sha1Hash(bundle.getString("playerInfo")));
-        map.put("TIMEANDDATE", LocalDateTime.now().toString());
-=======
+
         map.put("TEST_DATETIME", LocalDateTime.now());
         map.put("participantName", bundle.getString("partName"));
         map.put("participantID", bundle.getString("partId"));
->>>>>>> Stashed changes
+
 
         displayResults.append("Name: " + bundle.getString("playerInfo") + "\n");
         displayResults.append("Encryption: " + sha1Hash(bundle.getString("playerInfo")) + "\n");
