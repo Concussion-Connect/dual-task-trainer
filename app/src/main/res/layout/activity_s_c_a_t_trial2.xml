@@ -5,143 +5,193 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.github.concussionconnect.Controller.SCATTrial2Activity">
+    tools:context="com.github.concussionconnect.Controller.Dual2Trial2Activity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="631dp"
+            android:layout_height="675dp"
             android:weightSum="1">
 
-
-            <TextView
-                android:id="@+id/textView134"
+            <View
+                android:id="@+id/blueViewSCAT1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/SCATTrial2"
-                android:layout_marginTop="40dp"
-                android:text="What words do they remember?"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="18sp" />
+                android:layout_height="92dp"
+                android:background="@drawable/gradient_bg" />
 
+            <View
+                android:id="@+id/blueViewSCAT2"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@drawable/gradient_bg" />
 
             <TextView
                 android:id="@+id/textView155"
                 android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_alignTop="@id/textView134"
-                android:layout_marginTop="39dp"
-                android:text="Scroll If Any Info is Not Visible "
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/SCATTrial2"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mulish"
+                android:text="Scroll If Any Info is Not Visible"
                 android:textAlignment="center"
+                android:textColor="#FFF"
                 android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view2SCAT2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view1SCAT2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/gradient_bg" />
+
+            <View
+                android:id="@+id/view3SCAT2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view4SCAT2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright"
+                />
+
+            <TextView
+                android:id="@+id/SCATTrial2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/mulish"
+                android:text="Trial 2"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/nextFromTrial2SCAT"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="630dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:text="Next"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
 
             <CheckedTextView
                 android:id="@+id/SCATWord1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/SCATTrial2"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="143dp"
-                android:layout_marginBottom="-143dp"
+                android:layout_height="37dp"
+                android:layout_alignTop="@id/textView134"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:clickable="true"
                 android:text="Finger"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
             <CheckedTextView
                 android:id="@+id/SCATWord2"
                 android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:layout_alignBottom="@id/SCATWord1"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="187dp"
-                android:layout_marginBottom="-172dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/SCATWord1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:clickable="true"
                 android:text="Penny"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
             <CheckedTextView
                 android:id="@+id/SCATWord3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/SCATWord2"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="235dp"
-                android:layout_marginBottom="-234dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/SCATWord2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="54dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:clickable="true"
                 android:text="Blanket"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
             <CheckedTextView
                 android:id="@+id/SCATWord4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/SCATWord3"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="276dp"
-                android:layout_marginBottom="-275dp"
+                android:layout_height="47dp"
+                android:layout_alignTop="@id/SCATWord3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="54dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:clickable="true"
                 android:text="Lemon"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
             <CheckedTextView
                 android:id="@+id/SCATWord5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/SCATWord4"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="324dp"
-                android:layout_marginBottom="-322dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@id/SCATWord4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="57dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:clickable="true"
                 android:text="Insect"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
-            <Button
-                android:id="@+id/nextFromTrial2SCAT"
-                android:layout_width="411dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="-10dp"
-                android:layout_marginLeft="-10dp"
-                android:layout_marginBottom="13dp"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:text="Next" />
 
             <EditText
                 android:id="@+id/errorTextForSCAT2"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/SCATMem2"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="181dp"
-                android:layout_marginRight="181dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="339dp"
+                android:layout_marginTop="431dp"
+                android:layout_marginBottom="-124dp"
+                android:background="@null"
                 android:clickable="false"
                 android:ems="10"
                 android:focusable="false"
@@ -153,32 +203,31 @@
 
             <TextView
                 android:id="@+id/SCATMem2"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_alignTop="@+id/SCATWord5"
-                android:layout_marginTop="133dp"
-                android:layout_marginBottom="22dp"
-                android:text="# of Words Memorized"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="24sp" />
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="124dp"
+                android:layout_marginTop="440dp"
+                android:fontFamily="@font/mulish"
+                android:text="# of Words Memorized:"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/SCATTrial2"
-                android:layout_width="412dp"
+                android:id="@+id/textView134"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="-411dp"
-                android:layout_marginLeft="-411dp"
-                android:layout_marginTop="7dp"
-                android:layout_toEndOf="@+id/SCATMem2"
-                android:layout_toRightOf="@+id/SCATMem2"
-                android:text="Trial 2"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="126dp"
+                android:fontFamily="@font/mulish"
+                android:text="What words do they remember?"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
+                android:textSize="18sp" />
 
         </RelativeLayout>
     </LinearLayout>
