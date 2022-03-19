@@ -91,7 +91,7 @@ public class Dual2Trial2Activity extends Activity implements View.OnClickListene
 
     public void onClick(View v) {
         int num =  Integer.valueOf(numCorrectWords.getText().toString());
-      if (v == nextButton) {
+        if (v == nextButton) {
             int singleLegErrors = Integer.valueOf(errorNumText.getText().toString());
             Intent intent = new Intent(this, Dual2Trial3Activity.class);
             bundle.putInt("SingleLegErrorsDual2Trial2", singleLegErrors);
