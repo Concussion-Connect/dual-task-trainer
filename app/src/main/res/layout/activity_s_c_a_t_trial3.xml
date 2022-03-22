@@ -5,91 +5,150 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.github.concussionconnect.Controller.SCATTrial3Activity">
+    tools:context="com.github.concussionconnect.Controller.Dual2Trial2Activity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="750dp"
+            android:layout_height="675dp"
             android:weightSum="1">
 
+            <View
+                android:id="@+id/blueViewSCAT3"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@drawable/gradient_bg" />
 
             <TextView
                 android:id="@+id/textView156"
                 android:layout_width="match_parent"
-                android:layout_height="31dp"
-                android:layout_alignTop="@id/monthInReverse"
-                android:layout_marginTop="58dp"
-                android:text="Scroll If Any Info is Not Visible "
-                android:textAlignment="center"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/monthInReverse"
-                android:layout_width="412dp"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/SCATTrial3"
-                android:layout_marginTop="35dp"
-                android:text="@string/SCATTrial3"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mulish"
+                android:text="Scroll If Any Info is Not Visible"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="18sp" />
+                android:textColor="#FFF"
+                android:textStyle="bold" />
 
-
-            <TextView
-                android:id="@+id/months"
-                android:layout_width="match_parent"
-                android:layout_height="322dp"
-                android:layout_alignTop="@id/monthInReverse"
-                android:layout_marginTop="123dp"
-                android:text="December\nNovember\nOctober\nSeptember\nAugust\nJuly\nJune\nMay\nApril\nMarch\nFebruary\nJanuary"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black"
-                android:textStyle="bold|italic" />
-
-            <Button
-                android:id="@+id/nextFromTrial3SCAT"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <View
+                android:id="@+id/view2SCAT3"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="36dp"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:text="Next" />
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view1SCAT3"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/gradient_bg" />
+
+            <View
+                android:id="@+id/view3SCAT3"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view4SCAT3"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
 
             <TextView
                 android:id="@+id/SCATTrial3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="6dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/mulish"
                 android:text="Trial 3"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="24sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
+                android:textSize="40sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/months"
+                android:layout_width="match_parent"
+                android:layout_height="264dp"
+                android:layout_alignTop="@id/monthsInReverse"
+                android:layout_marginTop="69dp"
+                android:text="December\nNovember\nOctober\nSeptember\nAugust\nJuly\nJune\nMay\nApril\nMarch\nFebruary\nJanuary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textStyle="bold|italic" />
 
             <TextView
                 android:id="@+id/SelectSCATText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/months"
-                android:layout_marginTop="355dp"
+                android:layout_height="31dp"
+                android:layout_alignBottom="@id/SCAT3RadioGroup"
+                android:layout_marginTop="300dp"
+                android:layout_marginBottom="93dp"
+                android:fontFamily="@font/mulish"
                 android:text="Select 'Yes' or 'No'"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="16sp"
-                android:textStyle="bold|italic" />
+                tools:layout_alignTop="@id/months" />
+
+            <Button
+                android:id="@+id/nextFromTrial3SCAT"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="630dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:text="Next"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
+
+
+            <TextView
+                android:id="@+id/monthsInReverse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="126dp"
+                android:fontFamily="@font/mulish"
+                android:text="@string/SCATTrial3"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
 
             <RadioGroup
+                android:id="@+id/SCAT3RadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="84dp"
                 android:layout_alignTop="@id/months"
-                android:layout_marginTop="392dp"
+                android:layout_marginTop="340dp"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -97,6 +156,7 @@
                     android:layout_width="189dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
                     android:text="Yes"
                     android:textSize="18sp" />
 
@@ -104,11 +164,10 @@
                     android:id="@+id/NoSCAT3"
                     android:layout_width="189dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
                     android:text="No"
                     android:textSize="18sp" />
             </RadioGroup>
-
 
         </RelativeLayout>
     </LinearLayout>
