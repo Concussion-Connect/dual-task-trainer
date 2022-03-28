@@ -50,12 +50,54 @@
                 android:textColor="#FFF"
                 android:textSize="18sp" />
 
+            <View
+                android:id="@+id/view51"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view52"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/holo_blue_bright"
+                />
+
+            <View
+                android:id="@+id/view53"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/gradient_bg"
+                />
+
+            <View
+                android:id="@+id/view54"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/holo_blue_bright" />
+
             <TextView
                 android:id="@+id/textView148"
                 android:layout_width="match_parent"
                 android:layout_height="31dp"
                 android:layout_alignTop="@id/monthsInReverseDual23"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="80dp"
                 android:text="Scroll If Any Info is Not Visible"
                 android:textAlignment="center"
                 android:textStyle="bold" />
