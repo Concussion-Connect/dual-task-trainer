@@ -34,6 +34,16 @@
                 android:textStyle="bold" />
 
             <View
+                android:id="@+id/view1SCAT4"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
                 android:id="@+id/view2SCAT4"
                 android:layout_width="80dp"
                 android:layout_height="10dp"
@@ -42,16 +52,6 @@
                 android:layout_marginStart="120dp"
                 android:layout_marginTop="100dp"
                 android:background="@android:color/holo_blue_bright" />
-
-            <View
-                android:id="@+id/view1SCAT4"
-                android:layout_width="80dp"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="100dp"
-                android:background="@drawable/gradient_bg" />
 
             <View
                 android:id="@+id/view3SCAT4"
@@ -71,7 +71,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="320dp"
                 android:layout_marginTop="100dp"
-                android:background="@android:color/holo_blue_bright" />
+                android:background="@drawable/gradient_bg" />
 
             <TextView
                 android:id="@+id/SCATTrial4"

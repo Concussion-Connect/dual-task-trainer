@@ -51,7 +51,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="100dp"
-                android:background="@drawable/gradient_bg" />
+                android:background="@android:color/holo_blue_bright" />
 
             <View
                 android:id="@+id/view3SCAT3"
@@ -61,7 +61,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="100dp"
-                android:background="@android:color/holo_blue_bright" />
+                android:background="@drawable/gradient_bg" />
 
             <View
                 android:id="@+id/view4SCAT3"
