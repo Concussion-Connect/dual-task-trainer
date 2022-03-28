@@ -190,10 +190,24 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="153dp"
-                android:layout_marginTop="481dp"
+                android:layout_marginTop="493dp"
                 android:layout_marginBottom="84dp"
                 android:fontFamily="@font/mulish"
                 android:text="Single Leg Stance"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Dual2NumErrorsText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="513dp"
+                android:fontFamily="@font/mulish"
+                android:text="# of Errors"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
@@ -205,17 +219,17 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="531dp"
+                android:layout_marginTop="545dp"
                 android:background="@drawable/gradient_bg" />
 
             <View
                 android:id="@+id/view5"
-                android:layout_width="325dp"
+                android:layout_width="205dp"
                 android:layout_height="53dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="43dp"
-                android:layout_marginTop="539dp"
+                android:layout_marginTop="554dp"
                 android:background="#fff" />
 
             <ImageButton
@@ -225,7 +239,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="41dp"
-                android:layout_marginTop="539dp"
+                android:layout_marginTop="555dp"
                 android:adjustViewBounds="true"
                 android:background="#0000"
                 android:scaleType="fitCenter"
@@ -238,7 +252,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="313dp"
-                android:layout_marginTop="538dp"
+                android:layout_marginTop="555dp"
                 android:adjustViewBounds="true"
                 android:background="#0000"
                 android:scaleType="fitCenter"
@@ -250,7 +264,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="541dp"
+                android:layout_marginTop="559dp"
                 android:layout_marginEnd="175dp"
                 android:layout_marginBottom="-236dp"
                 android:background="@null"
@@ -262,20 +276,6 @@
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/Dual2NumErrorsText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="164dp"
-                android:layout_marginTop="501dp"
-                android:fontFamily="@font/mulish"
-                android:text="# of Errors"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="18sp" />
 
 
             <EditText
