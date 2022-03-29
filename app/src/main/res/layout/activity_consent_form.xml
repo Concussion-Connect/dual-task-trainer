@@ -12,12 +12,16 @@
 
         <TextView
             android:id="@+id/textView29"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="Consent Form For Enrolling Adult Participants in a Research Study"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/mulish"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@drawable/gradient_bg"
+            android:textColor="#FFF"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/textView30"
@@ -310,20 +314,36 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/backToKeyInfo"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:text="Back" />
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
 
             <Button
                 android:id="@+id/clickToSign"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Click to Sign" />
+                android:text="Click to Sign"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
 
 
 
