@@ -36,7 +36,7 @@
                 android:textSize="17dp" />
 
             <View
-                android:id="@+id/view3"
+                android:id="@+id/blueViewBESS2"
                 android:layout_width="match_parent"
                 android:layout_height="92dp"
                 android:background="@drawable/gradient_bg" />
