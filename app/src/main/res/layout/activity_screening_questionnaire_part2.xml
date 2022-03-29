@@ -1029,7 +1029,7 @@
                 android:fontFamily="@font/nunito"
                 android:inputType="textCapSentences"
                 android:textColor="#FFF"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <Button
                 android:id="@+id/Continue"
@@ -1043,7 +1043,7 @@
                 android:fontFamily="@font/nunito"
                 android:inputType="textCapSentences"
                 android:textColor="#FFF"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
         </LinearLayout>
 

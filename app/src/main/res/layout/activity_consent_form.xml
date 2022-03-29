@@ -329,7 +329,7 @@
                 android:fontFamily="@font/nunito"
                 android:inputType="textCapSentences"
                 android:textColor="#FFF"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <Button
                 android:id="@+id/clickToSign"
@@ -343,7 +343,7 @@
                 android:fontFamily="@font/nunito"
                 android:inputType="textCapSentences"
                 android:textColor="#FFF"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
 
 
