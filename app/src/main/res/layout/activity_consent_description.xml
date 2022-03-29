@@ -12,18 +12,30 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/gradient_bg"
+            android:fontFamily="@font/mulish"
+            android:singleLine="false"
             android:text="@string/key_info"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textAlignment="center"
-            android:textStyle="bold" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/skipButton"
             android:layout_width="196dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="@drawable/custom_rounded_shape"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/nunito"
+            android:inputType="textCapSentences"
+            android:textColor="#FFF"
+            android:textSize="17dp"
             android:text="Skip Forms" />
 
         <TextView
@@ -127,6 +139,13 @@
                 android:layout_width="196dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp"
                 android:text="Back to Login" />
 
             <Button
@@ -135,6 +154,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp"
                 android:text="Consent Form" />
         </LinearLayout>
 
