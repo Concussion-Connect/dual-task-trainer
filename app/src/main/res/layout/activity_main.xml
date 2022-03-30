@@ -18,11 +18,9 @@
         android:layout_width="335dp"
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="180dp"
         android:background="@drawable/custom_rounded_shape"
@@ -30,7 +28,7 @@
         android:inputType="textCapSentences"
         android:text="Settings"
         android:textColor="#FFFFFF"
-        android:textSize="24dp" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/testButton"
@@ -38,10 +36,8 @@
         android:layout_height="70dp"
         android:layout_above="@+id/settingsButton"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
         android:layout_marginEnd="38dp"
         android:layout_marginBottom="54dp"
         android:background="@drawable/custom_rounded_shape"
@@ -49,7 +45,7 @@
         android:inputType="textCapSentences"
         android:text="Begin Assessment"
         android:textColor="#FFFFFF"
-        android:textSize="24dp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/welcomeText"
@@ -66,5 +62,5 @@
         android:text="Welcome"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#ffffff"
-        android:textSize="48dp" />
+        android:textSize="48sp" />
 </RelativeLayout>

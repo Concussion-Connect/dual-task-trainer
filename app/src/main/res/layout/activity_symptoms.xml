@@ -49,6 +49,8 @@
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="7dp"
         android:layout_marginTop="650dp"
         android:background="@drawable/custom_rounded_shape"
@@ -57,8 +59,6 @@
         android:fontFamily="@font/nunito"
         android:inputType="textCapSentences"
         android:text="Next"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:textColor="#FFF"
         android:textSize="17sp" />
 
