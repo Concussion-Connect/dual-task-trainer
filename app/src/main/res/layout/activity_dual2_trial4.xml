@@ -223,7 +223,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFF"
                 android:textSize="40sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
 
         </RelativeLayout>

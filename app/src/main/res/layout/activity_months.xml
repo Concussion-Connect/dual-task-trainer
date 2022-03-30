@@ -8,125 +8,145 @@
     tools:context="com.github.concussionconnect.Controller.MonthsActivity"
     android:weightSum="1">
 
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/gradient_bg" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_weight="0.10"
-        android:fontFamily="sans-serif"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/mulish"
         android:text="Trial 3"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="24sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFF"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <ListView
         android:id="@+id/listView1"
         android:layout_width="wrap_content"
-        android:layout_height="295dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_height="400dp"
         android:layout_below="@+id/textView3"
-        android:layout_marginTop="19dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="10dp"
-        android:layout_weight="0.24"
-        android:clickable="true" />
-
-
+        android:clickable="true"
+        android:paddingHorizontal="10dp" />
+    
     <Button
         android:id="@+id/nextButton"
-        android:layout_width="match_parent"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="670dp"
+        android:background="@drawable/custom_rounded_shape"
         android:focusable="false"
         android:focusableInTouchMode="false"
+        android:fontFamily="@font/nunito"
+        android:inputType="textCapSentences"
         android:text="Next"
-        android:layout_below="@+id/errorNumText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp" />
-
-    <EditText
-        android:id="@+id/errorNumText"
-        android:layout_width="55dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:text="0"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/textView6"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignStart="@+id/textView6"
-        android:inputType="none"
-        android:focusable="false"
-        android:clickable="false"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="# of Errors"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="18sp"
-        android:layout_below="@+id/listView1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="44dp"
-        android:layout_marginEnd="44dp" />
+        android:textColor="#FFF"
+        android:textSize="17dp" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/minusButton"
-        android:layout_alignStart="@+id/minusButton"
-        android:layout_below="@+id/listView1"
-        android:text="Tandem Leg Stance"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="525dp"
+        android:layout_marginBottom="84dp"
+        android:fontFamily="@font/mulish"
+        android:text="Tandem Leg Stance\n # of Errors"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textSize="18sp" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="342dp"
+        android:layout_height="71dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="591dp"
+        android:background="@drawable/gradient_bg" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="205dp"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="600dp"
+        android:background="#fff" />
 
     <ImageButton
         android:id="@+id/minusButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_alignBottom="@+id/errorNumText"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="600dp"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
         android:background="#0000"
-        android:src="@drawable/minusbutton" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/minus_btn" />
 
     <ImageButton
         android:id="@+id/plusButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_alignTop="@+id/minusButton"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_toEndOf="@+id/minusButton"
-        android:layout_toRightOf="@+id/minusButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="313dp"
+        android:layout_marginTop="600dp"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
         android:background="#0000"
-        android:src="@drawable/plusbutton" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/plus_btn" />
+
+    <EditText
+        android:id="@+id/errorNumText"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="605dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="-236dp"
+        android:background="@null"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="wrap_content"
+        android:layout_width="412dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/mulish"
         android:text="Do they remember the months in reverse?"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFF"
         android:textSize="18sp" />
 
 

@@ -8,7 +8,7 @@
     tools:context="com.github.concussionconnect.Controller.Dual2Trial3Activity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -27,11 +27,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="6dp"
-                android:text="Trial 3"
-                android:textColor="#FFF"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:fontFamily="@font/mulish"
+                android:text="Trial 3"
                 android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
@@ -214,7 +214,7 @@
                 android:adjustViewBounds="true"
                 android:background="#0000"
                 android:scaleType="fitCenter"
-                android:src="@drawable/minus_btn"  />
+                android:src="@drawable/minus_btn" />
 
             <EditText
                 android:id="@+id/errorNumTextDual23"
