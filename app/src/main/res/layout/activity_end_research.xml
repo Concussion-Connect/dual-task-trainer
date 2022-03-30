@@ -23,7 +23,7 @@
                 android:fontFamily="@font/mulish"
                 android:text="Thanks for testing!"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView158"
@@ -40,11 +40,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
+                android:layout_marginTop="550dp"
                 android:background="@drawable/custom_rounded_shape"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:fontFamily="@font/nunito"
-                android:layout_marginTop="550dp"
                 android:inputType="textCapSentences"
                 android:text="Submit"
                 android:textColor="#FFF"
