@@ -2,7 +2,7 @@
     <string name="app_name">ConcussionConnect</string>
     <string name="register_string">Register</string>
     <string name="consent_form"><u>Consent Form</u></string>
-    <string name="key_info"><u>Key Information for Evaluation of a Balance and Cognitive Dual-Task in College Students</u></string>
+    <string name="key_info">Key Information for Evaluation of a Balance and Cognitive Dual-Task in College Students</string>
     <string name="what_am_i_doing"><u>What Am I Being Asked To Do?</u></string>
     <string name="study_about"><u>What Is This Study About and What Procedures Will You be Asked to Follow?</u></string>
     <string name="risks"><u>Are There Any Risks or Discomforts you Might Experience by Being in this Study?</u></string>
