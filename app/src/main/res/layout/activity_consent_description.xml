@@ -34,9 +34,9 @@
             android:focusableInTouchMode="false"
             android:fontFamily="@font/nunito"
             android:inputType="textCapSentences"
+            android:text="Skip Forms"
             android:textColor="#FFF"
-            android:textSize="17dp"
-            android:text="Skip Forms" />
+            android:textSize="17dp" />
 
         <TextView
             android:id="@+id/textView19"
