@@ -8,20 +8,45 @@
     tools:context="com.github.concussionconnect.Controller.DualTrial3Activity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="710dp"
+            android:layout_height="725dp"
             android:weightSum="1">
 
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@drawable/gradient_bg" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="342dp"
+                android:layout_height="71dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="591dp"
+                android:background="@drawable/gradient_bg" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="205dp"
+                android:layout_height="53dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="600dp"
+                android:background="#fff" />
 
             <TextView
                 android:id="@+id/textView152"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="31dp"
                 android:layout_alignTop="@id/monthsInReverseDual3"
-                android:layout_marginTop="58dp"
+                android:layout_marginTop="80dp"
                 android:text="Scroll If Any Info is Not Visible"
                 android:textAlignment="center"
                 android:textStyle="bold" />
@@ -31,37 +56,85 @@
                 android:layout_width="412dp"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/DualTrial3"
-                android:layout_marginTop="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/mulish"
                 android:text="@string/SCATTrial3"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
                 android:textSize="18sp" />
 
+            <View
+                android:id="@+id/view51"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view52"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/holo_blue_bright"
+                />
+
+            <View
+                android:id="@+id/view53"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/gradient_bg"
+                />
+
+            <View
+                android:id="@+id/view54"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/holo_blue_bright" />
 
             <TextView
                 android:id="@+id/monthsDual"
                 android:layout_width="match_parent"
                 android:layout_height="265dp"
                 android:layout_alignTop="@id/monthsInReverseDual3"
-                android:layout_marginTop="118dp"
+                android:layout_marginTop="123dp"
                 android:text="December\nNovember\nOctober\nSeptember\nAugust\nJuly\nJune\nMay\nApril\nMarch\nFebruary\nJanuary"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
                 android:textStyle="bold|italic" />
 
             <Button
                 android:id="@+id/nextFromTrial3Dual"
-                android:layout_width="match_parent"
+                android:layout_width="342dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="3dp"
-                android:layout_marginLeft="3dp"
-                android:layout_marginBottom="3dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="670dp"
+                android:background="@drawable/custom_rounded_shape"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:text="Next" />
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:text="Next"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/DualTrial3"
@@ -69,10 +142,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="6dp"
+                android:fontFamily="@font/mulish"
                 android:text="Trial 3"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="24sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
+                android:textSize="40sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -80,7 +155,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/monthsDual"
-                android:layout_marginTop="277dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="310dp"
+                android:fontFamily="@font/nunito"
                 android:text="Select 'Yes' or 'No'"
                 android:textSize="16sp"
                 android:textStyle="bold|italic" />
@@ -89,14 +166,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/monthsDual"
-                android:layout_marginTop="303dp"
+                android:layout_marginTop="350dp"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/YesDual3"
                     android:layout_width="189dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/nunito"
                     android:text="Yes"
                     android:textSize="18sp" />
 
@@ -104,50 +182,48 @@
                     android:id="@+id/NoDual3"
                     android:layout_width="189dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:text="No"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/nunito"
+                    android:textSize="18sp"/>
             </RadioGroup>
 
             <ImageButton
                 android:id="@+id/plusDual3"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_alignTop="@+id/minusDual3"
-                android:layout_alignEnd="@+id/tandemLeg"
-                android:layout_alignRight="@+id/tandemLeg"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="313dp"
+                android:layout_marginTop="600dp"
                 android:adjustViewBounds="true"
                 android:background="#0000"
                 android:scaleType="fitCenter"
-                android:src="@drawable/plusbutton" />
+                android:src="@drawable/plus_btn"  />
 
             <ImageButton
                 android:id="@+id/minusDual3"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_above="@+id/nextFromTrial3Dual"
-                android:layout_alignBottom="@id/SelectDualText"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="-179dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="600dp"
                 android:adjustViewBounds="true"
                 android:background="#0000"
                 android:scaleType="fitCenter"
-                android:src="@drawable/minusbutton" />
+                android:src="@drawable/minus_btn"  />
 
             <EditText
                 android:id="@+id/errorNumTextDual3"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/plusDual3"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginEnd="61dp"
-                android:layout_marginRight="61dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="605dp"
+                android:layout_marginEnd="175dp"
+                android:layout_marginBottom="-236dp"
+                android:background="@null"
                 android:clickable="false"
                 android:ems="10"
                 android:focusable="false"
@@ -155,7 +231,7 @@
                 android:text="0"
                 android:textAlignment="center"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"  />
 
             <TextView
                 android:id="@+id/numErrorsDual3"
