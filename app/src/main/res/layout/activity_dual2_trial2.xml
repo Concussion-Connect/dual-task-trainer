@@ -31,7 +31,7 @@
                 android:id="@+id/textView147"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/Dual2Trial1"
+                android:layout_alignTop="@id/Dual2Trial2"
                 android:layout_marginTop="60dp"
                 android:fontFamily="@font/mulish"
                 android:text="Scroll If Any Info is Not Visible"
@@ -57,8 +57,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="120dp"
                 android:layout_marginTop="100dp"
-                android:background="@android:color/holo_blue_bright"
-                />
+                android:background="@android:color/holo_blue_bright" />
 
             <View
                 android:id="@+id/view53"
@@ -68,8 +67,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="100dp"
-                android:background="@android:color/holo_blue_bright"
-                />
+                android:background="@android:color/holo_blue_bright" />
 
             <View
                 android:id="@+id/view54"
@@ -146,9 +144,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_alignTop="@id/Dual2Word2"
-                android:layout_marginTop="54dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="54dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:text="Perfume"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"

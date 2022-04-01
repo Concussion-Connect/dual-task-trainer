@@ -22,11 +22,11 @@
         android:id="@+id/displayResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <LinearLayout
         android:layout_width="match_parent"
