@@ -53,7 +53,7 @@ public class EndAllResearchActivity extends Activity implements View.OnClickList
         map.put("Participant Name", bundle.getString("participantName"));
         map.put("Participant ID", bundle.getString("consentID"));
         map.put("Consent Given Date", bundle.getString("consentDate"));
-        map.put("TEST DATETIME", LocalDateTime.now());
+        map.put("TEST DATETIME", LocalDateTime.now().toString());
 
         map.put("Subject Contact Info", bundle.get("contactInfo"));
         map.put("Subject Demographic Information", bundle.get("Subject Demographic Information"));

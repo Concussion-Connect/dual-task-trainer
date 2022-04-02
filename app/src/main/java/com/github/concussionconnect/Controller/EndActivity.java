@@ -44,7 +44,7 @@ public class EndActivity extends Activity implements View.OnClickListener {
         bundle = getIntent().getExtras();
 
         map = new HashMap<>();
-        map.put("TEST_DATETIME", LocalDateTime.now());
+        map.put("TEST_DATETIME", LocalDateTime.now().toString());
         map.put("participantName", bundle.getString("partName"));
         map.put("participantID", bundle.getString("partId"));
 
