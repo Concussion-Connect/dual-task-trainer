@@ -43,7 +43,7 @@
 
 
             <View
-                android:id="@+id/view5"
+                android:id="@+id/view4"
                 android:layout_width="342dp"
                 android:layout_height="71dp"
                 android:layout_alignParentTop="true"
@@ -54,7 +54,7 @@
 
             <View
                 android:id="@+id/view5"
-                android:layout_width="325dp"
+                android:layout_width="205dp"
                 android:layout_height="53dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
@@ -169,7 +169,6 @@
                 android:id="@+id/textView31"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/Dual2Trial1"
                 android:layout_marginTop="60dp"
                 android:fontFamily="@font/mulish"
                 android:text="Scroll If Any Info is Not Visible"
