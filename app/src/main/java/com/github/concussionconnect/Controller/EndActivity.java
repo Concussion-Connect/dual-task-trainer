@@ -17,11 +17,6 @@ import com.github.concussionconnect.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-import org.json.JSONObject;
-
-import java.io.UnsupportedEncodingException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,6 +30,7 @@ public class EndActivity extends Activity implements View.OnClickListener {
     private HashMap<String, Object> map;
     Bundle bundle;
     DBConnector connector;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,15 +42,16 @@ public class EndActivity extends Activity implements View.OnClickListener {
         submitButton.setOnClickListener(this);
         displayResults.setText("");
         bundle = getIntent().getExtras();
-        map = new HashMap<>();
-        map.put("PLAYERID", sha1Hash(bundle.getString("playerInfo")));
-        map.put("TIMEANDDATE", LocalDateTime.now().toString());
 
-        displayResults.append("Name: " + bundle.getString("playerInfo") + "\n");
-        displayResults.append("Encryption: " + sha1Hash(bundle.getString("playerInfo")) + "\n");
+        map = new HashMap<>();
+        map.put("TEST_DATETIME", LocalDateTime.now().toString());
+        map.put("participantName", bundle.getString("partName"));
+        map.put("participantID", bundle.getString("partId"));
+
+        displayResults.append("Name: " + bundle.getString("participantName") + "\n");
 
         displayResults.append("\n");
-        displayResults.append("Time and Date: " + map.get("TIMEANDDATE"));
+        displayResults.append("Time and Date: " + map.get("TEST_DATETIME"));
 
 //        displayResults.append("List ID: " + bundle.getInt("listId") + "\n");
         ArrayList<SymptomModel> symptoms = (ArrayList<SymptomModel>) getIntent().getSerializableExtra("symptoms");
@@ -64,7 +61,7 @@ public class EndActivity extends Activity implements View.OnClickListener {
         String symptomString = "";
         for (SymptomModel x : symptoms) {
             if (x.getValue() > 0) {
-                symptomString = symptomString == "" ? x.getSympName() + ", Severity: " + x.getValue() : symptomString + ", " + x.getSympName() + ", Severity: " + x.getValue();
+                symptomString = symptomString.equals("") ? x.getSympName() + ", Severity: " + x.getValue() : symptomString + ", " + x.getSympName() + ", Severity: " + x.getValue();
                 numSymptoms++;
             }
             severityTotal += x.getValue();
@@ -75,17 +72,17 @@ public class EndActivity extends Activity implements View.OnClickListener {
         displayResults.append("\nTotal number of symptoms: " + numSymptoms + " of " + symptoms.size() + "\n");
         displayResults.append("Symptom severity score: " + severityTotal + " of " + symptoms.size() * 6);
         displayResults.append("\n\n");
-        displayResults.append("Double Leg Errors: " + bundle.getInt("doubleLegErrors") +"\n");
+        displayResults.append("Double Leg Errors: " + bundle.getInt("doubleLegErrors") + "\n");
         map.put("TRIAL1DOUBLELEGERRORS", bundle.getInt("doubleLegErrors"));
-        displayResults.append("Short Term Memory Score: " + bundle.getInt("shortMemScore") +"\n");
+        displayResults.append("Short Term Memory Score: " + bundle.getInt("shortMemScore") + "\n");
         map.put("TRIAL2MEMORYSCORE", bundle.getInt("shortMemScore"));
-        displayResults.append("Single Leg Errors: " + bundle.getInt("singleLegErrors") +"\n");
+        displayResults.append("Single Leg Errors: " + bundle.getInt("singleLegErrors") + "\n");
         map.put("TRIAL2SINGLELEGERRORS", bundle.getInt("singleLegErrors"));
-        displayResults.append("Month Memory Score: " + bundle.getInt("monthMemScore") +"\n");
+        displayResults.append("Month Memory Score: " + bundle.getInt("monthMemScore") + "\n");
         map.put("TRIAL3MEMORYSCORE", bundle.getInt("monthMemScore"));
-        displayResults.append("Tandem Leg Errors: " + bundle.getInt("tandemLegErrors") +"\n");
+        displayResults.append("Tandem Leg Errors: " + bundle.getInt("tandemLegErrors") + "\n");
         map.put("TRIAL3TANDEMLEGERRORS", bundle.getInt("tandemLegErrors"));
-        displayResults.append("Long Term Memory Score: " + bundle.getInt("longMemScore") +"\n");
+        displayResults.append("Long Term Memory Score: " + bundle.getInt("longMemScore") + "\n");
         map.put("TRIAL4MEMORYSCORE", bundle.getInt("longMemScore"));
         //String id = bundle.getString("ID");
         String adminId = bundle.getString("ID");
@@ -119,40 +116,17 @@ public class EndActivity extends Activity implements View.OnClickListener {
             }
         }
     }
-    //The way that players will be hashed. Taking in their name and birthday
-    public String sha1Hash( String toHash )
-    {
-        String hash = null;
-        try
-        {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] bytes = toHash.getBytes("UTF-8");
-            digest.update(bytes, 0, bytes.length);
-            bytes = digest.digest();
-            hash = bytesToHex( bytes );
-        }
-        catch( NoSuchAlgorithmException e )
-        {
-            e.printStackTrace();
-        }
-        catch( UnsupportedEncodingException e )
-        {
-            e.printStackTrace();
-        }
-        return hash;
-    }
 
     final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
-    public static String bytesToHex( byte[] bytes )
-    {
-        char[] hexChars = new char[ bytes.length * 2 ];
-        for( int j = 0; j < bytes.length; j++ )
-        {
-            int v = bytes[ j ] & 0xFF;
-            hexChars[ j * 2 ] = hexArray[ v >>> 4 ];
-            hexChars[ j * 2 + 1 ] = hexArray[ v & 0x0F ];
+
+    public static String bytesToHex(byte[] bytes) {
+        char[] hexChars = new char[bytes.length * 2];
+        for (int j = 0; j < bytes.length; j++) {
+            int v = bytes[j] & 0xFF;
+            hexChars[j * 2] = hexArray[v >>> 4];
+            hexChars[j * 2 + 1] = hexArray[v & 0x0F];
         }
-        return new String( hexChars );
+        return new String(hexChars);
     }
 
     private class DBConnector extends AsyncTask<Void, Void, String> {

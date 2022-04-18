@@ -9,54 +9,96 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="631dp"
             android:weightSum="1">
 
-            <ImageButton
-                android:id="@+id/plusBESS2"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_below="@id/textView137"
-                android:layout_alignTop="@+id/minusBESS2"
-                android:layout_alignEnd="@+id/textView136"
-                android:layout_alignRight="@+id/textView136"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
-                android:adjustViewBounds="true"
-                android:background="#0000"
-                android:scaleType="fitCenter"
-                android:src="@drawable/plusbutton" />
+            <Button
+                android:id="@+id/nextFromTrial2BESS"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="538dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:text="Next"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
+
+            <View
+                android:id="@+id/blueViewBESS2"
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:background="@drawable/gradient_bg" />
+
+
+            <View
+                android:id="@+id/plusminusBarBESS2"
+                android:layout_width="342dp"
+                android:layout_height="71dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="436dp"
+                android:background="@drawable/gradient_bg" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="325dp"
+                android:layout_height="53dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="445dp"
+                android:background="#fff" />
 
             <ImageButton
                 android:id="@+id/minusBESS2"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_below="@id/textView137"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="14dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginTop="167dp"
-                android:layout_marginBottom="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="443dp"
                 android:adjustViewBounds="true"
                 android:background="#0000"
                 android:scaleType="fitCenter"
-                android:src="@drawable/minusbutton" />
+                android:src="@drawable/minus_btn" />
+
+            <ImageButton
+                android:id="@+id/plusBESS2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="313dp"
+                android:layout_marginTop="444dp"
+                android:adjustViewBounds="true"
+                android:background="#0000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/plus_btn" />
 
             <EditText
                 android:id="@+id/errorText2"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/plusBESS2"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginEnd="61dp"
-                android:layout_marginRight="61dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="451dp"
+                android:layout_marginEnd="175dp"
+                android:layout_marginRight="175dp"
+                android:layout_marginBottom="-236dp"
+                android:background="@null"
                 android:clickable="false"
                 android:ems="10"
                 android:focusable="false"
@@ -70,25 +112,29 @@
                 android:id="@+id/textView135"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView136"
-                android:layout_alignBottom="@+id/textView136"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginEnd="43dp"
-                android:layout_marginRight="43dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="378dp"
+                android:fontFamily="@font/mulish"
                 android:text="# of Errors"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
 
+
             <TextView
                 android:id="@+id/textView136"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/plusBESS2"
-                android:layout_alignStart="@+id/minusBESS2"
-                android:layout_alignLeft="@+id/minusBESS2"
-                android:layout_marginBottom="22dp"
+                android:layout_width="226dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="153dp"
+                android:layout_marginTop="338dp"
+                android:layout_marginBottom="84dp"
+                android:fontFamily="@font/mulish"
                 android:text="Single Leg Stance"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
 
@@ -97,51 +143,81 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="148dp"
+                android:fontFamily="@font/nunito"
                 android:text="User should hold stance for 20 seconds.\                  Monitor their balance!"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="36sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textView138"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="-164dp"
-                android:layout_marginLeft="-164dp"
-                android:layout_toEndOf="@+id/textView136"
-                android:layout_toRightOf="@+id/textView136"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/mulish"
                 android:text="Trial 2"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="24sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
+                android:textSize="40sp"
                 android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/nextFromTrial2BESS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginBottom="2dp"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:text="Next" />
 
             <TextView
                 android:id="@+id/textView32"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:layout_alignTop="@id/textView138"
-                android:layout_marginTop="37dp"
-                android:text="Scroll If Any Info is Not Visible "
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mulish"
+                android:text="Scroll If Any Info is Not Visible"
                 android:textAlignment="center"
+                android:textColor="#FFF"
                 android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view1BESS2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view2BESS2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/gradient_bg" />
+
+            <View
+                android:id="@+id/view3BESS2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view4BESS2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/holo_blue_bright" />
+
+
 
 
         </RelativeLayout>

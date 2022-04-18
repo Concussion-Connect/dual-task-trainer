@@ -12,19 +12,31 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/key_info"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/mulish"
             android:textAlignment="center"
-            android:textStyle="bold" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@drawable/gradient_bg"
+            android:textColor="#FFF"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/skipButton"
             android:layout_width="196dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Skip Forms" />
+            android:layout_gravity="center"
+            android:background="@drawable/custom_rounded_shape"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/nunito"
+            android:inputType="textCapSentences"
+            android:text="Skip Forms"
+            android:textColor="#FFF"
+            android:textSize="17dp" />
 
         <TextView
             android:id="@+id/textView19"
@@ -41,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="You are being asked to be a volunteer in a research study. This form will give you key  information to help you decide if you would like to participate. Your participation is  voluntary. As you read, please feel free to ask any questions you may have about the  research."
-            android:textColor="#494848"
+            android:textColor="@android:color/black"
             android:textSize="16dp" />
 
         <TextView
@@ -59,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" The purpose of this study is to determine if performing a balance test concurrently  with a memory task will result in different performance levels than doing the tasks  separately. It is a feasibility test to see how college aged students perform. In the  future, the test may be used as a concussion assessment test. The premise is that  doing two tasks concurrently will allow more sensitivity to assess neurological  performance than doing the tasks separately. Your participation will last less than 45  minutes, and you will be filling out a few short questionnaires as well as doing 4  separate 2 minute virtual reality tests (detailed further below)."
-            android:textColor="#494848"
+            android:textColor="@android:color/black"
             android:textSize="16dp" />
 
         <TextView
@@ -77,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" While the risk is expected to be minimal, it is possible that you will feel claustrophobic  and / or discomfort from the virtual reality google and in-google environment. You will  also be asked to do standing balance tests while wearing the googles and there is a risk  of falling, but the researchers are trained to guard you against falling. There are more details below and you can decide whether or not you want to participate based on  these possible risks. "
-            android:textColor="#494848"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -94,9 +106,8 @@
             android:id="@+id/textView26"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text=" The investigators of this study are interested in your opinion about the tests. While  the Dual Task test will not benefit you directly, your participation will aid in  determining if the test may be useful to detect concussion in the future."
-            android:textColor="#494848"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -114,7 +125,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" It is fully your decision if you wish to be in this study or not. If you choose not to  participate, or choose to participate and later determine you no longer wish to, you  will not lose any rights, services, or benefits as a result of your withdrawal. The study  is completely voluntary. There are no alternative way to assess the feasibility of a dual  task available."
-            android:textColor="#494848"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -127,6 +138,13 @@
                 android:layout_width="196dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp"
                 android:text="Back to Login" />
 
             <Button
@@ -135,6 +153,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp"
                 android:text="Consent Form" />
         </LinearLayout>
 

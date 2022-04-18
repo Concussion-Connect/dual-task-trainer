@@ -9,14 +9,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
+
         <EditText
-            android:id="@+id/contactInfoDate"
+            android:id="@+id/studyID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="date"
-            android:hint="Date"/>
-
+            android:hint="Study ID"
+            android:inputType="date" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -24,9 +25,10 @@
             android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/adminID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Study Administrator" />
+                android:hint="Administrator ID" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -34,10 +36,11 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/adminName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Subject ID" />
+                android:hint="Administrator Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -49,14 +52,6 @@
             android:textAlignment="center"
             android:textStyle="bold|italic"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-        <EditText
-            android:id="@+id/questionnaireName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Name"/>
 
         <TextView
             android:id="@+id/textView74"
@@ -73,6 +68,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/schoolName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="School Name" />
@@ -83,9 +79,10 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/yearInSchool"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Current Grade/ Year in School" />
+                android:hint="Current Grade/Year in School" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -103,6 +100,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/participantOccupation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Occupation" />
@@ -113,37 +111,41 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/yearsEmployed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Years Employed" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView129"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All participants"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:layout_marginTop="25dp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactInfoAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Permanent Address" />
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <EditText
-            android:id="@+id/contactInfoHomePhone"
+            android:id="@+id/contactInfoPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="phone"
-            android:hint="Phone (home)"/>
-
-
-        <EditText
-            android:id="@+id/contactInfoCellPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="phone"
-            android:hint="Phone (cell)"/>
+            android:hint="Phone"
+            android:inputType="phone" />
 
 
         <EditText
@@ -165,22 +167,22 @@
             tools:layout_marginTop="25dp" />
 
         <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phone" />
-
-        <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email" />
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/call"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mail" />
+            android:text="Call" />
+
+        <CheckBox
+            android:id="@+id/sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Text/SMS" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -189,17 +191,31 @@
 
             <Button
                 android:id="@+id/BackFromContactInfo"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Back" />
+                android:text="Back"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
 
             <Button
                 android:id="@+id/NextToQuestionnaire"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Next" />
+                android:text="Next"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
         </LinearLayout>
 
 

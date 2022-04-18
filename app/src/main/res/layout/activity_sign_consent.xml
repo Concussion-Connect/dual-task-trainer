@@ -16,15 +16,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sign Consent "
+            android:fontFamily="@font/mulish"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@drawable/gradient_bg"
+            android:textColor="#FFF"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/textView45"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
             android:text="If you have any questions about your rights as a research participant, you may contact"
             android:textColor="@android:color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -32,11 +36,11 @@
 
         <TextView
             android:id="@+id/textView47"
-            android:layout_width="389dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ms. Melanie Clark, Georgia Institute of Technology"
             android:textColor="@android:color/black"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold" />
@@ -48,6 +52,7 @@
             android:text="Office of Research Integrity Assurance, at (404) 894-6942."
             android:textColor="@android:color/black"
             android:textAlignment="center"
+            android:layout_marginTop="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold" />
 
@@ -89,7 +94,8 @@
             android:layout_height="wrap_content"
             android:text="If you sign below, it means that you have read (or have had read to you) the information given in this  consent form, and you would like to be a volunteer in this study."
             android:textColor="@android:color/black"
-            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold" />
 
@@ -98,17 +104,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Participant Name (Printed)"/>
+            android:layout_marginTop="40dp"
+            android:hint="Participant Name"
+            android:inputType="textPersonName" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/consentID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Participant Signature" />
+                android:hint="Participant ID" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
@@ -116,19 +124,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="date"
-            android:hint="Date (Participant)"/>
+            android:hint="Date (mm/dd/yyyy)"
+            android:inputType="date" />
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Signature of Person Obtaining Consent " />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -145,6 +147,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp"
                 android:text="Back" />
 
             <Button
@@ -152,6 +162,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/custom_rounded_shape"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:textColor="#FFF"
+                android:textSize="17dp"
                 android:text="Next" />
         </LinearLayout>
 

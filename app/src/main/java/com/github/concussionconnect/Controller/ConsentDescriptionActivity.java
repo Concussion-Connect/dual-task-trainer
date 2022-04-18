@@ -1,7 +1,5 @@
 package com.github.concussionconnect.Controller;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +13,7 @@ public class ConsentDescriptionActivity extends Activity implements View.OnClick
     private Button back;
     private Bundle bundle;
     private Button skipButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,25 +29,23 @@ public class ConsentDescriptionActivity extends Activity implements View.OnClick
         skipButton.setOnClickListener(this);
 
 
-
         bundle = getIntent().getExtras();
 
     }
 
     @Override
     public void onClick(View v) {
-        if(v== consentButton) {
+        if (v == consentButton) {
             Intent intent = new Intent(this, ConsentFormActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
         }
-        if(v == back) {
+        if (v == back) {
             startActivity(new Intent(this, LoginActivity.class));
         }
 
-        if(v == skipButton) {
+        if (v == skipButton) {
             Intent intent = new Intent(this, ResearchSymptomsActivity.class);
-            bundle.putString("participantName", " test ");
             intent.putExtras(bundle);
             startActivity(intent);
 

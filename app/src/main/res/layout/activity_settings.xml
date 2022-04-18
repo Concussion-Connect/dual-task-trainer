@@ -6,39 +6,107 @@
     android:layout_height="match_parent"
     tools:context="com.github.concussionconnect.Controller.SettingsActivity">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/gradient_bg" />
+
+    <TextView
+        android:id="@+id/editTextRegistrationTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/mulish"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFF"
+        android:textSize="30sp" />
+
+
     <ToggleButton
         android:id="@+id/infoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="ToggleButton"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="101dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/custom_rounded_shape"
+        android:checked="true"
+        android:fontFamily="@font/nunito"
+        android:text="ToggleButton"
+        android:textColor="#FFF"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="206dp"
+        android:layout_marginEnd="19dp"
+        android:fontFamily="@font/nunito"
         android:text="Show instructions on \n how to give an assessment"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textSize="18sp"
-        android:layout_alignTop="@+id/infoButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="24dp"
-        android:layout_marginEnd="24dp" />
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonChangeEmail"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="399dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/custom_rounded_shape"
+        android:fontFamily="@font/nunito"
+        android:inputType="textCapSentences"
+        android:text="Change Email"
+        android:textColor="#FFF"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="523dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/custom_rounded_shape"
+        android:fontFamily="@font/nunito"
+        android:inputType="textCapSentences"
+        android:text="Home"
+        android:textColor="#FFF"
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/buttonChangePassword"
-        android:layout_width="match_parent"
+        android:layout_width="337dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:text="Change Password" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/custom_rounded_shape"
+        android:fontFamily="@font/nunito"
+        android:inputType="textCapSentences"
+        android:text="Change Password"
+        android:textColor="#FFF"
+        android:textSize="17sp" />
 
 </RelativeLayout>

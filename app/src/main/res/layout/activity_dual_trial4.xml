@@ -15,17 +15,67 @@
             android:layout_height="694dp"
             android:weightSum="1">
 
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/gradient_bg" />
 
             <TextView
                 android:id="@+id/DualTrial4Question"
-                android:layout_width="match_parent"
+                android:layout_width="412dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/DualTrial4"
-                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mulish"
                 android:text="What words do they still remember?"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
                 android:textSize="18sp" />
+
+            <View
+                android:id="@+id/view51"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="110dp"
+                android:background="@android:color/holo_blue_bright" />
+
+            <View
+                android:id="@+id/view52"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="110dp"
+                android:background="@android:color/holo_blue_bright"
+                />
+
+            <View
+                android:id="@+id/view53"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="110dp"
+                android:background="@android:color/holo_blue_bright"
+                />
+
+            <View
+                android:id="@+id/view54"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/gradient_bg"
+                />
 
 
             <TextView
@@ -33,19 +83,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:layout_alignTop="@id/DualTrial4Question"
-                android:layout_marginTop="34dp"
+                android:layout_marginTop="65dp"
                 android:text="Scroll If Any Info is Not Visible"
                 android:textAlignment="center"
                 android:textStyle="bold" />
 
             <CheckedTextView
                 android:id="@+id/DualWord11"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/DualTrial4"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="134dp"
-                android:layout_marginBottom="-134dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="163dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:clickable="true"
                 android:text="Candle"
@@ -55,32 +104,15 @@
                 android:textStyle="bold|italic" />
 
             <CheckedTextView
-                android:id="@+id/DualWord12"
-                android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:layout_alignBottom="@id/DualWord11"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="179dp"
-                android:layout_marginBottom="-164dp"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:clickable="true"
-                android:text="Paper"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:textStyle="bold|italic" />
-
-            <CheckedTextView
-                android:id="@+id/DualWord13"
-                android:layout_width="match_parent"
+                android:id="@+id/DualWord15"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/DualWord12"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="226dp"
-                android:layout_marginBottom="-225dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="345dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:clickable="true"
-                android:text="Sugar"
+                android:text="Wagon"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
@@ -88,12 +120,11 @@
 
             <CheckedTextView
                 android:id="@+id/DualWord14"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/DualWord13"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="271dp"
-                android:layout_marginBottom="-270dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="300dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:clickable="true"
                 android:text="Sandwich"
@@ -103,16 +134,30 @@
                 android:textStyle="bold|italic" />
 
             <CheckedTextView
-                android:id="@+id/DualWord15"
-                android:layout_width="match_parent"
+                android:id="@+id/DualWord13"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/DualWord14"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="316dp"
-                android:layout_marginBottom="-314dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="255dp"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:clickable="true"
-                android:text="Wagon"
+                android:text="Sugar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <CheckedTextView
+                android:id="@+id/DualWord12"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="208dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:text="Paper"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
@@ -121,28 +166,31 @@
 
             <Button
                 android:id="@+id/nextFromTrial4Dual"
-                android:layout_width="match_parent"
+                android:layout_width="342dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="3dp"
-                android:layout_marginLeft="3dp"
-                android:layout_marginBottom="49dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="570dp"
+                android:background="@drawable/custom_rounded_shape"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:text="Finish Assessment" />
+                android:fontFamily="@font/nunito"
+                android:inputType="textCapSentences"
+                android:text="Finish Assessment"
+                android:textColor="#FFF"
+                android:textSize="17dp" />
 
             <EditText
                 android:id="@+id/errorTextForDual4"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/DualMem4"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="181dp"
-                android:layout_marginRight="181dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="515dp"
+                android:layout_marginEnd="175dp"
+                android:layout_marginBottom="-236dp"
+                android:background="@null"
                 android:clickable="false"
                 android:ems="10"
                 android:focusable="false"
@@ -158,7 +206,7 @@
                 android:layout_height="57dp"
                 android:layout_alignTop="@+id/DualWord15"
                 android:layout_marginTop="133dp"
-                android:layout_marginBottom="22dp"
+                android:fontFamily="@font/nunito"
                 android:text="# of Words Memorized"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -166,17 +214,16 @@
 
             <TextView
                 android:id="@+id/DualTrial4"
-                android:layout_width="412dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="-411dp"
-                android:layout_marginTop="7dp"
-                android:layout_toEndOf="@+id/DualMem4"
-                android:layout_toRightOf="@+id/DualMem4"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/mulish"
                 android:text="Trial 4"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="24sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
+                android:textSize="40sp"
                 android:textStyle="bold" />
 
 

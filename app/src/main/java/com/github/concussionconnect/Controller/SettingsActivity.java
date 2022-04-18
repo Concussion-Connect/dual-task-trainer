@@ -11,13 +11,15 @@ import com.github.concussionconnect.R;
 
 public class SettingsActivity extends Activity implements View.OnClickListener {
     private ToggleButton infoButton;
-    private Button buttonChangePassword;
+    private Button buttonChangePassword, buttonHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         infoButton = (ToggleButton) findViewById(R.id.infoButton);
         buttonChangePassword = (Button) findViewById(R.id.buttonChangePassword);
+        buttonHome = findViewById(R.id.buttonHome);
+        buttonHome.setOnClickListener(this);
         infoButton.setOnClickListener(this);
         buttonChangePassword.setOnClickListener(this);
     }
@@ -32,6 +34,10 @@ public class SettingsActivity extends Activity implements View.OnClickListener {
         }
         if (v == buttonChangePassword) {
             startActivity(new Intent(this, ChangePasswordActivity.class));
+        }
+
+        if (v == buttonHome) {
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
 }

@@ -2,7 +2,7 @@
     <string name="app_name">ConcussionConnect</string>
     <string name="register_string">Register</string>
     <string name="consent_form"><u>Consent Form</u></string>
-    <string name="key_info"><u>Key Information for Evaluation of a Balance and Cognitive Dual-Task in College Students</u></string>
+    <string name="key_info">Key Information for Evaluation of a Balance and Cognitive Dual-Task in College Students</string>
     <string name="what_am_i_doing"><u>What Am I Being Asked To Do?</u></string>
     <string name="study_about"><u>What Is This Study About and What Procedures Will You be Asked to Follow?</u></string>
     <string name="risks"><u>Are There Any Risks or Discomforts you Might Experience by Being in this Study?</u></string>
@@ -28,15 +28,15 @@
     <string name="SSQ"><u>Study Screening Questionnaire</u></string>
     <string name="demographic"><u>Demographic Information:</u></string>
     <string name="medical"><u>Medical / Health Information:</u></string>
-    <string name="medical9">9. Have you been diagnosed with a concussion in the<u> last 6 months?</u></string>
+    <string name="medical9">9. Have you been diagnosed with a concussion in the <u>last 6 months?</u></string>
     <string name="medical10">10. Have you consumed alcohol or any other potentially mind altering
 drugs or medications within the <u>past 12 hours?</u></string>
     <string name="medical11">11. Do you currently have or are you under the care of a doctor for any neurological injury
 or condition that may be associated with<u>neurological impairment?</u></string>
-    <string name="medical12">12.<u>Are you currently</u> being treated for, or taking medications for any of the following?
+    <string name="medical12">12. <u>Are you currently</u> being treated for, or taking medications for any of the following?
  </string>
     <string name="medication">Did you take this medication <u> last 24 hours?</u></string>
-    <string name="medical13a">13a. In your  <u> lifetime</u>, how many times have you had a concussion?</string>
+    <string name="medical13a">13a. In your <u>lifetime</u>, how many times have you had a concussion?</string>
     <string name="medical15">15. For each of the following symptoms please rate how you <u>currently feel</u>, regardless of
 whether or not you have ever had a concussion. </string>
     <string name="SCATTrial3">Indicate whether the subject recited <u>ALL</u> the months of the year backwards correctly</string>

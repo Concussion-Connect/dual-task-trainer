@@ -10,40 +10,61 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
+        android:fontFamily="@font/mulish"
         android:text="Thanks for testing!"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/cancelButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="28dp"
-        android:text="Cancel" />
-
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cancelButton"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:text="Submit" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/displayResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="600dp"
+        >
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/custom_rounded_shape"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/nunito"
+            android:inputType="textCapSentences"
+            android:textColor="#FFF"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/custom_rounded_shape"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/nunito"
+            android:inputType="textCapSentences"
+            android:textColor="#FFF"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>
